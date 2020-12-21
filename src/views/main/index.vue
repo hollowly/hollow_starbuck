@@ -30,7 +30,7 @@ export default {
 
 			$('#promotion > a > img').mouseenter(function() {
 				$(this).css({
-					'transform':'translateY(-10px)',
+					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
 				})
 			}).mouseleave(function() {
@@ -50,7 +50,7 @@ export default {
 /********************* main ************************/
 	main {
 		width: 70%;
-		height: 100%;
+		height: 200%;
 		float: right;
 		transform: translateY(-105px);
 	}
