@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-	<div style="width: 1530px;height:100vh;">
+	<div style="width: 1520px;height:100vh;">
 		<nav id='nav'>
 			<div id="sidebar-header">
 				<a href="/" style="float:left"><img src="@/assets/svg/logo.svg" width="40"></a>
@@ -88,6 +88,7 @@ export default {
 		display: inline-block;
 	}
 	#nav {
+		position: fixed;
 		width: 30%;
 		height: 100%;
 		box-shadow: 1px 1px 4px #ccc;

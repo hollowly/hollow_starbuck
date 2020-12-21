@@ -2,7 +2,7 @@
 <template>
 	<main>
 		<ul>
-			<span class='next'>＞</span>
+			<!-- <span class='next'>＞</span> -->
 			<li><a href=""><img src="@/assets/img/main_top1.jpg"></a></li>
 			<li><a href=""><img src="@/assets/img/main_top2.jpg"></a></li>
 		</ul>
