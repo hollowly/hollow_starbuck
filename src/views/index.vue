@@ -76,8 +76,18 @@ export default {
 				$('.view').show()
 				$('#sidebar-header').show(100)
 			})
+			
+			// 固定定位 nav 盒子的高度
+			// $(window).scroll(function() {
+			// 		var top = $(window).scrollTop();
+			// 		$("#nav").css('top',top)
+			// });
 		})
+
+
+		
 	}
+	
 
 }
 
@@ -89,10 +99,11 @@ export default {
 	}
 	#nav {
 		position: fixed;
-		width: 30%;
+		width: 456px;
 		height: 100%;
 		box-shadow: 1px 1px 4px #ccc;
 		display: inline-block;
+		background: white;
 	}
 	#sidebar-header {
 		padding: 20px 0px 0px 20px;

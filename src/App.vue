@@ -11,8 +11,13 @@
 @import url('assets/css/base.css');
 
 #app {
-	width: 100%;
+	width: 1520px;
 	height: 100%;
-	overflow-x: visible;
+	// overflow-x: hidden;
+}
+html {
+	width: 1520px;
+	height: 100%;
+	margin: 0 auto;
 }
 </style>

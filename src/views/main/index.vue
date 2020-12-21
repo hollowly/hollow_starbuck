@@ -1,8 +1,8 @@
 <!--  -->
 <template>
 	<main>
+			<span class='next'>＞</span>
 		<ul>
-			<!-- <span class='next'>＞</span> -->
 			<li><a href=""><img src="@/assets/img/main_top1.jpg"></a></li>
 			<li><a href=""><img src="@/assets/img/main_top2.jpg"></a></li>
 		</ul>
@@ -10,12 +10,18 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
 	data () {
 		return {
 
 		}
 	},
+	mounted() {
+		$(function() {
+
+		})
+	}
 
 }
 
@@ -27,11 +33,13 @@ export default {
 		width: 70%;
 		height: 100%;
 		float: right;
+		overflow: hidden;
 	}
 	main > ul {
-		width: 100%;
+		width: 200%;
 		list-style: none;
 		display: inline-block;
+		transform: translateY(-105px);
 	}
 	main > ul > li {
 		width: 100%;
@@ -40,14 +48,18 @@ export default {
 		width: 100%;
 	}
 	main > ul > li > a > img {
-		width: 100%;
+		width: 50%;
 		float: left;
 	}
 	.next {
-		display: inline;
-		float: right;
-		font-size: 50px;
+		font-size: 80px;
 		font-weight: 100;
-		transform: translate(-10px,100px);
+		color: white;
+		position: relative;
+		top: 25%;
+		left: 93%;
+		z-index: 10;
+		cursor: pointer;
+		user-select: none;
 	}
 </style>
