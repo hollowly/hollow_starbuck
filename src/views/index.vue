@@ -60,15 +60,15 @@ export default {
 	mounted() {
 		$(function() {
 			$('.sidebar-more').click(function() {
-				$('#sidebar-header').hide()
+				$('#sidebar-header').hide(100)
 				$('.view').hide()
-				$('#nav-container').show()
+				$('#nav-container').show(100)
 			})
 
 			$('.sidebar-close').click(function() {
-				$('#nav-container').hide()
+				$('#nav-container').hide(100)
 				$('.view').show()
-				$('#sidebar-header').show()
+				$('#sidebar-header').show(100)
 			})
 		})
 	}
