@@ -98,6 +98,7 @@ export default {
 		display: inline-block;
 	}
 	#nav {
+		/* position: absolute; */
 		position: fixed;
 		width: 456px;
 		height: 100%;

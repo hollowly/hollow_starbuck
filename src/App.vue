@@ -13,7 +13,7 @@
 #app {
 	width: 1520px;
 	height: 100%;
-	// overflow-x: hidden;
+	overflow-x: hidden;
 }
 html {
 	width: 1520px;
