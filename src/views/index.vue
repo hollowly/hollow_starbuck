@@ -1,7 +1,7 @@
 <!--  -->
 <template>
-	<div>
-		<nav>
+	<div style="width: 1530px;height:100vh;">
+		<nav id='nav'>
 			<div id="sidebar-header">
 				<a href="/" style="float:left"><img src="@/assets/svg/logo.svg" width="40"></a>
 				<div class="title">
@@ -42,20 +42,26 @@
 						<p>English | 隐私政策 | 使用条款</p>
 					</fotter>
 				</ul>
-
 			</div>
 		</nav>
+
+	<cmain></cmain>
+
 	</div>
 </template>
 
 <script>
 import $ from 'jquery'
+import cmain from '@/views/main/index'
 
 export default {
 	data () {
 		return {
 
 		}
+	},
+	components: {
+		cmain,
 	},
 	mounted() {
 		$(function() {
@@ -81,10 +87,11 @@ export default {
 	a {
 		display: inline-block;
 	}
-	nav {
-		width: 35%;
-		height: 100vh;
+	#nav {
+		width: 30%;
+		height: 100%;
 		box-shadow: 1px 1px 4px #ccc;
+		display: inline-block;
 	}
 	#sidebar-header {
 		padding: 20px 0px 0px 20px;
@@ -164,4 +171,5 @@ export default {
 	p:first-child {
 		font-size: 14px;
 	}
+
 </style>

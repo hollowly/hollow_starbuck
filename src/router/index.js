@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 
 const index = () => import('@/views/index')						//主要渲染
-const index2 = () => import('@/views/nav/index2')			//默认渲染
+const navindex = () => import('@/views/nav/index')	//默认渲染
 const stores = () => import('@/views/nav/stores')			//门店
 const menu = () => import('@/views/nav/menu')					//菜单
 const register = () => import('@/views/nav/register')	//注册
@@ -19,7 +19,7 @@ const routes = [
 		children:[
 			{
 				path:'/',
-				component:index2
+				component:navindex
 			},
 			{
 				path:'/stores',
