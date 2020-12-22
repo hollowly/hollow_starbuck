@@ -38,7 +38,16 @@
 				</p>
 			</div>
 			<ul>
-				<li></li>
+				<li>
+					<img src="@/assets/img/index/tmall1.png">
+					<p><strong>会员星礼包</strong></p>
+					<p>星享卡新升级</p>
+					<p>更多心意好礼</p>
+					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
+
+
+
+				</li>
 			</ul>
 		</div>
 	</main>
@@ -177,5 +186,35 @@ export default {
 		height: 100px;
 		padding: 30px 0px;
 		text-align: center;
+	}
+	#tmall > ul {
+		width: 80%;
+		margin: 0 auto;
+		list-style: none;
+		border: 1px solid red;
+	}
+	#tmall > ul > li {
+		width: 20%;
+		height: 100%;
+		background: white;
+		text-align: center;
+	}
+	#tmall > ul > li > img {
+		width: 60%;
+	}
+	#tmall > ul > li > p {
+		font-size: 14px;	
+		margin: 6px 0px;
+	}
+	#tmall > ul > li > p:first-of-type {
+		font-size: 16px;
+		color: black;
+	}
+	#tmall > ul > li > p:last-of-type {
+		font-size: 12px;
+		padding:20px 0px;
+	}
+	#tmall > ul > li > p > a:hover {
+		opacity: 0.7;
 	}
 </style>
