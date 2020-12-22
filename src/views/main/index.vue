@@ -96,7 +96,7 @@ export default {
 <style scoped>
 	main {
 		width: 70%;
-		height: 200%;
+		height: 900%;
 		float: right;
 		transform: translateY(-105px);
 	}
@@ -185,7 +185,7 @@ export default {
 		width: 99.6%;
 		background: rgb(247,247,247);
 		/* border:1px solid red; */
-		height: 400px;
+		height: 420px;
 		float: right;
 	}
 	#tmall > .tmall-top {
@@ -212,6 +212,7 @@ export default {
 	}
 	#tmall > ul > li > img {
 		width: 65%;
+		height: 75px;
 		transform: translate(-2.5px,-30px);
 	}
 	#tmall > ul > li > p {
