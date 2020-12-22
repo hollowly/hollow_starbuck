@@ -44,9 +44,27 @@
 					<p>星享卡新升级</p>
 					<p>更多心意好礼</p>
 					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
-
-
-
+				</li>
+				<li>
+					<img src="@/assets/img/index/tmall1.png">
+					<p><strong>会员星礼包</strong></p>
+					<p>星享卡新升级</p>
+					<p>更多心意好礼</p>
+					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
+				</li>
+				<li>
+					<img src="@/assets/img/index/tmall1.png">
+					<p><strong>会员星礼包</strong></p>
+					<p>星享卡新升级</p>
+					<p>更多心意好礼</p>
+					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
+				</li>
+				<li>
+					<img src="@/assets/img/index/tmall1.png">
+					<p><strong>会员星礼包</strong></p>
+					<p>星享卡新升级</p>
+					<p>更多心意好礼</p>
+					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
 				</li>
 			</ul>
 		</div>
@@ -72,7 +90,7 @@ export default {
 				alert('等待完善')
 			})
 
-			$('#promotion > a > img').mouseenter(function() {
+			$('#promotion > a > img, #tmall > ul > li').mouseenter(function() {
 				$(this).css({
 					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
@@ -80,7 +98,7 @@ export default {
 			}).mouseleave(function() {
 				$(this).css({
 					'transform':'translateY(0px)',
-					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0)'
+					'box-shadow': '0 2px 3px 1px rgba(0, 0, 0, 0.12)'
 					})
 			})
 		})
@@ -125,11 +143,14 @@ export default {
 	}
 /* ************************ */
 	#promotion {
-		background: rgb(247,247,247)
+		width: 99.6%;
+		background: rgb(247,247,247);
+		float:right;
 	}
 	#promotion > a > img {
 		width: 30%;
 		border-radius: 15px;
+		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
 		margin: 20px 0px 20px 25px;
 		transition: all .3s;
 	}
@@ -176,10 +197,11 @@ export default {
 		font-weight: 500;
 	}
 	#tmall {
-		width: 100%;
+		width: 99.6%;
 		background: rgb(247,247,247);
 		/* border:1px solid red; */
 		height: 400px;
+		float: right;
 	}
 	#tmall > .tmall-top {
 		width: 100%;
@@ -188,31 +210,38 @@ export default {
 		text-align: center;
 	}
 	#tmall > ul {
-		width: 80%;
+		width: 70%;
 		margin: 0 auto;
 		list-style: none;
-		border: 1px solid red;
 	}
 	#tmall > ul > li {
 		width: 20%;
-		height: 100%;
 		background: white;
 		text-align: center;
+		cursor: pointer;
+		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
+		border-radius: 7px;
+		margin: 0px 15px;
+		transition: all .3s;
+		float: left;
 	}
 	#tmall > ul > li > img {
-		width: 60%;
+		width: 65%;
+		transform: translate(-2.5px,-30px);
 	}
 	#tmall > ul > li > p {
-		font-size: 14px;	
+		font-size: 14px;
+		transform: translateY(-25px);
 		margin: 6px 0px;
 	}
 	#tmall > ul > li > p:first-of-type {
 		font-size: 16px;
 		color: black;
+		margin: 0px 0px 15px 0px;
 	}
 	#tmall > ul > li > p:last-of-type {
 		font-size: 12px;
-		padding:20px 0px;
+		padding:20px 0px 0px 0px;
 	}
 	#tmall > ul > li > p > a:hover {
 		opacity: 0.7;
