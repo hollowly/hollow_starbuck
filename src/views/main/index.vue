@@ -38,32 +38,11 @@
 				</p>
 			</div>
 			<ul>
-				<li>
-					<img src="@/assets/img/index/tmall1.png">
-					<p><strong>会员星礼包</strong></p>
-					<p>星享卡新升级</p>
-					<p>更多心意好礼</p>
-					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
-				</li>
-				<li>
-					<img src="@/assets/img/index/tmall1.png">
-					<p><strong>会员星礼包</strong></p>
-					<p>星享卡新升级</p>
-					<p>更多心意好礼</p>
-					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
-				</li>
-				<li>
-					<img src="@/assets/img/index/tmall1.png">
-					<p><strong>会员星礼包</strong></p>
-					<p>星享卡新升级</p>
-					<p>更多心意好礼</p>
-					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
-				</li>
-				<li>
-					<img src="@/assets/img/index/tmall1.png">
-					<p><strong>会员星礼包</strong></p>
-					<p>星享卡新升级</p>
-					<p>更多心意好礼</p>
+				<li v-for='item in tmallD'>
+					<img :src="item.imgUrl">
+					<p><strong>{{item.title}}</strong></p>
+					<p>{{item.p1}}</p>
+					<p>{{item.p2}}</p>
 					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
 				</li>
 			</ul>
@@ -80,6 +59,12 @@ export default {
 				{imgUrl:require('@/assets/img/index/program1.jpg'),text:'1'},
 				{imgUrl:require('@/assets/img/index/program2.jpg'),text:'1'},
 				{imgUrl:require('@/assets/img/index/program3.jpg'),text:'1'}
+			],
+			tmallD:[
+				{title:'会员星礼包',p1:'星享卡新升级',p2:'更多心意好礼',imgUrl:require('@/assets/img/index/tmall1.png')},
+				{title:'星礼卡',p1:'用一份心礼',p2:'让心意相随',imgUrl:require('@/assets/img/index/tmall2.png')},
+				{title:'电子产品券',p1:'心意',p2:'从这一杯开始',imgUrl:require('@/assets/img/index/tmall3.png')},
+				{title:'咖啡生活',p1:'星巴克',p2:'用心制作',imgUrl:require('@/assets/img/index/tmall4.png')},
 			]
 		}
 	},
