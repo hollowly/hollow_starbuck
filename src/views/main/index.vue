@@ -184,7 +184,6 @@ export default {
 	#tmall {
 		width: 99.6%;
 		background: rgb(247,247,247);
-		/* border:1px solid red; */
 		height: 420px;
 		float: right;
 	}
@@ -195,12 +194,12 @@ export default {
 		text-align: center;
 	}
 	#tmall > ul {
-		width: 70%;
+		width: 75%;
 		margin: 0 auto;
 		list-style: none;
 	}
 	#tmall > ul > li {
-		width: 20%;
+		width: 21.2%;
 		background: white;
 		text-align: center;
 		cursor: pointer;
@@ -212,7 +211,7 @@ export default {
 	}
 	#tmall > ul > li > img {
 		width: 65%;
-		height: 75px;
+		height: 80px;
 		transform: translate(-2.5px,-30px);
 	}
 	#tmall > ul > li > p {
