@@ -3,11 +3,10 @@
 	<div id='profile'>
 		<h2>菜单</h2>
 		<ul>
-			<li><a href="" class="active">季度精选</a></li>
-			<li><a href="">饮料</a></li>
-			<li><a href="">美食</a></li>
-			<li><a href="">咖啡产品</a></li>
-			<li><a href="">商品</a></li>
+			<li><a href="/menu" class="active">季度精选</a></li>
+			<li v-for='item in menu'>
+				<a :href="item.url">{{item.text}}</a>
+			</li>
 		</ul>
 	</div>
 </template>
@@ -16,7 +15,13 @@
 export default {
 	data () {
 		return {
-
+			menu:[
+				// {text:'季度精选',url:'/menu'},
+				{text:'饮料',url:'/menu/beverages/'},
+				{text:'美食',url:'/menu/food/'},
+				{text:'咖啡产品',url:'/menu/coffee/'},
+				{text:'商店',url:'/menu/merchandise/'},
+			]
 		}
 	},
 

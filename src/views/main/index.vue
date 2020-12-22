@@ -8,14 +8,14 @@
 		</ul>
 		
 		<div id='promotion'>
-			<a href=""><img src="@/assets/img/index/tmall1.jpg"></a>
-			<a href=""><img src="@/assets/img/index/tmall2.jpg"></a>
-			<a href=""><img src="@/assets/img/index/tmall3.jpg"></a>
-		</div>
+			<a href="" v-for='item in promotionUrl'>
+				<img :src="item.imgUrl">
+			</a>
+		</div>	
 
 		<div id='program'>
 			<div class="program-left">
-				<h2 style="font-weight:500">星享俱乐部</h2>
+				<h2>星享俱乐部</h2>
 				<p>
 					开启您的星享之旅，星星越多、会员等级越高、
 				</p>
@@ -31,7 +31,15 @@
 		</div>
 
 		<div id='tmall'>
-
+			<div class="tmall-top">
+				<h2 >星巴克精选</h2><br>
+				<p>
+					在星巴克天猫旗舰店发现更多咖啡心意
+				</p>
+			</div>
+			<ul>
+				<li></li>
+			</ul>
 		</div>
 	</main>
 </template>
@@ -39,10 +47,20 @@
 <script>
 import $ from 'jquery'
 export default {
+	data() {
+		return {
+			promotionUrl:[
+				{imgUrl:require('@/assets/img/index/program1.jpg'),text:'1'},
+				{imgUrl:require('@/assets/img/index/program2.jpg'),text:'1'},
+				{imgUrl:require('@/assets/img/index/program3.jpg'),text:'1'}
+			]
+		}
+	},
+
 	mounted() {
 		$(function() {
 			$('.next').click(() => {
-				alert('等待修复')
+				alert('等待完善')
 			})
 
 			$('#promotion > a > img').mouseenter(function() {
@@ -64,7 +82,6 @@ export default {
 </script>
 
 <style scoped>
-/********************* main ************************/
 	main {
 		width: 70%;
 		height: 200%;
@@ -91,13 +108,13 @@ export default {
 		font-weight: 100;
 		color: white;
 		position: relative;
-		top: 40%;
+		top: 20%;
 		left: 91%;
 		z-index: 10;
 		cursor: pointer;
 		user-select: none;
 	}
-
+/* ************************ */
 	#promotion {
 		background: rgb(247,247,247)
 	}
@@ -107,7 +124,7 @@ export default {
 		margin: 20px 0px 20px 25px;
 		transition: all .3s;
 	}
-
+/* ************************ */
 	#program {
 		width: 73%;
 		height: 210px;
@@ -115,7 +132,7 @@ export default {
 		margin: 0 auto;
 		padding: 40px 0px;
 		line-height: 300%;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 	}
 	#program > :first-child {
 		width: 50%;
@@ -123,7 +140,7 @@ export default {
 		float: left;
 		/* border: 1px solid yellow; */
 	}
-	#program > :first-child > p {
+	#program > :first-child > p, #tmall p {
 		color: rgba(0, 0, 0, 0.56);
 	}
 	#program .aInput {
@@ -145,5 +162,20 @@ export default {
 		height: 100%;
 		padding-top: 65px;
 		/* border: 1px solid blue; */
+	}
+	h2 {
+		font-weight: 500;
+	}
+	#tmall {
+		width: 100%;
+		background: rgb(247,247,247);
+		/* border:1px solid red; */
+		height: 400px;
+	}
+	#tmall > .tmall-top {
+		width: 100%;
+		height: 100px;
+		padding: 30px 0px;
+		text-align: center;
 	}
 </style>

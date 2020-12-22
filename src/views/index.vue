@@ -20,19 +20,13 @@
 				<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 				<img src="@/assets/svg/close.svg" class="sidebar-close">
 				<ul>
-					<li><a href="/stores">门店</a></li>
-					<li><a href="/club">星享俱乐部</a></li>
-					<li><a href="/menu">菜单</a></li>
+					<li v-for='item in container1'>
+						<a :href="item.url">{{item.text}}</a>
+					</li>
 					<li><hr></li>
-					<li><a href="">星巴克移动应用</a></li>
-					<li><a href="">星礼卡</a></li>
-					<li><a href="">星巴克臻选™</a></li>
-					<li><a href="">专星送™</a></li>
-					<li><a href="">啡快™ - 在线点 到店取</a></li>
-					<li><a href="">咖啡星讲堂</a></li>
-					<li><a href="">上海烘焙工坊</a></li>
-					<li><a href="">关于星巴克</a></li>
-					<li><a href="">帮助中心</a></li>
+					<li v-for='item in container2'>
+						<a :href="item.url">{{item.text}}</a>
+					</li>
 					<li><hr></li>
 					<a href='/login' class="aInput login-in">
 						<img src="@/assets/svg/sign-in.svg">登录
@@ -57,7 +51,22 @@ import cmain from '@/views/main/index'
 export default {
 	data () {
 		return {
-
+			container1:[
+				{text:'门店',url:'/stores'},
+				{text:'星享俱乐部',url:'/club'},
+				{text:'菜单',url:'/menu'},
+			],
+			container2:[		
+				{text:'星巴克移动应用',url:'/apps'},
+				{text:'星礼卡',url:'/gift-card'},
+				{text:'星巴克臻选™',url:'/reserve'},
+				{text:'啡快™ - 在线点 到店取',url:'/now'},
+				{text:'专星送™',url:'/delivers'},
+				{text:'咖啡星讲堂',url:'/coffee-blog'},
+				{text:'上海烘焙工坊',url:'/baking'},
+				{text:'关于星巴克',url:'/about'},
+				{text:'帮助中心',url:'/help'}
+			]
 		}
 	},
 	components: {
