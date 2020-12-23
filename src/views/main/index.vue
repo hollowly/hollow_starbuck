@@ -47,6 +47,19 @@
 				</li>
 			</ul>
 		</div>
+		<div id='tmall' style="background:rgb(253,253,253)">
+			<div class="tmall-top">
+				<h2 >1912 派克街 | 咖啡星讲堂</h2><br>
+				<p>
+					了解更多星巴克咖啡文化
+				</p>
+			</div>
+			<ul>
+
+			</ul>
+		</div>
+
+		
 	</main>
 </template>
 
@@ -54,7 +67,7 @@
 import $ from 'jquery'
 export default {
 	data() {
-		return {
+		return {	
 			promotionUrl:[
 				{imgUrl:require('@/assets/img/index/program1.jpg'),text:'1'},
 				{imgUrl:require('@/assets/img/index/program2.jpg'),text:'1'},
@@ -96,7 +109,7 @@ export default {
 <style scoped>
 	main {
 		width: 70%;
-		height: 900%;
+		height: 100%;
 		float: right;
 		transform: translateY(-105px);
 	}
@@ -184,14 +197,15 @@ export default {
 	#tmall {
 		width: 99.6%;
 		background: rgb(247,247,247);
-		height: 420px;
+		height: 430px;
 		float: right;
 	}
 	#tmall > .tmall-top {
 		width: 100%;
 		height: 100px;
-		padding: 30px 0px;
+		padding: 40px 0px 20px 0px;
 		text-align: center;
+		/* border:1px solid red; */
 	}
 	#tmall > ul {
 		width: 75%;
