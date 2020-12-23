@@ -1,8 +1,8 @@
 <!--  -->
 <template>
 	<main>
-			<span class='next'>＞</span>
 		<ul>
+			<span class='next'>＞</span>
 			<li><a href=""><img src="@/assets/img/index/top1.jpg"></a></li>
 			<li><a href=""><img src="@/assets/img/index/top2.jpg"></a></li>
 		</ul>
@@ -14,7 +14,7 @@
 		</div>	
 
 		<div id='program'>
-			<div class="program-left">
+			<div>
 				<h2>星享俱乐部</h2>
 				<p>
 					开启您的星享之旅，星星越多、会员等级越高、
@@ -120,9 +120,9 @@ export default {
 		font-weight: 100;
 		color: white;
 		position: relative;
-		top: 20%;
-		left: 91%;
-		z-index: 10;
+		bottom: -285px;
+		right: -46%;
+		z-index: 100;
 		cursor: pointer;
 		user-select: none;
 	}
@@ -142,18 +142,17 @@ export default {
 /* ************************ */
 	#program {
 		width: 73%;
-		height: 210px;
+		height: 175px;
 		background: white;
 		margin: 0 auto;
-		padding: 40px 0px;
 		line-height: 300%;
-		/* border: 1px solid red; */
+		clear: both;
 	}
 	#program > :first-child {
 		width: 50%;
 		height: 100%;
 		float: left;
-		/* border: 1px solid yellow; */
+		margin-top: 35px;
 	}
 	#program > :first-child > p, #tmall p {
 		color: rgba(0, 0, 0, 0.56);
@@ -175,12 +174,13 @@ export default {
 		float: right;
 		width: 35%;
 		height: 100%;
-		padding-top: 65px;
-		/* border: 1px solid blue; */
+		margin-top: 95px;
 	}
 	h2 {
 		font-weight: 500;
 	}
+
+
 	#tmall {
 		width: 99.6%;
 		background: rgb(247,247,247);
