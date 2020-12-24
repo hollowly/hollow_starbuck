@@ -11,7 +11,6 @@ const login = () => import('@/views/nav/login')				//登录
 const club = () => import('@/views/nav/club')					//俱乐部
 
 
-
 const mainindex = () => import('@/views/main/index')	//right默认渲染
 
 const rstores = () => import('@/views/main/stores.vue')
