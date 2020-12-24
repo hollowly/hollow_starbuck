@@ -21,37 +21,45 @@ Vue.use(VueRouter)
 const routes = [
   {
 		path: '/',
-		component:index,
+		component: index,
 		children:[
 			{
 				path:'/',
 				components:{
-					default: navindex,
-					main:mainindex
+					nav: navindex,
+					main: mainindex
 				}
 			},
 			{
 				path:'/stores',
 				components: {
-					default:stores,
-					main:rstores
+					nav: stores,
+					main: rstores
 				}
 			},
 			{
 				path:'/menu',
-				component:menu
+				components: {
+					nav: menu
+				}
 			},
 			{
 				path:'/login',
-				component:login
+				components: {
+					nav: login
+				}
 			},
 			{
 				path:'/register',
-				component:register
+				components: {
+					nav: register
+				}
 			},
-			{
+			{ 
 				path:'/club',
-				component:club
+				components: {
+					nav: club
+				}
 			}
 		]
 	},
