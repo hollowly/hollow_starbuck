@@ -39,7 +39,9 @@
 			</keep-alive>
 		</nav>
 
-		<router-view class="view" name='main' />
+		<keep-alive>
+			<router-view name='main' />
+		</keep-alive>
 
 	</div>
 </template>
