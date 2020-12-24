@@ -12,10 +12,6 @@
 				<a class='sidebar-more'>☰</a>
 			</div>
 
-		<keep-alive>
-			<router-view class="view" />
-		</keep-alive>
-		
 			<div id='nav-container'>
 				<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 				<img src="@/assets/svg/close.svg" class="sidebar-close">
@@ -37,16 +33,18 @@
 					</fotter>
 				</ul>
 			</div>
+
+			<keep-alive>
+				<router-view class="view" />
+			</keep-alive>
 		</nav>
 
-	<cmain></cmain>
 
 	</div>
 </template>
 
 <script>
 import $ from 'jquery'
-import cmain from '@/views/main/index'
 
 export default {
 	data () {
@@ -68,9 +66,6 @@ export default {
 				{text:'帮助中心',url:'/help'}
 			]
 		}
-	},
-	components: {
-		cmain,
 	},
 	mounted() {
 		$(function() {

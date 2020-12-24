@@ -6,15 +6,20 @@
 		<img src="@/assets/svg/sign-in.svg">登陆</router-link>
 		<router-link to='/register'>注册</router-link>
 	</div>
+
 </template>
 
 <script>
+import cmain from '@/views/main/index'
 export default {
 	data () {
 		return {
 
 		}
-	}
+	},
+	components: {
+		cmain,
+	},
 }
 
 </script>
