@@ -57,7 +57,8 @@
 			</div>
 			
 			<div class="tmall-screen">
-				<span class="screen-right"><img src="@/assets/svg/screen-right.svg'"></span>
+				<span class="screen-left"><img src="@/assets/svg/screen-left.svg"></span>
+				<span class="screen-right"><img src="@/assets/svg/screen-right.svg"></span>
 				<a href="" v-for='item in tmallCulture'>
 					<div :style="{backgroundImage: 'url(' + item.imgUrl + ')'}">
 						<span>{{item.title}}</span>
@@ -66,6 +67,12 @@
 				</a>
 			</div>
 
+			<div id='fotter'>
+				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000253">
+					<img src="@/assets/img/icpicon.png" width="12px">
+				</a>
+				沪公网安备 31010402000253号 | 沪ICP备17003747号
+			</div>
 		</div>
 
 		
@@ -103,7 +110,7 @@ export default {
 				alert('等待完善')
 			})
 
-			$('#promotion > a > img, #tmall > ul > li').mouseenter(function() {
+			$('#promotion > a > img, #tmall > ul > li, #tmall > .tmall-screen > a ').mouseenter(function() {
 				$(this).css({
 					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
@@ -112,8 +119,17 @@ export default {
 				$(this).css({
 					'transform':'translateY(0px)',
 					'box-shadow': '0 2px 3px 1px rgba(0, 0, 0, 0.12)'
-					})
+				})
 			})
+
+			$('.screen-right').click(function() {
+				alert('等待完善')
+			})
+
+			$('.screen-left').click(function() {
+				alert('等待完善哦')
+			})
+
 		})
 	}
 
@@ -215,16 +231,23 @@ export default {
 		height: 430px;
 		float: right;
 	}
-	.screen-right {
+	.screen-right, .screen-left {
 		display: inline-block;
 		width: 30px;
 		height: 30px;
 		border-radius: 30px;
-		border: 1px solid red;	
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+		background: white;
 		position: relative;
-		left: 1000px;
+		left: 960px;
 		top: -80px;
-		
+		z-index: 10;
+	}
+	.screen-left {
+		left: 10px;
+		top: -80px;
 	}
 	#tmall > .tmall-top {
 		width: 100%;
@@ -282,6 +305,7 @@ export default {
 		height: 100%;
 		margin: 0px 10px 0px 10px;
 		display: inline-block;
+		transition: all .3s;
 	}
 	#tmall > .tmall-screen > a > p {
 		color: black;
@@ -301,5 +325,14 @@ export default {
 		padding: 8px 12px;
     background: #C2A661;
     color: #FFF;
+	}
+
+	#fotter {
+		height: 60px;
+		line-height: 80px;
+		text-align: center;
+		color: #666;
+		font-size: 14px;
+		font-weight: 300;
 	}
 </style>
