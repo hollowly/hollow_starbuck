@@ -142,7 +142,7 @@ export default {
 		width: 70%;
 		height: 100%;
 		float: right;
-		transform: translateY(-105px);
+		transform: translateY(-106px);
 	}
 	main > ul {
 		width: 200%;
@@ -223,8 +223,7 @@ export default {
 	h2 {
 		font-weight: 500;
 	}
-
-
+/* ************************ */
 	#tmall {
 		width: 99.6%;
 		background: rgb(247,247,247);
@@ -294,7 +293,7 @@ export default {
 	#tmall > ul > li > p > a:hover {
 		opacity: 0.7;
 	}
-
+/* ************************ */
 	#tmall > .tmall-screen {
 		width: 200%;
 		height: 50%;
@@ -326,7 +325,7 @@ export default {
     background: #C2A661;
     color: #FFF;
 	}
-
+/* ************************ */
 	#fotter {
 		height: 60px;
 		line-height: 80px;
