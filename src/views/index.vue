@@ -35,10 +35,11 @@
 			</div>
 
 			<keep-alive>
-				<router-view class="view" />
+				<router-view class="view"/>
 			</keep-alive>
 		</nav>
 
+		<router-view class="view" name='main'/>
 
 	</div>
 </template>

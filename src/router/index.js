@@ -4,27 +4,38 @@ import VueRouter from 'vue-router'
 
 const index = () => import('@/views/index')						//主要渲染
 const navindex = () => import('@/views/nav/index')		//left默认渲染
-const mainindex = () => import('@/views/main/render')	//right默认渲染
 const stores = () => import('@/views/nav/stores')			//门店
 const menu = () => import('@/views/nav/menu')					//菜单
 const register = () => import('@/views/nav/register')	//注册
 const login = () => import('@/views/nav/login')				//登录
 const club = () => import('@/views/nav/club')					//俱乐部
 
+
+
+const mainindex = () => import('@/views/main/index')	//right默认渲染
+
+const rstores = () => import('@/views/main/stores.vue')
+
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+		path: '/',
 		component:index,
 		children:[
 			{
 				path:'/',
-				component:navindex
+				components:{
+					default: navindex,
+					main:mainindex
+				}
 			},
 			{
 				path:'/stores',
-				component:stores
+				components: {
+					default:stores,
+					main:rstores
+				}
 			},
 			{
 				path:'/menu',
