@@ -103,6 +103,7 @@ export default {
 <style scoped>
 	a {
 		display: inline-block;
+		color: black;
 	}
 	#nav {
 		/* position: absolute; */
