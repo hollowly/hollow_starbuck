@@ -39,6 +39,9 @@ export default {
 		list-style: none;
 		margin: 20px 20px 20px 0px;
 	}
+	ul > li > a:hover {
+		color: black;
+	}
 	ul > li > a {
 		color: #777;
 	}

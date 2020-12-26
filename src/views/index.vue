@@ -2,7 +2,7 @@
 <template>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 sticky-top">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 						<div class="navbar-collapse">
@@ -113,9 +113,10 @@ export default {
 		padding: 0;
 	}
 	.container-fluid > .row > div:first-child {
+		display: block;
 		height: 100vh;
 		box-shadow: 1px 1px 2px #ccc;
-		border: 1px solid yellow;
+		box-sizing: border-box;
 	}
 	.navbar > a {
 		margin: 15px 0px 0px 25px;
