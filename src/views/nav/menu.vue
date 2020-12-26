@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div id='profile'>
-		<h2>菜单</h2>
+		<h3 style="font-weight:700">菜单</h3>
 		<ul>
 			<li><a href="/menu" class="active">季度精选</a></li>
 			<li v-for='item in menu'>
