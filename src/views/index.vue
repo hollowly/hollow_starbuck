@@ -31,17 +31,15 @@
 								</footer>
 							</ul>
 						</div>
-
-
 						<keep-alive>
 							<router-view class="view" name='nav' />
 						</keep-alive>
 				</div>
 
 				<div class="col-sm col-md col-lg col-xl">
-					<keep-alive>
+					<!-- <keep-alive>
 						<router-view name='main' />
-					</keep-alive>
+					</keep-alive> -->
 				</div>
 			</div>
 		</div>
@@ -93,7 +91,19 @@ export default {
 	@media screen and (max-width: 992px) {
 		.container-fluid > .row > div:first-child {
 			width: 100%;
-			border: 1px solid red;
+			height: auto !important;
+			box-shadow: none!important;
+
+			/* border: 1px solid red; */
+		}
+		nav {
+			width: 80%;
+		}
+		#nav-container {
+			width: 100vh;
+			height: 100vh;
+			background: white;
+
 		}
 	}
 	.container-fluid {
@@ -106,7 +116,6 @@ export default {
 	}
 	nav {
 		float: left;
-		width:290px;
 		border: 1px solid blue;
 	}
 	nav > a {
@@ -118,6 +127,7 @@ export default {
 	}
 	
 	#nav-container {
+		width: 100%;
 		box-sizing: border-box;
 		padding: 20px 0px 0px 20px;
 		display: none;
@@ -126,7 +136,9 @@ export default {
 		margin: 15px 0px 0px 25px;
 	}
 	.sidebar-more {
+		line-height: 70px;
 		font-size: 25px;
+		margin-right: 20px;
 		cursor: pointer;
 		user-select: none;
 	}
