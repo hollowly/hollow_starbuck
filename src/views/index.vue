@@ -2,16 +2,14 @@
 <template>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 sticky-top">
+				<div class="col-sm-12 col-md-12 col-lg-5 col-xl-4 sticky-top">
 					<nav class="nav">
 						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 						<router-link to='/stores' class="nav-link">门店</router-link>
 						<router-link to='/login' class="nav-link">我的账户</router-link>
 						<router-link to='/menu' class="nav-link">菜单</router-link>
-						<a class='sidebar-more'>☰</a>
 					</nav>
-
-					<nav>
+					<div style="float:right"><a class='sidebar-more'>☰</a></div>
 						<div id='nav-container'>
 							<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 							<img src="@/assets/svg/close.svg" class="sidebar-close">
@@ -33,17 +31,12 @@
 								</footer>
 							</ul>
 						</div>
+
+
 						<keep-alive>
 							<router-view class="view" name='nav' />
 						</keep-alive>
-					</nav>
 				</div>
-<!-- <nav class="nav">
-  <a class="nav-link active" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-</nav> -->
 
 				<div class="col-sm col-md col-lg col-xl">
 					<keep-alive>
@@ -79,14 +72,16 @@ export default {
 	mounted() {
 		$(function() {
 			$('.sidebar-more').click(function() {
-				$('.navbar').hide(100)
+				$(this).hide()
+				$('.nav').hide(100)
 				$('.view').hide(100)
 				$('#nav-container').show(100)
 			})
 
 			$('.sidebar-close').click(function() {
+				$('.sidebar-more').show()
 				$('#nav-container').hide(100)
-				$('.navbar').show(100)
+				$('.nav').show(100)
 				$('.view').show(100)
 			})
 		})
@@ -98,13 +93,9 @@ export default {
 	@media screen and (max-width: 992px) {
 		.container-fluid > .row > div:first-child {
 			width: 100%;
-			height: auto !important;
 			border: 1px solid red;
 		}
 	}
-	/* .row > div > nav > div > ul {
-		border: 1px solid red;
-	} */
 	.container-fluid {
 		margin: 0;
 		padding: 0;
@@ -112,11 +103,15 @@ export default {
 	.container-fluid > .row > div:first-child {
 		height: 100vh;
 		box-shadow: 1px 1px 2px #ccc;
-		box-sizing: border-box;
+	}
+	nav {
+		float: left;
+		width:290px;
+		border: 1px solid blue;
 	}
 	nav > a {
 		font-weight: 600;
-		margin: 15px 0px 0px 25px;
+		margin: 15px 0px 0px 5px;
 	}
 	a {
 		color: black;
