@@ -4,9 +4,9 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
 					<nav class="navbar navbar-expand-lg navbar-light">
-						<a href="/" style="float:left"><img src="@/assets/svg/logo.svg" width="40"></a>
+						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 						<div class="navbar-collapse">
-							<ul class="navbar-nav mr-auto">
+							<ul class="navbar-nav">
 								<li class="nav-item active">
 									<router-link to='/stores' class="nav-link">门店</router-link>
 								</li>
@@ -16,11 +16,9 @@
 								<li class="nav-item active">
 									<router-link to='/menu' class="nav-link">菜单</router-link>
 								</li>
-								<li class="nav-item">
-								<a class='sidebar-more'>☰</a>
-								</li>
 							</ul>
 						</div>
+						<a class='sidebar-more'>☰</a>
 					</nav>
 
 					<nav>
@@ -45,10 +43,10 @@
 								</footer>
 							</ul>
 						</div>
-					<keep-alive>
-						<router-view class="view" name='nav' />
-					</keep-alive>
-						</nav>
+						<keep-alive>
+							<router-view class="view" name='nav' />
+						</keep-alive>
+					</nav>
 				</div>
 
 
@@ -88,15 +86,15 @@ export default {
 	mounted() {
 		$(function() {
 			$('.sidebar-more').click(function() {
-				$('#sidebar-header').hide(100)
-				$('.view').hide()
+				$('.navbar').hide(100)
+				$('.view').hide(100)
 				$('#nav-container').show(100)
 			})
 
 			$('.sidebar-close').click(function() {
 				$('#nav-container').hide(100)
-				$('.view').show()
-				$('#sidebar-header').show(100)
+				$('.navbar').show(100)
+				$('.view').show(100)
 			})
 		})
 
@@ -113,40 +111,39 @@ export default {
 	.container-fluid {
 		margin: 0;
 		padding: 0;
-		/* border: 1px solid red; */
 	}
-	.container-fluid > .row {
-		/* border: 1px solid blue; */
+	.container-fluid > .row > div:first-child {
+		height: 100vh;
+		box-shadow: 1px 1px 2px #ccc;
+		border: 1px solid yellow;
 	}
-	.container-fluid > .row > div {
-		border: 2px solid yellow;
-	}
-	.navbar {
-		border: 1px solid green;
+	.navbar > a {
+		margin: 15px 0px 0px 25px;
 	}
 	.navbar > .navbar-collapse {
-		border: 1px solid skyblue;
+		color: black;
+		font-size:16px;
+		font-weight: 700;
 	}
-
-	#nav-container {
-		display: none;
+	.navbar > .navbar-collapse > ul{
+		margin: 10px 0px 0px 20px;
 	}
 	a {
-		display: inline-block;
 		color: black;
 	}
-	.sidebar-more {
-		float: right;
-		margin: 2px 20px;
-		font-size: 25px;
-		cursor: pointer;
-		user-select: none;
-	}
-
+	
 	#nav-container {
 		box-sizing: border-box;
 		padding: 20px 0px 0px 20px;
 		display: none;
+	}
+	#nav-container > a {
+		margin: 15px 0px 0px 25px;
+	}
+	.sidebar-more {
+		font-size: 25px;
+		cursor: pointer;
+		user-select: none;
 	}
 	.sidebar-close {
 		float: right;
@@ -155,7 +152,7 @@ export default {
 	}
 	#nav-container ul {
 		width: 80%;
-		padding: 45px 0px 0px 45px;
+		padding: 35px 0px 0px 60px;
 	}
 	hr {
 		background: rgba(0, 0, 0, 0.12);
@@ -163,7 +160,7 @@ export default {
     height: 1px;
 	}
 	#nav-container ul > li {
-		padding-bottom: 15px;
+		padding-bottom: 10px;
 		list-style: none;
 		font-weight: 700;
 		font-size: 18px;
@@ -190,7 +187,7 @@ export default {
 	}
 	footer {
 		display: block;
-		margin: 25px 0px 0px 0px;
+		margin: 20px 0px 0px 0px;
 		color: rgba(0,0,0,0.4);
 		font-size: 12px;
 	}
