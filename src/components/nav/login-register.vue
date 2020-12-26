@@ -14,7 +14,7 @@
 	#profile {
 		position: absolute;
 		top: 280px;
-		left: 40px;
+		left: 80px;
 	}
 	#profile > p {
 		font-size: 28px;

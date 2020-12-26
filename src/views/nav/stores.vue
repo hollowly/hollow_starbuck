@@ -14,9 +14,9 @@
 </template>
 <style scoped>
 	#profile {
-		position: absolute;
-		top: 110px;
-		left: 30px;
+		/* position: absolute; */
+		/* top: 110px; */
+		/* left: 30px; */
     font-size: 15px;
     cursor: pointer;
 		color: #333;

@@ -3,21 +3,11 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 sticky-top">
-					<nav class="navbar navbar-expand-lg navbar-light">
+					<nav class="nav">
 						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
-						<div class="navbar-collapse">
-							<ul class="navbar-nav">
-								<li class="nav-item active">
-									<router-link to='/stores' class="nav-link">门店</router-link>
-								</li>
-								<li class="nav-item active">
-									<router-link to='/login' class="nav-link">我的账户</router-link>
-								</li>
-								<li class="nav-item active">
-									<router-link to='/menu' class="nav-link">菜单</router-link>
-								</li>
-							</ul>
-						</div>
+						<router-link to='/stores' class="nav-link">门店</router-link>
+						<router-link to='/login' class="nav-link">我的账户</router-link>
+						<router-link to='/menu' class="nav-link">菜单</router-link>
 						<a class='sidebar-more'>☰</a>
 					</nav>
 
@@ -48,7 +38,12 @@
 						</keep-alive>
 					</nav>
 				</div>
-
+<!-- <nav class="nav">
+  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+</nav> -->
 
 				<div class="col-sm col-md col-lg col-xl">
 					<keep-alive>
@@ -100,26 +95,28 @@ export default {
 </script>
 
 <style scoped>
+	@media screen and (max-width: 992px) {
+		.container-fluid > .row > div:first-child {
+			width: 100%;
+			height: auto !important;
+			border: 1px solid red;
+		}
+	}
+	/* .row > div > nav > div > ul {
+		border: 1px solid red;
+	} */
 	.container-fluid {
 		margin: 0;
 		padding: 0;
 	}
 	.container-fluid > .row > div:first-child {
-		display: block;
 		height: 100vh;
 		box-shadow: 1px 1px 2px #ccc;
 		box-sizing: border-box;
 	}
-	.navbar > a {
+	nav > a {
+		font-weight: 600;
 		margin: 15px 0px 0px 25px;
-	}
-	.navbar > .navbar-collapse {
-		color: black;
-		font-size:16px;
-		font-weight: 700;
-	}
-	.navbar > .navbar-collapse > ul{
-		margin: 10px 0px 0px 20px;
 	}
 	a {
 		color: black;
