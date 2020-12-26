@@ -80,7 +80,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 export default {
 	data() {
 		return {	
@@ -142,7 +141,6 @@ export default {
 		width: 70%;
 		height: 100%;
 		float: right;
-		transform: translateY(-106px);
 	}
 	main > ul {
 		width: 200%;
