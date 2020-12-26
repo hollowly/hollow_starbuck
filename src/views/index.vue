@@ -37,9 +37,9 @@
 				</div>
 
 				<div class="col-sm col-md col-lg col-xl">
-					<!-- <keep-alive>
+					<keep-alive>
 						<router-view name='main' />
-					</keep-alive> -->
+					</keep-alive>
 				</div>
 			</div>
 		</div>
@@ -88,24 +88,6 @@ export default {
 </script>
 
 <style scoped>
-	@media screen and (max-width: 992px) {
-		.container-fluid > .row > div:first-child {
-			width: 100%;
-			height: auto !important;
-			box-shadow: none!important;
-
-			/* border: 1px solid red; */
-		}
-		nav {
-			width: 80%;
-		}
-		#nav-container {
-			width: 100vh;
-			height: 100vh;
-			background: white;
-
-		}
-	}
 	.container-fluid {
 		margin: 0;
 		padding: 0;
@@ -116,7 +98,6 @@ export default {
 	}
 	nav {
 		float: left;
-		border: 1px solid blue;
 	}
 	nav > a {
 		font-weight: 600;
@@ -195,4 +176,16 @@ export default {
 		font-size: 14px;
 	}
 
+	@media screen and (max-width: 992px) {
+		.container-fluid > .row > div:first-child {
+			width: 100%;
+			height: auto;
+			box-shadow: none;
+		}
+		#nav-container {
+			width: 100vh;
+			height: 100vh;
+			background: white;
+		}
+	}
 </style>

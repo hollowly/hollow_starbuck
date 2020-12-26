@@ -41,4 +41,10 @@
 		vertical-align: middle;
 		margin-right: 5px;
 	}
+	@media screen and (max-width: 992px) {
+		#profile {
+			top: 75px;
+			left: 20px;
+		}
+	}
 </style>

@@ -33,7 +33,16 @@
 	ul > li > a:hover {
 		color: black;
 	}
-	
+	@media screen and (max-width: 992px) {
+		#profile {
+			top: 75px;
+			left: 20px;
+		}
+		ul > li  {
+			float: left;
+			margin: 5px 20px 20px 0px;
+		}
+	}
 
 
 	.active {

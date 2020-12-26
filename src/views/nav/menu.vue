@@ -48,4 +48,14 @@ export default {
 		border-bottom: 3px solid #00a862;
 		color: black;
 	}
+
+	@media screen and (max-width: 992px){
+		#profile {
+			top: 75px;
+			left: 20px;
+		}
+		ul > li {
+			float: left;
+		}
+	}
 </style>
