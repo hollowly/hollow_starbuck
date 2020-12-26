@@ -28,9 +28,9 @@
 						<img src="@/assets/svg/sign-in.svg">登录
 					</a>
 					<a href='/register' class="aInput">注册</a> <br>
-					<fotter class="fotter">
+					<footer>
 						<p>English | 隐私政策 | 使用条款</p>
-					</fotter>
+					</footer>
 				</ul>
 			</div>
 
@@ -179,7 +179,7 @@ export default {
 		vertical-align: middle;
 		margin-right: 5px;
 	}
-	.fotter {
+	footer {
 		display: block;
 		margin: 25px 0px 0px 0px;
 		color: rgba(0,0,0,0.4);

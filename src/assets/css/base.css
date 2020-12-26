@@ -9,6 +9,6 @@ html,body {
 }
 
 a,a:link,a:hover,a:active {
-	text-decoration: none;
+	text-decoration: none !important;
 	color: black;
 }

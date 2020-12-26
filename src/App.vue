@@ -7,6 +7,14 @@
   </div>
 </template>
 
+<script>
+export default {
+	mounted() {
+		console.log($);
+	}
+}
+</script>
+
 <style lang="scss">
 @import url('assets/css/base.css');
 
