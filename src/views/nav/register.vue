@@ -7,12 +7,8 @@
 
 <script>
 import register from '@/components/nav/login-register'
-export default {
-	data () {
-		return {
 
-		}
-	},
+export default {
 	components: {
 		register,
 	}

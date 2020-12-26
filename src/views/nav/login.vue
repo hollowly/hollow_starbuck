@@ -7,6 +7,7 @@
 
 <script>
 import login from '@/components/nav/login-register'
+
 export default {
 	data () {
 		return {

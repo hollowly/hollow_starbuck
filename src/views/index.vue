@@ -60,8 +60,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
-
 export default {
 	data () {
 		return {
@@ -97,14 +95,8 @@ export default {
 				$('.view').show(100)
 			})
 		})
-
-
-		
 	}
-	
-
 }
-
 </script>
 
 <style scoped>

@@ -6,12 +6,8 @@
 
 <script>
 import club from '@/components/nav/login-register'
-export default {
-	data () {
-		return {
 
-		}
-	},
+export default {
 	components: {
 		club,
 	}

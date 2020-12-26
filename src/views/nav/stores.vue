@@ -12,18 +12,6 @@
 		<img src='@/assets/svg/noStores.svg' class="loading">
 	</div>
 </template>
-<script>
-export default {
-	data () {
-		return {
-
-		}
-	}
-
-}
-
-</script>
-
 <style scoped>
 	#profile {
 		position: absolute;
