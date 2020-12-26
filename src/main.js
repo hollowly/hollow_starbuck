@@ -6,7 +6,7 @@ import router from './router'
 import $ from 'jquery'
 import 'bootstrap'
 // 引入bootstrap样式
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 // 全局注册 $
 Vue.prototype.$ = $

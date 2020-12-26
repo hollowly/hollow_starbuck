@@ -1,31 +1,13 @@
 <template>
-  <div id="app">
-		<keep-alive>
-    	<router-view />
-		</keep-alive>
-
-  </div>
+	<div id='app' class="container-fluid">
+	<keep-alive>
+		<router-view />
+	</keep-alive>
+	</div>
 </template>
 
-<script>
-export default {
-	mounted() {
-		console.log($);
-	}
-}
-</script>
 
-<style lang="scss">
+<style>
 @import url('assets/css/base.css');
 
-#app {
-	width: 1520px;
-	height: 100%;
-	overflow-x: hidden;
-}
-html {
-	width: 1520px;
-	height: 100%;
-	margin: 0 auto;
-}
 </style>

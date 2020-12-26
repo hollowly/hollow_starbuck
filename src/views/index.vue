@@ -1,49 +1,64 @@
 <!--  -->
 <template>
-	<div style="width: 1520px;height:100vh;">
-		<nav id='nav'>
-			<div id="sidebar-header">
-				<a href="/" style="float:left"><img src="@/assets/svg/logo.svg" width="40"></a>
-				<div class="title">
-					<router-link to='/stores'>门店</router-link>
-					<router-link to='/login'>我的账户</router-link>
-					<router-link to='/menu'>菜单</router-link>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a href="/" style="float:left"><img src="@/assets/svg/logo.svg" width="40"></a>
+						<div class="navbar-collapse">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<router-link to='/stores' class="nav-link">门店</router-link>
+								</li>
+								<li class="nav-item active">
+									<router-link to='/login' class="nav-link">我的账户</router-link>
+								</li>
+								<li class="nav-item active">
+									<router-link to='/menu' class="nav-link">菜单</router-link>
+								</li>
+								<li class="nav-item">
+								<a class='sidebar-more'>☰</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<nav>
+						<div id='nav-container'>
+							<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
+							<img src="@/assets/svg/close.svg" class="sidebar-close">
+							<ul>
+								<li v-for='item in container1'>
+									<a :href="item.url">{{item.text}}</a>
+								</li>
+								<li><hr></li>
+								<li v-for='item in container2'>
+									<a :href="item.url">{{item.text}}</a>
+								</li>
+								<li><hr></li>
+								<a href='/login' class="aInput login-in">
+									<img src="@/assets/svg/sign-in.svg">登录
+								</a>
+								<a href='/register' class="aInput">注册</a> <br>
+								<footer>
+									<p>English | 隐私政策 | 使用条款</p>
+								</footer>
+							</ul>
+						</div>
+					<keep-alive>
+						<router-view class="view" name='nav' />
+					</keep-alive>
+						</nav>
 				</div>
-				<a class='sidebar-more'>☰</a>
+
+
+				<div class="col-sm col-md col-lg col-xl">
+					<keep-alive>
+						<router-view name='main' />
+					</keep-alive>
+				</div>
 			</div>
-
-			<div id='nav-container'>
-				<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
-				<img src="@/assets/svg/close.svg" class="sidebar-close">
-				<ul>
-					<li v-for='item in container1'>
-						<a :href="item.url">{{item.text}}</a>
-					</li>
-					<li><hr></li>
-					<li v-for='item in container2'>
-						<a :href="item.url">{{item.text}}</a>
-					</li>
-					<li><hr></li>
-					<a href='/login' class="aInput login-in">
-						<img src="@/assets/svg/sign-in.svg">登录
-					</a>
-					<a href='/register' class="aInput">注册</a> <br>
-					<footer>
-						<p>English | 隐私政策 | 使用条款</p>
-					</footer>
-				</ul>
-			</div>
-
-			<keep-alive>
-				<router-view class="view" name='nav' />
-			</keep-alive>
-		</nav>
-
-		<keep-alive>
-			<router-view name='main' />
-		</keep-alive>
-
-	</div>
+		</div>
 </template>
 
 <script>
@@ -83,12 +98,6 @@ export default {
 				$('.view').show()
 				$('#sidebar-header').show(100)
 			})
-			
-			// 固定定位 nav 盒子的高度
-			// $(window).scroll(function() {
-			// 		var top = $(window).scrollTop();
-			// 		$("#nav").css('top',top)
-			// });
 		})
 
 
@@ -101,29 +110,30 @@ export default {
 </script>
 
 <style scoped>
+	.container-fluid {
+		margin: 0;
+		padding: 0;
+		/* border: 1px solid red; */
+	}
+	.container-fluid > .row {
+		/* border: 1px solid blue; */
+	}
+	.container-fluid > .row > div {
+		border: 2px solid yellow;
+	}
+	.navbar {
+		border: 1px solid green;
+	}
+	.navbar > .navbar-collapse {
+		border: 1px solid skyblue;
+	}
+
+	#nav-container {
+		display: none;
+	}
 	a {
 		display: inline-block;
 		color: black;
-	}
-	#nav {
-		/* position: absolute; */
-		position: fixed;
-		width: 456px;
-		height: 100%;
-		box-shadow: 1px 1px 4px #ccc;
-		display: inline-block;
-		background: white;
-	}
-	#sidebar-header {
-		padding: 20px 0px 0px 20px;
-	}
-	.title {
-		float: left;
-	}
-	.title > a {
-		margin: 10px 15px 0px 30px;
-		font-size: 16px;
-		font-weight: 700
 	}
 	.sidebar-more {
 		float: right;
@@ -134,8 +144,6 @@ export default {
 	}
 
 	#nav-container {
-		width: 100%;
-		height: 100vh;
 		box-sizing: border-box;
 		padding: 20px 0px 0px 20px;
 		display: none;
@@ -145,7 +153,7 @@ export default {
 		margin: 12px 24px;
 		user-select: none;
 	}
-	ul {
+	#nav-container ul {
 		width: 80%;
 		padding: 45px 0px 0px 45px;
 	}
@@ -154,7 +162,7 @@ export default {
     border: none;
     height: 1px;
 	}
-	ul > li {
+	#nav-container ul > li {
 		padding-bottom: 15px;
 		list-style: none;
 		font-weight: 700;
