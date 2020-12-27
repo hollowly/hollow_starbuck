@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
+// 左边渲染
 const index = () => import('@/views/index')						//主要渲染
 const navindex = () => import('@/views/nav/index')		//left默认渲染
 const stores = () => import('@/views/nav/stores')			//门店
@@ -11,9 +11,9 @@ const login = () => import('@/views/nav/login')				//登录
 const club = () => import('@/views/nav/club')					//俱乐部
 
 
+// 右边渲染
 const mainindex = () => import('@/views/main/index')	//right默认渲染
-
-const rstores = () => import('@/views/main/stores.vue')
+const rstores = () => import('@/views/main/stores')		//right门店
 
 Vue.use(VueRouter)
 

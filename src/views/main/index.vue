@@ -1,11 +1,22 @@
 <!--  -->
 <template>
 	<main>
-		<ul>
-			<span class='next'>＞</span>
-			<li><a href=""><img src="@/assets/img/index/top1.jpg"></a></li>
-			<li><a href=""><img src="@/assets/img/index/top2.jpg"></a></li>
-		</ul>
+		<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-interval="4000">
+					<img src="@/assets/img/index/top1.jpg" class="w-100">
+				</div>
+				<div class="carousel-item" data-interval="4000">
+					<img src="@/assets/img/index/top2.jpg" class="w-100">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+				<img src="@/assets/svg/screen-left-white.svg">
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+				<img src="@/assets/svg/screen-right-white.svg">
+			</a>
+	</div>
 		
 		<div id='promotion'>
 			<a href="" v-for='item in promotionUrl'>
@@ -137,11 +148,10 @@ export default {
 </script>
 
 <style scoped>
-	main {
-		width: 70%;
-		height: 100%;
-		float: right;
+	.carousel > a > img {
+		width: 70px;
 	}
+
 	main > ul {
 		width: 200%;
 		list-style: none;

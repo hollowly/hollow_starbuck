@@ -106,7 +106,7 @@ export default {
 	}
 	nav > a {
 		font-weight: 600;
-		margin: 15px 0px 0px 5px;
+		margin: 15px 15px 0px 5px;
 	}
 	a {
 		color: black;
