@@ -114,7 +114,6 @@ export default {
 		color: black;
 	}
 	#nav-container {
-		border: 1px solid red;
 		box-sizing: border-box;
 		padding: 20px 0px 0px 20px;
 		display: none;
