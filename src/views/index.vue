@@ -38,7 +38,7 @@
 
 				<div class="col-sm col-md col-lg col-xl">
 					<keep-alive>
-						<router-view name='main' />
+						<router-view name='main' class="main"/>
 					</keep-alive>
 				</div>
 			</div>
@@ -88,6 +88,11 @@ export default {
 </script>
 
 <style scoped>
+	@media screen and (max-width: 991px){
+		.main {
+			transform: translateY(120px);
+		}
+	}
 	.container-fluid {
 		margin: 0;
 		padding: 0;
