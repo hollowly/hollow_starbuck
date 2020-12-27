@@ -16,7 +16,6 @@ export default {
 	data () {
 		return {
 			menu:[
-				// {text:'季度精选',url:'/menu'},
 				{text:'饮料',url:'/menu/beverages/'},
 				{text:'美食',url:'/menu/food/'},
 				{text:'咖啡产品',url:'/menu/coffee/'},
