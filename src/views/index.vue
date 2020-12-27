@@ -99,7 +99,7 @@ export default {
 	}
 	.container-fluid > .row > div:first-child {
 		height: 100vh;
-		box-shadow: 1px 1px 2px #ccc;
+		border:1px solid #eeeeee;
 		position: sticky;
 		top: 0;
 	}
