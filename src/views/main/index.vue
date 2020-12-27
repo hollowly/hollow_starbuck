@@ -16,52 +16,61 @@
 			<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
 				<img src="@/assets/svg/screen-right-white.svg">
 			</a>
-	</div>
-		
-		<div id='promotion'>
-			<a href="" v-for='item in promotionUrl'>
-				<img :src="item.imgUrl">
-			</a>
-		</div>	
+		</div>
 
-		<div id='program'>
-			<div>
-				<h2>星享俱乐部</h2>
-				<p>
-					开启您的星享之旅，星星越多、会员等级越高、
-				</p>
-				<p>
-					好礼越丰富。<a href="" style="color: #C2A661;">了解更多 › </a>
-				</p>
-				<a href='/register' class="aInput">注册</a>
-				<a href='/login' class="aInput login-in">登录</a>
+		<div class="container-fuild" id='promotion'>
+			<div class="row">
+				<div class="col-sm" v-for='item in promotionUrl'>
+					<a href="">
+						<img :src="item.imgUrl">
+					</a>
+				</div>
 			</div>
-			<div>
-				<img src="@/assets/svg/logo-msr-new.svg">
+		</div>
+		
+		<div class="container-fuild" id='program'>
+			<div class="row">
+				<div class="col-sm">
+					<h4>星享俱乐部</h4>
+					<p>
+						开启您的星享之旅，星星越多、会员等级越高、
+					</p>
+					<p>
+						好礼越丰富。<a href="" style="color: #C2A661;">了解更多 › </a>
+					</p>
+					<a href='/register' class="aInput">注册</a>
+					<a href='/login' class="aInput login-in">登录</a>
+				</div>
+
+				<div class="col-sm">
+					<br><br>
+					<img src="@/assets/svg/logo-msr-new.svg">
+				</div>
 			</div>
 		</div>
 
-		<div id='tmall'>
-			<div class="tmall-top">
-				<h2 >星巴克精选</h2><br>
+		<div class="container-fuild" id='tmall'>
+			<div>
+				<h4 style="padding-bottom:15px">星巴克精选</h4>
 				<p>
 					在星巴克天猫旗舰店发现更多咖啡心意
 				</p>
 			</div>
-			<ul>
-				<li v-for='item in tmallD'>
+
+			<div class="row">
+				<div class="col-sm" v-for='item in tmallD'>
 					<img :src="item.imgUrl">
 					<p><strong>{{item.title}}</strong></p>
 					<p>{{item.p1}}</p>
 					<p>{{item.p2}}</p>
 					<p><a href="" style="color: #C2A661;">了解更多 ›</a></p>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
 
 		<div id='tmall' style="background:rgb(253,253,253)">
 			<div class="tmall-top">
-				<h2 >1912 派克街 | 咖啡星讲堂</h2><br>
+				<h2>1912 派克街 | 咖啡星讲堂</h2><br>
 				<p>
 					了解更多星巴克咖啡文化
 				</p>
@@ -85,8 +94,6 @@
 				沪公网安备 31010402000253号 | 沪ICP备17003747号
 			</div>
 		</div>
-
-		
 	</main>
 </template>
 
@@ -116,11 +123,7 @@ export default {
 
 	mounted() {
 		$(function() {
-			$('.next').click(() => {
-				alert('等待完善')
-			})
-
-			$('#promotion > a > img, #tmall > ul > li, #tmall > .tmall-screen > a ').mouseenter(function() {
+			$('#promotion  a > img, #tmall > ul > li > qwer, #tmall > .tmall-screen > a ').mouseenter(function() {
 				$(this).css({
 					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
@@ -151,93 +154,97 @@ export default {
 	.carousel > a > img {
 		width: 70px;
 	}
-
-	main > ul {
-		width: 200%;
-		list-style: none;
-		display: inline-block;
-	}
-	main > ul > li {
-		width: 100%;
-	}
-	main > ul > li > a{
-		width: 100%;
-	}
-	main > ul > li > a > img {
-		width: 50%;
-		float: left;
-	}
-	.next {
-		font-size: 80px;
-		font-weight: 100;
-		color: white;
-		position: relative;
-		bottom: -285px;
-		right: -46%;
-		z-index: 100;
-		cursor: pointer;
-		user-select: none;
-	}
 /* ************************ */
 	#promotion {
-		width: 99.6%;
+		padding: 20px;
+		text-align: center;
 		background: rgb(247,247,247);
-		float:right;
 	}
-	#promotion > a > img {
-		width: 30%;
+	#promotion  a > img {
+		width: 90%;
 		border-radius: 15px;
 		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
-		margin: 20px 0px 20px 25px;
 		transition: all .3s;
 	}
 /* ************************ */
 	#program {
-		width: 73%;
-		height: 175px;
-		background: white;
-		margin: 0 auto;
-		line-height: 300%;
-		clear: both;
+		padding: 30px 20px;
+		text-align: center;
 	}
-	#program > :first-child {
-		width: 50%;
-		height: 100%;
-		float: left;
-		margin-top: 35px;
+	#program > .row > div:first-child {
+		margin-left: 10%;
+		text-align: left;
+		line-height: 40px;
 	}
-	#program > :first-child > p, #tmall p {
+	#program > .row > div > p{
 		color: rgba(0, 0, 0, 0.56);
 	}
 	#program .aInput {
 		padding: 3px 12px;
-		font-size: 20px;
+		font-size: 16px;
 		text-align: center;
 		margin: 0px 10px 0px 0px;
 		border: 1px solid #00a862;
 		border-radius: 48px;
 		color: #00a862;
-		background: white;
 		outline: none;
 		cursor: pointer;
 		font-weight: 300;
 	}
-	#program > :last-child {
-		float: right;
-		width: 35%;
-		height: 100%;
-		margin-top: 95px;
-	}
-	h2 {
-		font-weight: 500;
-	}
 /* ************************ */
 	#tmall {
-		width: 99.6%;
 		background: rgb(247,247,247);
-		height: 430px;
-		float: right;
+		padding: 30px 0px;
 	}
+	#tmall > div:first-child {
+		text-align: center;
+	}
+	#tmall > div:first-child > p {
+		color: rgba(0, 0, 0, 0.56);
+	}
+	#tmall > .row {
+		width: 70%;
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 1250px){
+		#tmall > .row {
+			width: 100%;
+		}
+	}
+	#tmall > .row > div {
+		text-align: center;
+		background: white;
+		height: 200px;
+		border-radius: 5px;
+		margin: 50px 10px 10px 10px;
+		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12)
+	}
+	#tmall > .row > div:last-child {
+		margin-right: 0;
+	}
+	#tmall > .row > div > img {
+		transform: translateY(-30px);
+		height: 70px;
+	}
+	#tmall > .row  p {
+		margin: 0;
+		padding: 5px 0px;
+		font-size: 14px;
+		color: rgba(0, 0, 0, 0.56);
+		transform: translateY(-20px);
+	}
+	#tmall > .row p > strong {
+		font-size: 16px;
+		color: black;
+	}
+	#tmall > .row p:last-child {
+		padding-top: 15px;
+		font-size: 12px;
+		color:rgb(194, 166, 97);
+	}
+
+/* ************************ */
+
 	.screen-right, .screen-left {
 		display: inline-block;
 		width: 30px;
@@ -263,45 +270,6 @@ export default {
 		text-align: center;
 		/* border:1px solid red; */
 	}
-	#tmall > ul {
-		width: 75%;
-		margin: 0 auto;
-		list-style: none;
-	}
-	#tmall > ul > li {
-		width: 21.2%;
-		background: white;
-		text-align: center;
-		cursor: pointer;
-		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
-		border-radius: 7px;
-		margin: 0px 15px;
-		transition: all .3s;
-		float: left;
-	}
-	#tmall > ul > li > img {
-		width: 65%;
-		height: 80px;
-		transform: translate(-2.5px,-30px);
-	}
-	#tmall > ul > li > p {
-		font-size: 14px;
-		transform: translateY(-25px);
-		margin: 6px 0px;
-	}
-	#tmall > ul > li > p:first-of-type {
-		font-size: 16px;
-		color: black;
-		margin: 0px 0px 15px 0px;
-	}
-	#tmall > ul > li > p:last-of-type {
-		font-size: 12px;
-		padding:20px 0px 0px 0px;
-	}
-	#tmall > ul > li > p > a:hover {
-		opacity: 0.7;
-	}
-/* ************************ */
 	#tmall > .tmall-screen {
 		width: 200%;
 		height: 50%;

@@ -98,9 +98,6 @@ export default {
 		position: sticky;
 		top: 0;
 	}
-	.row > div {
-		border: 2px solid yellow;
-	}
 	nav {
 		float: left;
 	}
@@ -111,9 +108,8 @@ export default {
 	a {
 		color: black;
 	}
-	
 	#nav-container {
-		width: 100%;
+		border: 1px solid red;
 		box-sizing: border-box;
 		padding: 20px 0px 0px 20px;
 		display: none;
