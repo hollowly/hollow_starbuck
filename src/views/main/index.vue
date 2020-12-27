@@ -68,25 +68,26 @@
 			</div>
 		</div>
 
-		<div id='tmall' style="background:rgb(253,253,253)">
-			<div class="tmall-top">
-				<h2>1912 派克街 | 咖啡星讲堂</h2><br>
+
+		<div class="container-fuild" id='coffeehouse'>
+			<div>
+				<h4>1912 派克街 | 咖啡星讲堂</h4>
 				<p>
 					了解更多星巴克咖啡文化
 				</p>
 			</div>
-			
-			<div class="tmall-screen">
-				<span class="screen-left"><img src="@/assets/svg/screen-left.svg"></span>
-				<span class="screen-right"><img src="@/assets/svg/screen-right.svg"></span>
-				<a href="" v-for='item in tmallCulture'>
-					<div :style="{backgroundImage: 'url(' + item.imgUrl + ')'}">
-						<span>{{item.title}}</span>
-					</div>
-					<p>{{item.p}}</p>
-				</a>
-			</div>
 
+			<div class="row">
+				<div class="col-sm" v-for='item in tmallCulture'>
+					<a href="">
+						<div :style="{backgroundImage: 'url(' + item.imgUrl + ')'}">
+							<span>{{item.title}}</span>
+						</div>
+						<p>{{item.p}}</p>
+					</a>
+				</div>
+			</div>
+		</div>
 			<div id='fotter'>
 				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000253">
 					<img src="@/assets/img/icpicon.png" width="12px">
@@ -123,7 +124,7 @@ export default {
 
 	mounted() {
 		$(function() {
-			$('#promotion  a > img, #tmall > ul > li > qwer, #tmall > .tmall-screen > a ').mouseenter(function() {
+			$('#promotion  a > img, #tmall > div > div, #tmall > .tmall-screen > aa ').mouseenter(function() {
 				$(this).css({
 					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
@@ -147,7 +148,6 @@ export default {
 	}
 
 }
-
 </script>
 
 <style scoped>
@@ -192,14 +192,14 @@ export default {
 		font-weight: 300;
 	}
 /* ************************ */
-	#tmall {
+	#tmall,#coffeehouse {
 		background: rgb(247,247,247);
 		padding: 30px 0px;
 	}
-	#tmall > div:first-child {
+	#tmall > div:first-child, #coffeehouse > div:first-child {
 		text-align: center;
 	}
-	#tmall > div:first-child > p {
+	#tmall > div:first-child > p, #coffeehouse > div:first-child > p {
 		color: rgba(0, 0, 0, 0.56);
 	}
 	#tmall > .row {
@@ -217,6 +217,7 @@ export default {
 		height: 200px;
 		border-radius: 5px;
 		margin: 50px 10px 10px 10px;
+		cursor: pointer;
 		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12)
 	}
 	#tmall > .row > div:last-child {
@@ -242,9 +243,7 @@ export default {
 		font-size: 12px;
 		color:rgb(194, 166, 97);
 	}
-
 /* ************************ */
-
 	.screen-right, .screen-left {
 		display: inline-block;
 		width: 30px;
@@ -262,44 +261,6 @@ export default {
 	.screen-left {
 		left: 10px;
 		top: -80px;
-	}
-	#tmall > .tmall-top {
-		width: 100%;
-		height: 100px;
-		padding: 40px 0px 20px 0px;
-		text-align: center;
-		/* border:1px solid red; */
-	}
-	#tmall > .tmall-screen {
-		width: 200%;
-		height: 50%;
-	}
-	#tmall > .tmall-screen > a {
-		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
-		width: 14%;
-		height: 100%;
-		margin: 0px 10px 0px 10px;
-		display: inline-block;
-		transition: all .3s;
-	}
-	#tmall > .tmall-screen > a > p {
-		color: black;
-		font-size: 16px;
-		line-height: 50px;
-		text-indent: 1rem;
-	}
-	#tmall > .tmall-screen > a > div {
-		width: 100%;
-		height: 75%;
-		background-size: 100%;
-	}
-	#tmall > .tmall-screen > a > div > span {
-		font-size: 14px;
-		display: inline-block;
-		margin-top: 8px;
-		padding: 8px 12px;
-    background: #C2A661;
-    color: #FFF;
 	}
 /* ************************ */
 	#fotter {
