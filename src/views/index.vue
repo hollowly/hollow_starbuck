@@ -2,7 +2,7 @@
 <template>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-5 col-xl-4 sticky-top">
+				<div class="col-sm-12 col-md-12 col-lg-5 col-xl-4">
 					<nav class="nav">
 						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
 						<router-link to='/stores' class="nav-link">门店</router-link>
@@ -95,6 +95,11 @@ export default {
 	.container-fluid > .row > div:first-child {
 		height: 100vh;
 		box-shadow: 1px 1px 2px #ccc;
+		position: sticky;
+		top: 0;
+	}
+	.row > div {
+		border: 2px solid yellow;
 	}
 	nav {
 		float: left;
@@ -181,6 +186,7 @@ export default {
 			width: 100%;
 			height: auto;
 			box-shadow: none;
+			position: static;
 		}
 		#nav-container {
 			width: 100vh;
