@@ -4,14 +4,14 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-5 col-xl-4">
 					<nav class="nav">
-						<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
+						<a href="/"><img src="@/assets/img/logo.png" width="40"></a>
 						<router-link to='/stores' class="nav-link">门店</router-link>
 						<router-link to='/login' class="nav-link">我的账户</router-link>
 						<router-link to='/menu' class="nav-link">菜单</router-link>
 					</nav>
 					<div style="float:right"><a class='sidebar-more'>☰</a></div>
 						<div id='nav-container'>
-							<a href="/"><img src="@/assets/svg/logo.svg" width="40"></a>
+							<a href="/"><img src="@/assets/img/logo.png" width="40"></a>
 							<img src="@/assets/svg/close.svg" class="sidebar-close">
 							<ul>
 								<li v-for='item in container1'>
@@ -107,6 +107,7 @@ export default {
 		float: left;
 	}
 	nav > a:first-child {
+		margin-top: 10px;
 		margin-left: 20px;
 	}
 	nav > a {
