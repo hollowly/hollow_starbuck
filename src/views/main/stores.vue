@@ -1,38 +1,29 @@
 <!--  -->
 <template>
 	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm">
-					One of three columns
-				</div>
-				<div class="col-sm">
-					One of three columns
-				</div>
-				<div class="col-sm">
-					One of three columns
-				</div>
-			</div>
+    <div style="height: 100vh" id="container"></div>
 		</div>
 	</main>
 </template>
 
 <script>
+import AMap from "AMap"
+
 export default {
-	data () {
-		return {
-
-		}
-	},
-
-}
+  name: "Index",
+  data() {
+    return {}
+  },
+  mounted() {
+    new AMap.Map("container", {
+      resizeEnable: true,
+      zoom: 11
+    });
+  }
+};
 
 </script>
 
 <style scoped>
-	main {
-		width: 70%;
-		height: 100%;
-		float: right;
-	}
+
 </style>

@@ -10,6 +10,10 @@ module.exports = {
         "window.jQuery": "jquery",
         Popper: ["popper.js", "default"],
       }),
-    ],
+		],
+		//	高德地图配置
+		externals: {
+      AMap: "window.AMap"
+    }
   },
 };
