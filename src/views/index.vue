@@ -106,6 +106,9 @@ export default {
 	nav {
 		float: left;
 	}
+	nav > a:first-child {
+		margin-left: 20px;
+	}
 	nav > a {
 		font-weight: 600;
 		margin: 15px 15px 0px 5px;

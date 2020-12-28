@@ -68,7 +68,7 @@
 			</div>
 		</div>
 
-		<div id='tmall' style="background:rgb(253,253,253)">
+		<div id='tmall' class="" style="background:rgb(253,253,253)">
 			<div class="tmall-top">
 				<h4>1912 派克街 | 咖啡星讲堂</h4><br>
 				<p>
@@ -78,13 +78,13 @@
 			
 			<div class="tmall-screen">
 				<span class="screen-left"><img src="@/assets/svg/screen-left.svg"></span>
-				<span class="screen-right"><img src="@/assets/svg/screen-right.svg"></span>
 				<a href="" v-for='item in tmallCulture'>
 					<div :style="{backgroundImage: 'url(' + item.imgUrl + ')'}">
 						<span>{{item.title}}</span>
 					</div>
 					<p>{{item.p}}</p>
 				</a>
+				<span class="screen-right"><img src="@/assets/svg/screen-right.svg"></span>
 			</div>
 
 			<div id='fotter'>
@@ -136,11 +136,15 @@ export default {
 			})
 
 			$('.screen-right').click(function() {
-				alert('等待完善')
+				$('#tmall > .tmall-screen').css({	
+					'transform': 'translateX(200px)'
+				})
 			})
 
 			$('.screen-left').click(function() {
-				alert('等待完善哦')
+				$('#tmall > .tmall-screen').css({	
+					'transform': 'translateX(-200px)'
+				})
 			})
 
 		})
@@ -150,6 +154,9 @@ export default {
 </script>
 
 <style scoped>
+main {
+	overflow: hidden;
+}
 	.carousel > a > img {
 		width: 70px;
 	}
@@ -194,6 +201,9 @@ export default {
 	#tmall {
 		background: rgb(247,247,247);
 		padding: 30px 0px;
+	}
+	#tmall:last-child {
+		padding: 30px 0px 0px 0px;
 	}
 	#tmall > div:first-child {
 		text-align: center;
@@ -251,7 +261,7 @@ export default {
 	#tmall > .tmall-screen {
 		width: 250%;
 		height: 220px;
-		/* border: 1px solid yellow; */
+		transform: translateX(200px);
 	}
 	#tmall > .tmall-screen > a {
 		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12);
@@ -289,20 +299,18 @@ export default {
 		text-align: center;
 		background: white;
 		position: relative;
-		left: 10px;
-		top: -80px;
+		left: 50px;
+		top: -90px;
 		z-index: 10;
 	}
 	.screen-right {
-		position: relative;
-		right: 200px;
-		bottom: 200px;
-		background: red;
+		left: -70px;
+		top: -90px;
 	}
 /* ************************ */
 	#fotter {
-		height: 60px;
-		line-height: 80px;
+		height: 50px;
+		line-height: 70px;
 		text-align: center;
 		color: #666;
 		font-size: 14px;
