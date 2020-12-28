@@ -7,6 +7,7 @@
 				<div class="col-sm-8">
 					<h4>使用星巴克App进行注册</h4>
 					<p>现在就下载<span>星巴克App</span>便可直接用手机进行注册、支付、查看消费记录及管理卡片。</p>
+					<img src="@/assets/img/main/register/download.png" class="download">
 				</div>
 				<div class="col-sm">
 					<img src='@/assets/img/main/register/phone.png' width="200"></div>	
@@ -25,11 +26,18 @@
 	.top > .row > div:first-child {
 		padding-top: 15%;
 	}
+	.top > .row > div:last-child {
+		text-align: center;
+	}
 	.top > .row > div > h4 {
 		margin: 20px 0px;
 	}
 	.top > .row > div > p > span {
 		color: #00A862;
+	}
+	.download {
+		width: 150px;
+		cursor: pointer;
 	}
 	@media screen and (max-width:1300px){
 		.top > .row {
@@ -41,7 +49,7 @@
 			width: 100%;
 		}
 	}
-	@media screen and (min-width:875px){
+	@media screen and (max-width:875px){
 		.top > .row {
 			width: 70%;
 		}
