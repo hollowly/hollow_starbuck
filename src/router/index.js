@@ -15,6 +15,10 @@ const club = () => import('@/views/nav/club')					//俱乐部
 const mainindex = () => import('@/views/main/index')	//right默认渲染
 const rstores = () => import('@/views/main/stores')		//right门店
 const rlogin = () => import('@/views/main/login')			//right登录
+const rregister = () => import('@/views/main/register')//right注册
+
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -52,7 +56,8 @@ const routes = [
 			{
 				path:'/register',
 				components: {
-					nav: register
+					nav: register,
+					main: rregister
 				}
 			},
 			{ 

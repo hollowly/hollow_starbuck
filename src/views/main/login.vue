@@ -1,16 +1,17 @@
 <!--  -->
 <template>
 	<div>
-		<img src="@/assets/img/main/login/top.jpg" class="img-fluid">
-		<div class="container-fuild">
+		<a href="/register"><img src="@/assets/img/main/login/top.jpg" class="img-fluid"></a>
+		<div class="container-fuild top">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm">
 					<div><input type="text" placeholder="用户名或电子邮箱" autocomplete="new-password"></div>
 					<div><input type="password" placeholder="密码" autocomplete="new-password"></div>
 					<div>
 						<span>
 							<label for="autologin">
-								<input type="checkbox" id='autologin'>下次自动登录
+								<input type="checkbox" id='autologin'>
+								下次自动登录
 							</label>
 						</span>
 						<span><a href="">忘记密码？</a></span>
@@ -22,8 +23,17 @@
 						</div>
 					</div>
 					<div>
-						<button class="signbutton">登录</button>
+						<btn>登录</btn>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fuild bottom">
+			<div class="row">
+				<div class="col-sm">
+					<h4>加入星享俱乐部</h4>
+					<p>只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。</p>
+					<a href='/register'><button class="register">注册</button></a>
 				</div>
 			</div>
 		</div>
@@ -31,27 +41,32 @@
 </template>
 
 <script>
+import btn from '@/components/btn'
+
 export default {
 	data () {
 		return {
 
 		}
 	},
+	components: {
+		btn
+	}
 
 }
 
 </script>
 
 <style scoped>
-.container-fuild {
+.top {
 	margin: 50px 0px;
 }
-.container-fuild > .row > div > div {
+.top > .row > div > div {
 	width: 40%;
 	margin: 0 auto;
 	/* border: 1px solid red; */
 }
-.container-fuild > .row > div > div > input {
+.top > .row > div > div > input {
 	width: 100%;
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -66,29 +81,26 @@ export default {
 	border: 1px solid #00A862;
   border-radius: 8px;
 }
-.container-fuild > .row > div > div > span:first-child {
+.top > .row > div > div > span:first-child {
 	cursor: pointer;
 	color: rgba(0, 0, 0, 0.56);
 	margin-top: 10px;
 	float: left;
 }
-.container-fuild > .row > div > div > span > a {
+.top > .row > div > div > span > a {
 	color: #00A862;
 	margin-top: 10px;
 	float: right;
 }
-.container-fuild > .row  input:hover {
+.top > .row  input:hover {
 	border-bottom: 1px solid #00A862;
 }
 input::placeholder {
 	font-weight: 100;
 }
-
-.container-fuild > .row > div > div:last-child {
+.top > .row > div > div:last-child {
 	margin-top: 60px;
 }
-
-
 .signbutton {
 	margin-top: 20px;
 	float: right;
@@ -102,5 +114,32 @@ input::placeholder {
   color: rgba(0, 0, 0, 0.38);
   cursor: pointer;
 	outline: none;
+}
+
+.bottom {
+	padding: 35px 0px 60px 0px;
+	background: rgb(21,119,123);
+	color: white;
+}
+.bottom > .row {
+	width: 75%;
+	margin: 0 auto;
+}
+.bottom > .row > div > p {
+	padding: 15px 0px;
+	color: #D8D8D8;
+}
+.register {
+	padding: 5px 12px;
+	font-size: 17px;
+	text-align: center;
+	margin: 0px 20px 0px 0px;
+	border: 1px solid #C2A661;
+	border-radius: 48px;
+	color: #C2A661;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: 400;
 }
 </style>
