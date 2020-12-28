@@ -154,9 +154,9 @@ export default {
 </script>
 
 <style scoped>
-main {
-	overflow: hidden;
-}
+	main {
+		overflow: hidden;
+	}
 	.carousel > a > img {
 		width: 70px;
 	}
