@@ -130,7 +130,7 @@ input::placeholder {
 	color: #D8D8D8;
 }
 .register {
-	padding: 5px 12px;
+	padding: 8px 18px;
 	font-size: 17px;
 	text-align: center;
 	margin: 0px 20px 0px 0px;
