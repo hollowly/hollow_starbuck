@@ -6,8 +6,8 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<h4>使用星巴克App进行注册</h4>
-					<p>现在就下载<span>星巴克App</span>便可直接用手机进行注册、支付、查看消费记录及管理卡片。</p>
-					<img src="@/assets/img/main/register/download.png" class="download">
+					<p>现在就下载<a href="">星巴克App</a>便可直接用手机进行注册、支付、查看消费记录及管理卡片。</p>
+					<a href=""><img src="@/assets/img/main/register/download.png" class="download"></a>
 				</div>
 				<div class="col-sm">
 					<img src='@/assets/img/main/register/phone.png' width="200"></div>	
@@ -32,8 +32,9 @@
 	.top > .row > div > h4 {
 		margin: 20px 0px;
 	}
-	.top > .row > div > p > span {
+	.top > .row > div > p > a {
 		color: #00A862;
+		cursor: pointer;
 	}
 	.download {
 		width: 150px;
