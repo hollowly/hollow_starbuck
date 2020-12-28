@@ -14,7 +14,7 @@ const club = () => import('@/views/nav/club')					//俱乐部
 // 右边渲染
 const mainindex = () => import('@/views/main/index')	//right默认渲染
 const rstores = () => import('@/views/main/stores')		//right门店
-
+const rlogin = () => import('@/views/main/login')			//right登录
 Vue.use(VueRouter)
 
 const routes = [
@@ -37,15 +37,16 @@ const routes = [
 				}
 			},
 			{
-				path:'/menu',
+				path:'/login',
 				components: {
-					nav: menu
+					nav: login,
+					main: rlogin,
 				}
 			},
 			{
-				path:'/login',
+				path:'/menu',
 				components: {
-					nav: login
+					nav: menu
 				}
 			},
 			{
@@ -65,8 +66,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-	routes,
-	mode:'history'
+	mode:'history',
+	routes
 })
 
 export default router

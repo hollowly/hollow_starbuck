@@ -1,7 +1,10 @@
 <!--  -->
 <template>
 	<main>
-    <div style="height: 100vh" id="container"></div>
+		<div class="container-fuild">
+			<!-- <div class="row"> -->
+				<div style="height: 100vh" id="container"></div>
+			<!-- </div> -->
 		</div>
 	</main>
 </template>
@@ -18,12 +21,17 @@ export default {
     new AMap.Map("container", {
       resizeEnable: true,
       zoom: 11
-    });
+    })
   }
-};
-
+}
 </script>
 
 <style scoped>
-
+	.container-fuild {
+		height: 100%;
+		border: 1px solid white;
+	}
+	.row {
+		height: 100%;
+	}
 </style>

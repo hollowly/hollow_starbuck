@@ -4,10 +4,10 @@
 		<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-interval="4000">
-					<img src="@/assets/img/index/top1.jpg" class="w-100">
+					<img src="@/assets/img/main/index/top1.jpg" class="w-100">
 				</div>
 				<div class="carousel-item" data-interval="4000">
-					<img src="@/assets/img/index/top2.jpg" class="w-100">
+					<img src="@/assets/img/main/index/top2.jpg" class="w-100">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -102,21 +102,21 @@ export default {
 	data() {
 		return {	
 			promotionUrl:[
-				{imgUrl:require('@/assets/img/index/program1.jpg'),text:'1'},
-				{imgUrl:require('@/assets/img/index/program2.jpg'),text:'1'},
-				{imgUrl:require('@/assets/img/index/program3.jpg'),text:'1'}
+				{imgUrl:require('@/assets/img/main/index/program1.jpg'),text:'1'},
+				{imgUrl:require('@/assets/img/main/index/program2.jpg'),text:'1'},
+				{imgUrl:require('@/assets/img/main/index/program3.jpg'),text:'1'}
 			],
 			tmallD:[
-				{title:'会员星礼包',p1:'星享卡新升级',p2:'更多心意好礼',imgUrl:require('@/assets/img/index/tmall1.png')},
-				{title:'星礼卡',p1:'用一份心礼',p2:'让心意相随',imgUrl:require('@/assets/img/index/tmall2.png')},
-				{title:'电子产品券',p1:'心意',p2:'从这一杯开始',imgUrl:require('@/assets/img/index/tmall3.png')},
-				{title:'咖啡生活',p1:'星巴克',p2:'用心制作',imgUrl:require('@/assets/img/index/tmall4.png')},
+				{title:'会员星礼包',p1:'星享卡新升级',p2:'更多心意好礼',imgUrl:require('@/assets/img/main/index/tmall1.png')},
+				{title:'星礼卡',p1:'用一份心礼',p2:'让心意相随',imgUrl:require('@/assets/img/main/index/tmall2.png')},
+				{title:'电子产品券',p1:'心意',p2:'从这一杯开始',imgUrl:require('@/assets/img/main/index/tmall3.png')},
+				{title:'咖啡生活',p1:'星巴克',p2:'用心制作',imgUrl:require('@/assets/img/main/index/tmall4.png')},
 			],
 			tmallCulture: [
-				{title:'咖啡知识',p:'咖啡的起源于栽培',imgUrl:require('@/assets/img/index/coffeehouse1.jpg')},
-				{title:'咖啡品鉴',p:'咖啡调制',imgUrl:require('@/assets/img/index/coffeehouse2.jpg')},
-				{title:'咖啡知识',p:'咖啡烘焙',imgUrl:require('@/assets/img/index/coffeehouse3.jpg')},
-				{title:'咖啡品鉴',p:'手冲咖啡',imgUrl:require('@/assets/img/index/coffeehouse4.jpg')},
+				{title:'咖啡知识',p:'咖啡的起源于栽培',imgUrl:require('@/assets/img/main/index/coffeehouse1.jpg')},
+				{title:'咖啡品鉴',p:'咖啡调制',imgUrl:require('@/assets/img/main/index/coffeehouse2.jpg')},
+				{title:'咖啡知识',p:'咖啡烘焙',imgUrl:require('@/assets/img/main/index/coffeehouse3.jpg')},
+				{title:'咖啡品鉴',p:'手冲咖啡',imgUrl:require('@/assets/img/main/index/coffeehouse4.jpg')},
 			]
 		}
 	},
