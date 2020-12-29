@@ -89,6 +89,20 @@
 			</div>
 			<img src="@/assets/img/main/club/join-banner.jpg" class="img-fluid" slot='footerImg'>
 		</club>
+		
+		<!-- 常见问题 -->
+		<club class="question">
+			<img src="@/assets/img/main/club/question-title.png" width="320" slot='titleImg'>
+			<div class="col-sm-12" slot='container'>
+				<img src="@/assets/img/main/club/question1.svg">
+			</div>
+			<div class="col-sm-12" slot='container'>
+				<img src="@/assets/img/main/club/question1.svg">
+			</div>
+			<div class="col-sm-12" slot='container'>
+				<img src="@/assets/img/main/club/question1.svg">
+			</div>
+		</club>
 
 
 	</div>
@@ -250,5 +264,9 @@ export default {
 	}
 	.join .row > div:first-child {
 		border-right: 2px solid black;
+	}
+	/* 常见问题 */
+	.question {
+		border: 1px solid red;
 	}
 </style>
