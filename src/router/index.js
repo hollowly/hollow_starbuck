@@ -12,11 +12,11 @@ const club = () => import('@/views/nav/club')					//俱乐部
 
 
 // 右边渲染
-const mainindex = () => import('@/views/main/index')	//right默认渲染
-const rstores = () => import('@/views/main/stores')		//right门店
-const rlogin = () => import('@/views/main/login')			//right登录
-const rregister = () => import('@/views/main/register')//right注册
-
+const mainindex = () => import('@/views/main/index')		//right默认渲染
+const rstores = () => import('@/views/main/stores')			//right门店
+const rlogin = () => import('@/views/main/login')				//right登录
+const rregister = () => import('@/views/main/register')	//right注册
+const rclub = () => import('@/views/main/club')				 	//right俱乐部
 
 
 Vue.use(VueRouter)
@@ -63,7 +63,8 @@ const routes = [
 			{ 
 				path:'/club',
 				components: {
-					nav: club
+					nav: club,
+					main:rclub
 				}
 			}
 		]
