@@ -1,8 +1,9 @@
 <!--  -->
 <template>
-	<div style="height:2000px">
+	<div style="height:5000px">
 		<a href="/register"><img src="@/assets/img/main/club/top.jpeg" class='img-fluid'></a>
 
+		<!-- 星享俱乐部 -->
 		<club class="rewards">
 			<img src="@/assets/img/main/club/rewards-title.png" width="260" slot='titleImg'>
 
@@ -14,6 +15,7 @@
 			<img src="@/assets/img/main/club/rewards-banner.jpg" class="img-fluid" slot='footerImg'>
 		</club>
 
+		<!-- 积分升级 -->
 		<club class="upgrade">
 			<img src="@/assets/img/main/club/upgrade-title.png" width="380" slot='titleImg'>
 
@@ -26,34 +28,58 @@
 			<img src="@/assets/img/main/club/upgrade-banner.jpg" class="img-fluid" slot='footerImg'>
 		</club>
 
-
-<!-- 
-	<div>
-		<div class="container-fuild">
-			<slot name='titleImg'></slot>
-
-			<div class="row">
-				<slot name='container'>
-				</slot>
-			</div>
-
-				<p class="treaty">详情以<span>《星享俱乐部活动的条款和条件》</span>的规定为准</p>
-				<slot name='footerImg'></slot>
-		</div>
-	</div> -->
-
+		<!-- 等级会员权益 -->
 		<club class="stars">
-			<img src="@/assets/img/main/club/stars-title.png" width="250" slot='titleImg'>
-
+			<img src="@/assets/img/main/club/stars-title.png" width="240" slot='titleImg'>
 			<div class="col-sm" v-for='item in stars' slot='container'>
 				<img :src="item.imgUrl" width="150">
+				<div></div>
 					<ul>
-						<li>购买绑定会员星礼包可直通玉星级</li>
-						<li>各类奖励星星活动</li>
+						<li>{{item.text[0]}}</li>
+						<li>{{item.text[1]}}</li>
+						<li>{{item.text[2]}}</li>
+						<li>{{item.text[3]}}</li>
+						<li>{{item.text[4]}}</li>
 					</ul>
 			</div>
 			<img src="@/assets/img/main/club/stars-banner.png" class="img-fluid" slot='footerImg'>
 		</club>
+
+		<!-- 会员星礼包 -->
+		<div class="container-fuild giftbag">
+			<img src="@/assets/img/main/club/giftbag-title.png" width="320">
+			<div class="row">
+				<div class="col-sm">
+					<img src="@/assets/img/main/club/giftbag1.png" width="70%">
+				</div>
+				<div class="col-sm">
+					<img src="@/assets/img/main/club/giftbag2.png" width="80%">
+				</div>
+				<div class="col-sm">
+					<h6>选购会员星礼包，丰富好礼随心享：</h6>
+					<ul>
+						<li>6张电子好礼券*，适用多种商品种类</li>
+						<li>附赠一张精美星礼卡**，可绑定至星巴克中国App 内充值并支付</li>
+						<li>银星级会员初次将会员星礼包成功绑定至帐户后，即可升级成为玉星级会员</li>
+					</ul>
+					<p>* 每份券将在添加至您的星享俱乐部帐户的当天生效，有效期为90天。** 附赠星礼卡的初始余额为0元。</p>
+				</div>
+			</div>
+				<img src="@/assets/img/main/club/giftbag-banner.jpg" class="img-fluid" slot='footerImg'>
+		</div>
+
+		<!-- 更多获得星星的途径 -->
+		<club class="channel">
+			<img src="@/assets/img/main/club/channel-title.png" width="280" slot='titleImg'>
+
+			<div class="col-sm" v-for='item in channel' slot='container'>
+				<img :src="item.imgUrl" height="70">
+				<p>{{item.p1}}</p>
+				<p>{{item.p2}}</p>
+			</div>
+			<img src="@/assets/img/main/club/channel-banner.jpg" class="img-fluid" slot='footerImg'>
+		</club>
+
 
 	</div>
 </template>
@@ -74,20 +100,43 @@ export default {
 				{imgUrl:require('@/assets/img/main/club/upgrade20.png'),p1_1:'玉星级',p2_1:'再累积',p2_span:'16',p2_2:'颗星星',p3_1:'升级至',p3_span:'金星级',p3_2:'会员'},
 			],
 			stars: [
-				{imgUrl:require('@/assets/img/main/club/stars1.png')},
-				{imgUrl:require('@/assets/img/main/club/stars2.png')},
-				{imgUrl:require('@/assets/img/main/club/stars3.png')},	
+				{imgUrl:require('@/assets/img/main/club/stars1.png'),text:['购买绑定会员星礼包可直通玉星级','各类奖励星星活动']},
+				{imgUrl:require('@/assets/img/main/club/stars2.png'),text:['玉星晋级饮品券','金星在望饮品券','生日饮品券','永享玉星级保级','各类奖励星星活动']},
+				{imgUrl:require('@/assets/img/main/club/stars3.png'),text:['金星晋级饮品券','周年庆饮品券','生日饮品券','永享玉星级保级','好礼星星兑换','各类奖励星星活动']},	
+			],
+			giftbag: [
+				{imgUrl:require('@/assets/img/main/club/giftbag1.png')},
+				{imgUrl:require('@/assets/img/main/club/giftbag2.png')},
+			],
+			channel: [
+				{imgUrl:require('@/assets/img/main/club/channel1.png'),p1:'星巴克门店',p2:''},
+				{imgUrl:require('@/assets/img/main/club/channel2.png'),p1:'专星送™',p2:'（仅限已开通门店）'},
+				{imgUrl:require('@/assets/img/main/club/channel3.png'),p1:'啡快™',p2:'（仅限已开通门店）'},
+				{imgUrl:require('@/assets/img/main/club/channel4.png'),p1:'星巴克天猫',p2:'会员旗舰店'},
+				{imgUrl:require('@/assets/img/main/club/channel5.png'),p1:'星星奖励',p2:'活动'},
 			]
 		}
 	},
 	components: {
-		club
+		club,
 	}
 }
 
 </script>
 <style scoped>
-
+/* 默认样式 */
+.container-fuild {
+	margin: 0 auto;
+	padding-top: 30px;
+	text-align: center;
+	font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.container-fuild > .row {
+	margin-top: 30px;
+	width: 100%;
+	margin-left:0px;
+}
+/* 星享俱乐部 */
 	.rewards {
 		background: #023529;
 		color: white;
@@ -102,6 +151,7 @@ export default {
 		border-style: solid;
 		border-color: #14767c transparent transparent transparent;
 	}
+	/* 积分升级 */
 	.upgrade {
 		background: #EBF3F5;
 		color: black;
@@ -112,5 +162,43 @@ export default {
 	}
 	.upgrade .row p span{
 		font-weight: 700;
+	}
+	/* 等级会员权益 */
+	ul > li {
+		list-style: none;
+		padding: 5px 0px;
+		font-size: 15px;
+	}
+	.stars .row > div > div {
+		width: 30px;
+		height: 3px;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		background: #C2A661;
+	}
+	/* 会员星礼包 */
+	.giftbag > div > div  > img {
+		display: inline-block;
+		transform: translateY(20%);
+		vertical-align: middle;
+	}
+	.giftbag > div > div > h6 {
+		font-weight: 700;
+	}
+	.giftbag > div > div > p {
+		font-size: 12px;
+	}
+	/* 多种获得星星的图片 */
+	.channel {
+		background: #023529;
+		color: white;
+	}
+	.channel > div > img {
+		margin-top: 5px;
+	}
+	.channel > div > div > div img {
+		margin: 10px 0px 5px 0px;
 	}
 </style>
