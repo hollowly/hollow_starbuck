@@ -27,7 +27,7 @@
 		</club>
 
 
-
+<!-- 
 	<div>
 		<div class="container-fuild">
 			<slot name='titleImg'></slot>
@@ -40,7 +40,7 @@
 				<p class="treaty">详情以<span>《星享俱乐部活动的条款和条件》</span>的规定为准</p>
 				<slot name='footerImg'></slot>
 		</div>
-	</div>
+	</div> -->
 
 		<club class="stars">
 			<img src="@/assets/img/main/club/stars-title.png" width="250" slot='titleImg'>
