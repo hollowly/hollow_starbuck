@@ -4,7 +4,7 @@
 		<a href="/register"><img src="@/assets/img/main/club/top.jpeg" class='img-fluid'></a>
 
 		<div class="container-fuild rewards">
-			<img src="@/assets/img/main/club/title.png" width="300">
+			<img src="@/assets/img/main/club/title.png" width="260">
 			<div class="row">
 				<div class="col-sm" v-for='item in rewards'>
 					<img :src="item.imgUrl" width="120">
@@ -12,7 +12,6 @@
 					<p>{{item.p}}</p>
 				</div>
 			</div>
-			
 				<p class="treaty">详情以<span>《星享俱乐部活动的条款和条件》</span>的规定为准</p>
 				<img src="@/assets/img/main/club/banner.jpg" class="img-fluid">
 		</div>
@@ -43,19 +42,28 @@ export default {
 		color: white;
 		font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 	}
+	.rewards::before {
+    content: '';
+    position: relative;
+		top: -40px;
+		left: 15%;
+    transform: translateX(-50%);
+    width: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #14767c transparent transparent transparent;
+}
 	.rewards > .row {
 		margin-top: 20px;
 		width: 100%;
 		margin-left:0px;
 	}
-	.rewards > .row > div {
-		/* border: 1px solid blue; */
-	}
 	.rewards > .row > div > p {
 		font-size: 12px;
+		padding-top: 5px;
 	}
 	.treaty {
-		padding-top: 20px;
+		padding-top: 25px;
 		font-size: 12px;
 	}
 	.treaty > span {
