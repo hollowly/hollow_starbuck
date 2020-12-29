@@ -1,33 +1,48 @@
 <!--  -->
 <template>
 	<div>
-		<div class="container-fuild rewards">
-			<img src="@/assets/img/main/club/title.png" width="260">
+		<div class="container-fuild">
+			<slot name='titleImg'></slot>
+
 			<div class="row">
-				<div class="col-sm" v-for='item in rewards'>
-					<img :src="item.imgUrl" width="120">
-					<h5>{{item.title}}</h5>
-					<p>{{item.p}}</p>
-				</div>
+				<slot name='container'>
+				</slot>
 			</div>
+
 				<p class="treaty">详情以<span>《星享俱乐部活动的条款和条件》</span>的规定为准</p>
-				<img src="@/assets/img/main/club/banner.jpg" class="img-fluid">
+				<slot name='footerImg'></slot>
 		</div>
 	</div>
 </template>
 
-<script>
-export default {
-	data () {
-		return {
-
-		}
-	},
-
+<style scoped>
+ p {
+	 margin: 0;
+ }
+.container-fuild {
+	margin: 0 auto;
+	padding-top: 30px;
+	text-align: center;
+	/* border: 1px solid red; */
+	font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
-</script>
-
-<style scoped>
-
+.container-fuild > .row {
+	/* border: 1px solid red; */
+	margin-top: 30px;
+	width: 100%;
+	margin-left:0px;
+}
+.container-fuild > .row > div > p {
+	font-size: 12px;
+	padding-top: 5px;
+}
+.treaty {
+	/* border: 1px solid red; */
+	padding-top: 25px;
+	font-size: 12px;
+}
+.treaty > span {
+	color: #00A862;
+}
 </style>
