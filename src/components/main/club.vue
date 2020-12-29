@@ -23,12 +23,10 @@
 	margin: 0 auto;
 	padding-top: 30px;
 	text-align: center;
-	/* border: 1px solid red; */
 	font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 .container-fuild > .row {
-	/* border: 1px solid red; */
 	margin-top: 30px;
 	width: 100%;
 	margin-left:0px;
@@ -38,8 +36,7 @@
 	padding-top: 5px;
 }
 .treaty {
-	/* border: 1px solid red; */
-	padding-top: 25px;
+	padding: 25px 0px 15px 0px;
 	font-size: 12px;
 }
 .treaty > span {

@@ -63,6 +63,7 @@
 					<p>* 每份券将在添加至您的星享俱乐部帐户的当天生效，有效期为90天。** 附赠星礼卡的初始余额为0元。</p>
 				</div>
 			</div>
+				<p class="treaty">详情以<span>《星享俱乐部活动的条款和条件》</span>的规定为准</p>
 				<img src="@/assets/img/main/club/giftbag-banner.jpg" class="img-fluid" slot='footerImg'>
 		</div>
 
@@ -149,6 +150,13 @@ export default {
 	width: 100%;
 	margin-left:0px;
 }
+.treaty {
+	padding: 25px 0px 5px 0px;
+	font-size: 12px;
+}
+.treaty > span {
+	color: #00A862;
+}
 /* 星享俱乐部 */
 	.rewards {
 		background: #023529;
@@ -192,6 +200,9 @@ export default {
 		background: #C2A661;
 	}
 	/* 会员星礼包 */
+	.giftbag > div {
+		text-align: left;
+	}
 	.giftbag > div > div  > img {
 		display: inline-block;
 		transform: translateY(20%);
@@ -217,12 +228,27 @@ export default {
 	.channel > div > div p:last-child {
 		margin-bottom: 30px;
 	}
-
 	/* 注册加入我们 */
 	.join {
 		background: rgb(235,243,245);
 	}
 	.join  div p {
 		font-size: 16px !important;
+		color: black;
+	}
+	.join  div div button {
+		background: #15767C;
+		border-radius: 48px;
+		border: none;
+    color: #FFFFFF;
+		font-size: 14px;
+		margin: 20px 0px 0px 0px;
+    padding: 0 22px;
+	}
+	.join div > div {
+		margin-bottom: 25px;
+	}
+	.join .row > div:first-child {
+		border-right: 2px solid black;
 	}
 </style>
