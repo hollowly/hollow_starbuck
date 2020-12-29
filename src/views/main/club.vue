@@ -6,7 +6,6 @@
 		<!-- 星享俱乐部 -->
 		<club class="rewards">
 			<img src="@/assets/img/main/club/rewards-title.png" width="260" slot='titleImg'>
-
 			<div class="col-sm" v-for='item in rewards' slot='container'>
 				<img :src="item.imgUrl" width="120">
 				<h5>{{item.title}}</h5>
@@ -18,7 +17,6 @@
 		<!-- 积分升级 -->
 		<club class="upgrade">
 			<img src="@/assets/img/main/club/upgrade-title.png" width="380" slot='titleImg'>
-
 			<div class="col-sm" v-for='item in upgrade' slot='container'>
 				<img :src="item.imgUrl" width="150">
 				<p>{{item.p1_1}}<span>{{item.p1_span}}</span>{{item.p1_2}}</p>
@@ -71,13 +69,24 @@
 		<!-- 更多获得星星的途径 -->
 		<club class="channel">
 			<img src="@/assets/img/main/club/channel-title.png" width="280" slot='titleImg'>
-
 			<div class="col-sm" v-for='item in channel' slot='container'>
 				<img :src="item.imgUrl" height="70">
 				<p>{{item.p1}}</p>
 				<p>{{item.p2}}</p>
 			</div>
 			<img src="@/assets/img/main/club/channel-banner.jpg" class="img-fluid" slot='footerImg'>
+		</club>
+
+		<!-- 注册加入我们 -->
+		<club class="join">
+			<img src="@/assets/img/main/club/join-title.png" width="360" slot='titleImg'>
+			<div class="col-sm" v-for='item in join' slot='container'>
+				<h4>{{item.title}}</h4>
+				<p>{{item.p1}}</p>
+				<p>{{item.p2}}</p>
+				<button>{{item.btn}}</button>
+			</div>
+			<img src="@/assets/img/main/club/join-banner.jpg" class="img-fluid" slot='footerImg'>
 		</club>
 
 
@@ -114,6 +123,10 @@ export default {
 				{imgUrl:require('@/assets/img/main/club/channel3.png'),p1:'啡快™',p2:'（仅限已开通门店）'},
 				{imgUrl:require('@/assets/img/main/club/channel4.png'),p1:'星巴克天猫',p2:'会员旗舰店'},
 				{imgUrl:require('@/assets/img/main/club/channel5.png'),p1:'星星奖励',p2:'活动'},
+			],
+			join: [
+				{title:'现在就来加入星享俱乐部',p1:'轻松注册，立即开启',p2:"您的全新星享之旅，好礼享不停",btn:'立即注册'},
+				{title:'已是星享俱乐部的会员',p1:'您可快速绑定会员星礼包，',p2:"专享加速积星，丰富好礼等你",btn:'立即登录'},
 			]
 		}
 	},
@@ -200,5 +213,16 @@ export default {
 	}
 	.channel > div > div > div img {
 		margin: 10px 0px 5px 0px;
+	}
+	.channel > div > div p:last-child {
+		margin-bottom: 30px;
+	}
+
+	/* 注册加入我们 */
+	.join {
+		background: rgb(235,243,245);
+	}
+	.join  div p {
+		font-size: 16px !important;
 	}
 </style>
