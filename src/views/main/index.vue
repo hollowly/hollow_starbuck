@@ -123,7 +123,7 @@ export default {
 
 	mounted() {
 		$(function() {
-			$('#promotion  a > img, #tmall > div > div, #tmall > .tmall-screen > aa ').mouseenter(function() {
+			$('#promotion  a > img, #tmall > div > div, #tmall > .tmall-screen > a').mouseenter(function() {
 				$(this).css({
 					'transform':'translateY(-5px)',
 					'box-shadow': '0 1px 3px 2px rgba(0, 0, 0, 0.15)'
@@ -298,7 +298,7 @@ export default {
 		cursor: pointer;
 		text-align: center;
 		background: white;
-		position: relative;
+		position: absolute;
 		left: 50px;
 		top: -90px;
 		z-index: 10;
