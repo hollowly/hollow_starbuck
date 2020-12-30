@@ -20,3 +20,7 @@ a,a:link,a:hover,a:active {
 	padding-right: 0 !important;
 	padding-left: 0 !important;
 }
+
+body {
+	font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}

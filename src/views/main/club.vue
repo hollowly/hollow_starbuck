@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-	<div style="height:5000px">
+	<div>
 		<a href="/register"><img src="@/assets/img/main/club/top.jpeg" class='img-fluid'></a>
 
 		<!-- 星享俱乐部 -->
@@ -85,7 +85,7 @@
 				<h4>{{item.title}}</h4>
 				<p>{{item.p1}}</p>
 				<p>{{item.p2}}</p>
-				<button>{{item.btn}}</button>
+				<a :href="item.aUrl"><button>{{item.text}}</button></a>
 			</div>
 			<img src="@/assets/img/main/club/join-banner.jpg" class="img-fluid" slot='footerImg'>
 		</club>
@@ -239,6 +239,15 @@
 			</div>
 		</club>
 
+		<div class="container footer" :style="{backgroundImage: 'url(' + footer + ')'}">
+			<div class="row">
+				<div class="col-sm">
+					<p>详情以《星享俱乐部活动的条款和条件》的规定为准</p>
+					<p>© 2020 Starbucks Corporation. All rights reserved.</p>
+ 					<img src="@/assets/img/icpicon.png">沪公网安备 31010402000253号 沪ICP备17003747号
+				</div>
+			</div>
+		</div>
 		
 	</div>
 </template>
@@ -275,9 +284,10 @@ export default {
 				{imgUrl:require('@/assets/img/main/club/channel5.png'),p1:'星星奖励',p2:'活动'},
 			],
 			join: [
-				{title:'现在就来加入星享俱乐部',p1:'轻松注册，立即开启',p2:"您的全新星享之旅，好礼享不停",btn:'立即注册'},
-				{title:'已是星享俱乐部的会员',p1:'您可快速绑定会员星礼包，',p2:"专享加速积星，丰富好礼等你",btn:'立即登录'},
-			]
+				{title:'现在就来加入星享俱乐部',p1:'轻松注册，立即开启',p2:"您的全新星享之旅，好礼享不停",text:'立即注册',aUrl:'/register'},
+				{title:'已是星享俱乐部的会员',p1:'您可快速绑定会员星礼包，',p2:"专享加速积星，丰富好礼等你",text:'立即登录',aUrl:'/login'},
+			],
+			footer: require('@/assets/img/main/club/bg-footer.jpeg')
 		}
 	},
 	components: {
@@ -388,11 +398,15 @@ export default {
 	.join  div div button {
 		background: #15767C;
 		border-radius: 48px;
+		outline: none;
 		border: none;
     color: #FFFFFF;
 		font-size: 14px;
 		margin: 20px 0px 0px 0px;
     padding: 0 22px;
+	}
+	.join  div div button > a{
+		color: white;
 	}
 	.join div > div {
 		margin-bottom: 25px;
@@ -425,7 +439,6 @@ export default {
 		text-align: left;
 	}
 	.card-body p {
-		font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 		font-size: 16px;
 	}
 	.card-body > .p-container {
@@ -444,5 +457,16 @@ export default {
 		color: #00A862;
 	}
 
-
+	/* 底部 */
+	.footer {
+		text-align: center;
+		color: white;
+		height: 200px;
+		font-size: 14px;
+		background-size: 100%;
+		background-position: center center;
+	}
+	.footer > .row > div {
+		margin-top: 5%;
+	}
 </style>
