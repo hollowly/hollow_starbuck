@@ -298,7 +298,7 @@ export default {
 		cursor: pointer;
 		text-align: center;
 		background: white;
-		position: absolute;
+		position: relative;
 		left: 50px;
 		top: -90px;
 		z-index: 10;
