@@ -23,26 +23,14 @@
 			<p>每一次细品，都是对这个季节的美妙诠释</p>
 		</menutext>
 
-
-		<div class="container newmain">
-			<h4>主要新品</h4>
-			<div class="row">
-				<div class="col-sm">
-					<img src="@/assets/img/main/menu/newmain1.jpg">
-				</div>
-				<div class="col-sm">
-					
-				</div>
-				<div class="col-sm">
-					
-				</div>
-			</div>
-		</div>
+		<menuimg></menuimg>
+		
 	</div>
 </template>
 
 <script>
 import menutext from '@/components/main/menutext'
+import menuimg from '@/components/main/menuimg'
 export default {
 	data () {
 		return {
@@ -50,7 +38,8 @@ export default {
 		}
 	},
 	components: {
-		menutext
+		menutext,
+		menuimg
 	}
 
 }
@@ -65,18 +54,4 @@ export default {
 		margin: 0;
 	}
 
-
-	.newmain > .row {
-		width: 80%;
-		margin: 0 auto;
-		border: 1px solid red;
-	}
-
-	.newmain > .row > div {
-		width: 30%;
-		border: 1px solid red;
-	}
-	.newmain > .row > div > img {
-		width: 100%;
-	}
 </style>
