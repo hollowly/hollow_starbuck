@@ -63,15 +63,13 @@ const routes = [
 					nav: menu,
 					main: rmenu
 				},
-				children: [
-					{
-						path:'/menu/beverages/',
-						components: {
-							nav: beverages,
-							main: rbeverages
-						}
-					}
-				]
+			},
+			{
+				path:'/menu/beverages',
+				components: {
+				nav: beverages,
+				main: rbeverages
+				}
 			},
 			{
 				path:'/register',
