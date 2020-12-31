@@ -4,19 +4,22 @@
 		<div class="container">
 			<h4>主要新品</h4>
 			<div class="row">
-				<div class="col-sm">
-					<img src="@/assets/img/main/menu/newmain1.jpg"><p>太妃榛果拿铁</p>
-				</div>
-				<div class="col-sm">
-					<img src="@/assets/img/main/menu/newmain2.jpg"><p>熔岩黑巧摩卡</p>
-				</div>
-				<div class="col-sm">
-					<img src="@/assets/img/main/menu/newmain3.jpg"><p>流金圣诞茶拿铁</p>
-				</div>
+				<menuimg><img src="@/assets/img/main/menu/newmain1.jpg"><p>熔岩黑巧摩卡</p></menuimg>
+				<menuimg></menuimg>
+				<menuimg></menuimg>
 			</div>
 		</div>
 	</div>
 </template>
+
+<script>
+import menuimg from '@/components/main/menuimg'
+export default {
+	components: {
+		menuimg,
+	}
+}
+</script>
 
 <style scoped>
 	.container {
@@ -40,8 +43,5 @@
 		margin-right: 0;
 	}
 
-	.container > .row > div > img {
-		width: 83%;
-		margin-bottom: 20px;
-	}
+	
 </style>

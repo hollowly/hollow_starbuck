@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import menutext from '@/components/main/menutext'
 import menuimgrow from '@/components/main/menuimgrow'
+import menutext from '@/components/main/menutext'
 export default {
 	data () {
 		return {
