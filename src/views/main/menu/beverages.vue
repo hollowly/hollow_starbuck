@@ -73,4 +73,12 @@ export default {
 			float: left;
 		}
 	}
+
+
+
+	.active {
+		font-weight: 700;
+		border-bottom: 3px solid #00a862;
+		color: black;
+	}
 </style>
