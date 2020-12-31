@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div>
-		<div class="container">
+		<div class="container-fuild">
 			<h4>主要新品</h4>
 			<div class="row">
 				<menuimg><img src="@/assets/img/main/menu/newmain1.jpg"><p>太妃榛果拿铁</p></menuimg>
@@ -33,9 +33,6 @@
 				<menuimg><img src="@/assets/img/main/menu/newmain17.jpg"><p>咖啡快乐圣诞会员星礼包</p></menuimg>
 				<menuimg><img src="@/assets/img/main/menu/newmain18.jpg"><p>咖啡快乐圣诞会员星礼包</p></menuimg>
 			</div>
-			<div class="row">
-				<menuimg><img src="@/assets/img/main/menu/newmain19.jpg"><p>咖啡快乐圣诞会员星礼包</p></menuimg>
-			</div>
 		</div>
 	</div>
 </template>
@@ -50,24 +47,26 @@ export default {
 </script>
 
 <style scoped>
-	.container {
+	.container-fuild {
 		text-align: center;
 		background: rgb(247,247,247);
 	}
-	.container > h4 {
+	.container-fuild > h4 {
 		padding: 28px 0px;
 	}
-	.container > .row {
+	.container-fuild > .row {
 		width: 80%;
 		margin: 0 auto;
-	}
-
-	.container > .row > div {
+		margin-bottom: 40px;
 		text-align: center;
-		width: 30%;
 	}
 
-	.container > .row > div:last-child {
+	.container-fuild > .row > div {
+		margin: 0 auto;
+		width: 32%;
+	}
+
+	.container-fuild > .row > div:last-child {
 		margin-right: 0;
 	}
 

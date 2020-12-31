@@ -2,9 +2,7 @@
 <template>
 	<div>
 		<a href=""><img src="@/assets/img/main/menu/menu1.jpg" class="img-fluid clearbottom"></a>
-
 		<menutext></menutext>
-
 		<a href=""><img src="@/assets/img/main/menu/menu2.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu3.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu4.jpg" class="img-fluid"></a>
@@ -22,6 +20,7 @@
 			<p>层次分明，有着比想象更多的特殊风味。</p>
 			<p>每一次细品，都是对这个季节的美妙诠释</p>
 		</menutext>
+
 
 		<menuimgrow></menuimgrow>
 		
