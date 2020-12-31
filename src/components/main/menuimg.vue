@@ -20,12 +20,12 @@
 
 <style scoped>
 	.container {
+		text-align: center;
 		background: rgb(247,247,247);
 	}
 	.container > .row {
 		width: 80%;
 		margin: 0 auto;
-		/* border: 1px solid blue; */
 	}
 
 	.container > .row > div {
