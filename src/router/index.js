@@ -9,6 +9,8 @@ const menu = () => import('@/views/nav/menu')					//菜单
 const register = () => import('@/views/nav/register')	//注册
 const login = () => import('@/views/nav/login')				//登录
 const club = () => import('@/views/nav/club')					//俱乐部
+// 菜单左边渲染
+const beverages = () => import('@/views/main/menu/beverages')		//饮料
 
 
 // 右边渲染
@@ -18,6 +20,14 @@ const rlogin = () => import('@/views/main/login')				//right登录
 const rregister = () => import('@/views/main/register')	//right注册
 const rclub = () => import('@/views/main/club')				 	//right俱乐部
 const rmenu = () => import('@/views/main/menu')					//right菜单
+// 菜单右边渲染
+const rbeverages = () => import('@/views/main/menu/rbeverages')		//right饮料
+
+
+
+
+
+
 
 Vue.use(VueRouter)
 
@@ -52,7 +62,16 @@ const routes = [
 				components: {
 					nav: menu,
 					main: rmenu
-				}
+				},
+				children: [
+					{
+						path:'/menu/beverages/',
+						components: {
+							nav: beverages,
+							main: rbeverages
+						}
+					}
+				]
 			},
 			{
 				path:'/register',
