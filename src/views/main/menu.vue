@@ -23,14 +23,14 @@
 			<p>每一次细品，都是对这个季节的美妙诠释</p>
 		</menutext>
 
-		<menuimg></menuimg>
+		<menuimgrow></menuimgrow>
 		
 	</div>
 </template>
 
 <script>
 import menutext from '@/components/main/menutext'
-import menuimg from '@/components/main/menuimg'
+import menuimgrow from '@/components/main/menuimgrow'
 export default {
 	data () {
 		return {
@@ -39,7 +39,7 @@ export default {
 	},
 	components: {
 		menutext,
-		menuimg
+		menuimgrow
 	}
 
 }
