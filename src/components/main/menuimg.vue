@@ -3,7 +3,7 @@
 	<div>
 		<slot>
 			<div class="col-sm">
-				<!-- <img src="@/assets/img/main/menu/newmain1.jpg" name='img'><p name='p'>太妃榛果拿铁</p> -->
+				
 			</div>
 		</slot>
 	</div>
