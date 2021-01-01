@@ -2,21 +2,18 @@
 <template>
 <div>
 	<div class="container-fluid">
-		<slot name='title'></slot>
+
+		<h6>咖啡融合冰淇淋</h6>
 		<div class="row">
-			<slot name='div'>
-				<div class="col-sm" v-for='item in coffeePlusIceCream'>
+			<div class="col-sm" v-for='item in coffeePlusIceCream'>
 				<slotone>
 					<img :src="item.imgUrl" slot='img'>
 					<strong slot='text'>{{item.text}}</strong>
 				</slotone>
-				</div>
-			</slot>
+			</div>
 		</div>
-	</div>
 
-	<!-- <div class="container-fluid">
-		<slot name='title'></slot>
+		<h6>星巴克冷萃咖啡系列</h6>
 		<div class="row">
 			<div class="col-sm" v-for='item in coldBrew'>
 				<slotone>
@@ -25,7 +22,29 @@
 				</slotone>
 			</div>
 		</div>
-	</div> -->
+
+		<h6>手工调制浓缩咖啡</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in espresso1'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm" v-for='item in espresso2'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
+		</div>
+
+	</div>
+
+
+	
 </div>
 </template>
 
@@ -45,6 +64,18 @@ export default {
 				{imgUrl:require('@/assets/img/main/menu/beverages/cold-brew/2.jpg'),text:'轻甜奶油冷萃'},
 				{imgUrl:require('@/assets/img/main/menu/beverages/cold-brew/3.jpg'),text:'绵云冷萃'},
 				{imgUrl:'',text:''},
+			],
+			espresso1: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/1.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/2.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/3.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/4.jpg'),text:'冷萃冰咖啡'},
+			],
+			espresso2: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/5.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/6.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/7.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/8.jpg'),text:'冷萃冰咖啡'},
 			]
 		}
 	},	
