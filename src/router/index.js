@@ -65,7 +65,7 @@ const routes = [
 				},
 			},
 			{
-				path:'/menu/beverages',
+				path:'/menu/beverages/',
 				components: {
 				nav: beverages,
 				main: rbeverages
