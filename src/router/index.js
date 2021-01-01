@@ -65,10 +65,17 @@ const routes = [
 				},
 			},
 			{
-				path:'/menu/beverages/',
-				components: {
-				nav: beverages,
-				main: rbeverages
+				path:'/menu/beverages',
+					components: {
+					nav: beverages,
+					main: rbeverages
+				}
+			},
+			{
+				path:'/menu/beverages/:id',
+					components: {
+					nav: beverages,
+					main: rbeverages
 				}
 			},
 			{

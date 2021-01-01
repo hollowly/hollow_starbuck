@@ -16,14 +16,14 @@ export default {
 	data () {
 		return {
 			menu:[
-				{text:'星巴克玩味冰调™',url:'/menu/beverages/'},
-				{text:'手工调制浓缩咖啡',url:'/menu/food/'},
-				{text:'星冰乐®',url:'/menu/coffee/'},
-				{text:'茶瓦纳™',url:'/menu/merchandise/'},
-				{text:'经典巧克力饮品',url:'/menu/merchandise/'},
-				{text:'咖啡融合冰淇淋',url:'/menu/merchandise/'},
-				{text:'星巴克冷萃咖啡系列',url:'/menu/merchandise/'},
-				{text:'气致™冷萃咖啡',url:'/menu/merchandise/'},
+				{text:'星巴克玩味冰调™',url:'/menu/beverages/modern-mixology/'},
+				{text:'手工调制浓缩咖啡',url:'/menu/beverages/espresso/'},
+				{text:'星冰乐®',url:'/menu/beverages/frappuccino-blended-beverage/'},
+				{text:'茶瓦纳™',url:'/menu/beverages/teavana/'},
+				{text:'经典巧克力饮品',url:'/menu/beverages/signature-chocolate-beverage/'},
+				{text:'咖啡融合冰淇淋',url:'/menu/beverages/coffee-plus-ice-cream/'},
+				{text:'星巴克冷萃咖啡系列',url:'/menu/beverages/cold-brew/'},
+				{text:'气致™冷萃咖啡',url:'/menu/beverages/nitro-cold-brew/'},
 			]
 		}
 	},
