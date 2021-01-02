@@ -40,11 +40,83 @@
 				</slotone>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-sm" v-for='item in espresso3'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
+		</div>
+
+	<h6>星冰乐®</h6>
+	<div class="row">
+		<div class="col-sm" v-for='item in frappuccinoBlendedBeverage1'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm" v-for='item in frappuccinoBlendedBeverage2'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+
+	<h6>星巴克玩味冰调™</h6>
+	<div class="row">
+		<div class="col-sm" v-for='item in modernMixology'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+
+	<h6>气致™冷萃咖啡</h6>
+	<div class="row">
+		<div class="col-sm" v-for='item in nitroColdBrew'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+
+	<h6>经典巧克力饮品</h6>
+	<div class="row">
+		<div class="col-sm" v-for='item in teavana1'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm" v-for='item in teavana2'>
+			<slotone>
+				<img :src="item.imgUrl" slot='img'>
+				<strong slot='text'>{{item.text}}</strong>
+			</slotone>
+		</div>
+	</div>
+
+
+
+
+
+
+
 
 	</div>
 
 
-	
+
+
 </div>
 </template>
 
@@ -66,25 +138,71 @@ export default {
 				{imgUrl:'',text:''},
 			],
 			espresso1: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/1.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/2.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/3.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/4.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/1.jpg'),text:'美式咖啡（热/冷）'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/2.jpg'),text:'拿铁（热/冷）'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/3.jpg'),text:'摩卡（热/冷)'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/4.jpg'),text:'卡布奇诺（热/冷）'},
 			],
 			espresso2: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/5.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/6.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/7.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/8.jpg'),text:'冷萃冰咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/5.jpg'),text:'焦糖玛奇朵（热/冷）'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/6.jpg'),text:'浓缩咖啡'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/7.jpg'),text:'馥芮白™'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/8.jpg'),text:'榛果风味拿铁（热/冷）'},
+			],
+			espresso3: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/9.jpg'),text:'香草风味拿铁（热/冷）'},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+			],
+			frappuccinoBlendedBeverage1: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/1.jpg'),text:'焦糖浓缩咖啡星冰乐'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/2.jpg'),text:'抹茶星冰乐'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/3.jpg'),text:'芒果西番莲果茶星冰乐'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/4.jpg'),text:'摩卡星冰乐'},
+			],
+			frappuccinoBlendedBeverage2: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/5.jpg'),text:'摩卡可可碎片星冰乐'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/6.jpg'),text:'香草风味星冰乐'},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+			],
+			modernMixology: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/1.jpg'),text:'气炫冰山美式'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/2.jpg'),text:'橙柚派对'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/3.jpg'),text:'醋意桃桃'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/4.jpg'),text:'酸柠浮冷萃'},
+			],
+			nitroColdBrew: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/nitro-cold-brew/1.jpg'),text:'气致™冷萃咖啡'},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+			],
+			signatureChocolateBeverage: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/signature-chocolate-beverage/1.jpg'),text:'经典巧克力饮品（热/冷）'},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+				{imgUrl:'',text:''},
+			],
+			teavana1: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/1.jpg'),text:'红茶拿铁（热/冷）'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/2.jpg'),text:'抹茶拿铁（热/冷）'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/3.jpg'),text:'茶瓦纳™ 冰摇柚柚蜂蜜红茶'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/4.jpg'),text:'冰摇红莓黑加仑茶'},
+			],
+			teavana2: [
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/5.jpg'),text:'冰摇芒果花草茶'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/6.jpg'),text:'茶瓦纳™冰摇桃桃乌龙茶'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/7.jpg'),text:'梨光清润路芭茶'},
+				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/8.jpg'),text:'橘香柚柚花草茶'},
 			]
 		}
-	},	
+	},
 	components: {
 		slotone
 	}
-
 }
-
 </script>
 
 <style scoped>
