@@ -40,7 +40,7 @@ export default {
 
 				// 使用 Bus 发送被点击的 a 标签的文本，
 				//在 rbeverages 组件中接收
-				//目的是为了把点击标签的文本发送到 beverages 组件，再在 beverages 组件中进行筛选出对应文本的模块来渲染
+				//目的是为了把点击标签的文本发送到 rbeverages 组件，再在 rbeverages 组件中进行筛选出对应文本的模块来渲染
 				Bus.$emit('texttitle', $(this).text());
 			})
 		})

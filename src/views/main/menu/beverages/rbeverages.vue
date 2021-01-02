@@ -238,12 +238,12 @@ export default {
 		slotone
 	},
 	mounted() {
+		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
 		Bus.$on('texttitle', texttitle => {
 			this.text = texttitle
 
 			for(let i = 0; i < this.istext.length;i++) {
 				if(this.text == this.istext[i]) {
-					console.log(i);
 					if(i == 0) {
 						$('.beverages > div').show()
 					} else {
