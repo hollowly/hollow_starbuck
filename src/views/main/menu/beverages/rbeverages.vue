@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-<div>
+<div style="">
 	<div class="container-fluid beverages">
 		<!-- 咖啡融合冰淇淋 -->
 		<div>
@@ -284,6 +284,7 @@ export default {
 		margin-left: 4%;
 		margin-right: 4%;
 	}
+	.col-sm 
 
 	@media screen and (max-width: 576px){
 		.container-fluid > .row > div {
