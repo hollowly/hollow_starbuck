@@ -12,6 +12,10 @@
 	</div>
 </template>
 <script>
+
+//引用 Bus 来进行兄弟组件中之间通信
+import Bus from '@/utils/bus'
+
 export default {
 	data () {
 		return {
@@ -31,6 +35,11 @@ export default {
 		$(function() {
 			$('ul > li > a').click(function() {
 				$(this).addClass('active').parent('li').siblings('li').children('a').removeClass('active');
+
+				// 使用 Bus 发送被点击的 a 标签的文本，
+				//在 rbeverages 组件中接收
+				//目的是为了把点击标签的文本发送到 beverages 组件，再在 beverages 组件中进行筛选出对应文本的模块来渲染
+				Bus.$emit('texttitle', $(this).text());
 			})
 		})
 	}
