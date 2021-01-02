@@ -11,7 +11,7 @@ const login = () => import('@/views/nav/login')				//登录
 const club = () => import('@/views/nav/club')					//俱乐部
 // 菜单左边渲染
 const beverages = () => import('@/views/main/menu/beverages/beverages')		//饮料
-
+const food = () => import('@/views/main/menu/food/food')		//美食
 
 // 右边渲染
 const mainindex = () => import('@/views/main/index')		//right默认渲染
@@ -22,7 +22,7 @@ const rclub = () => import('@/views/main/club')				 	//right俱乐部
 const rmenu = () => import('@/views/main/menu/index')		//right菜单
 // 菜单右边渲染
 const rbeverages = () => import('@/views/main/menu/beverages/rbeverages')		//right饮料
-
+const rfood = () => import('@/views/main/menu/food/rfood')		//right美食
 
 
 
@@ -58,27 +58,6 @@ const routes = [
 				}
 			},
 			{
-				path:'/menu',
-				components: {
-					nav: menu,
-					main: rmenu
-				},
-			},
-			{
-				path:'/menu/beverages',
-					components: {
-					nav: beverages,
-					main: rbeverages
-				}
-			},
-			{
-				path:'/menu/beverages/:id',
-					components: {
-					nav: beverages,
-					main: rbeverages
-				}
-			},
-			{
 				path:'/register',
 				components: {
 					nav: register,
@@ -90,6 +69,27 @@ const routes = [
 				components: {
 					nav: club,
 					main:rclub
+				}
+			},
+			{
+				path:'/menu',
+				components: {
+					nav: menu,
+					main: rmenu
+				},
+			},
+			{
+				path:'/menu/beverages',
+				components: {
+					nav: beverages,
+					main: rbeverages
+				}
+			},
+			{
+				path:'/menu/food/',
+				components: {
+					nav:food,
+					main:rfood
 				}
 			}
 		]
