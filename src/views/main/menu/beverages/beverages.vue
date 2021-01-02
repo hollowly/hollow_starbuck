@@ -69,11 +69,6 @@ export default {
 		list-style: none;
 		margin: 20px 20px 20px 0px;
 	}
-	/* ul > li:first-child > a {
-		font-weight: 700;
-		border-bottom: 3px solid #00a862;
-		color: black;
-	} */
 	ul > li > a:hover {
 		color: black;
 	}

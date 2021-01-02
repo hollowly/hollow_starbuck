@@ -2,7 +2,7 @@
 <template>
 	<div id='profile'>
 		<a href='/menu'><h6><img src="@/assets/svg/screen-left.svg">菜单</h6></a>
-		<h3 style="font-weight:700">饮料</h3>
+		<h3 style="font-weight:700">美食</h3>
 		<ul>
 			<li v-for='item in menu'>
 				<router-link to=''>{{item.text}}</router-link>
@@ -66,11 +66,6 @@ export default {
 		list-style: none;
 		margin: 20px 20px 20px 0px;
 	}
-	/* ul > li:first-child > a {
-		font-weight: 700;
-		border-bottom: 3px solid #00a862;
-		color: black;
-	} */
 	ul > li > a:hover {
 		color: black;
 	}

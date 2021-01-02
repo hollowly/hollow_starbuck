@@ -2,13 +2,13 @@
 <template>
 	<div>
 		<a href=""><img src="@/assets/img/main/menu/menu1.jpg" class="img-fluid clearbottom"></a>
-		<menutext></menutext>
+		<mainnewproductstext></mainnewproductstext>
 		<a href=""><img src="@/assets/img/main/menu/menu2.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu3.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu4.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu5.jpg" class="img-fluid"></a>
 		<a href=""><img src="@/assets/img/main/menu/menu6.jpg" class="img-fluid clearbottom"></a>
-		<menutext>
+		<mainnewproductstext>
 			<h4>欢享圣诞咖啡好时光</h4>
 			<p>雪松般的香气，伴随着柑橘果酱和奶油糖果香甜</p>
 			<p>星巴克臻选™2020圣诞综合咖啡豆总是诠释这个美妙的季节</p>
@@ -19,16 +19,16 @@
 			<p>草本植物般的气息仿佛节日的庆典般热闹</p>
 			<p>层次分明，有着比想象更多的特殊风味。</p>
 			<p>每一次细品，都是对这个季节的美妙诠释</p>
-		</menutext>
+		</mainnewproductstext>
 
-		<menuimg></menuimg>
+		<mainnewproductsimg></mainnewproductsimg>
 
 	</div>
 </template>
 
 <script>
-import menuimg from '@/components/main/menu/menuimg'
-import menutext from '@/components/main/menu/menutext'
+import mainnewproductsimg from '@/components/main/menu/mainnewproductsimg'
+import mainnewproductstext from '@/components/main/menu/mainnewproductstext'
 export default {
 	data () {
 		return {
@@ -36,8 +36,8 @@ export default {
 		}
 	},
 	components: {
-		menutext,
-		menuimg
+		mainnewproductstext,
+		mainnewproductsimg
 	}
 
 }

@@ -1,8 +1,8 @@
 <!--  -->
 <template>
 	<div class="imgbox">
-		<slot name='img'><img src="@/assets/img/main/menu/beverages/coffee-plus-ice-cream/1.jpg"></slot>
-		<slot name='text'><strong>阿馥奇朵™</strong></slot>
+		<slot name='img'></slot>
+		<slot name='text'><strong></strong></slot>
 	</div>
 </template>
 

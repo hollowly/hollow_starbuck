@@ -7,10 +7,10 @@
 			<h6>咖啡融合冰淇淋</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in coffeePlusIceCream'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -21,10 +21,10 @@
 			<h6>星巴克冷萃咖啡系列</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in coldBrew'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -35,26 +35,26 @@
 			<h6>手工调制浓缩咖啡</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso1'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso2'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso3'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -65,18 +65,18 @@
 			<h6>星冰乐®</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in frappuccinoBlendedBeverage1'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm" v-for='item in frappuccinoBlendedBeverage2'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -87,10 +87,10 @@
 			<h6>星巴克玩味冰调™</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in modernMixology'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -101,10 +101,10 @@
 			<h6>气致™冷萃咖啡</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in nitroColdBrew'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -115,10 +115,10 @@
 			<h6>经典巧克力饮品</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in signatureChocolateBeverage'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<hr>
@@ -129,18 +129,18 @@
 			<h6>茶瓦纳™</h6>
 			<div class="row">
 				<div class="col-sm" v-for='item in teavana1'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm" v-for='item in teavana2'>
-					<slotone>
+					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
-					</slotone>
+					</oneimgbox>
 				</div>
 			</div>
 		</div>
@@ -151,7 +151,7 @@
 </template>
 
 <script>
-import slotone from './slotone'
+import oneimgbox from '@/components/main/menu/oneimgbox'
 
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
@@ -235,7 +235,7 @@ export default {
 		}
 	},
 	components: {
-		slotone
+		oneimgbox
 	},
 	mounted() {
 		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
