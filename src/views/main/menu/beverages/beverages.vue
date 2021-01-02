@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div id='profile'>
-		<router-link to='/menu'><h6><img src="@/assets/svg/screen-left.svg">菜单</h6></router-link>
+		<a href='/menu'><h6><img src="@/assets/svg/screen-left.svg">菜单</h6></a>
 		<h3 style="font-weight:700">饮料</h3>
 		<ul>
 			<li><router-link to="/menu/beverages/" class="active">全部</router-link></li>
@@ -30,7 +30,7 @@ export default {
 	mounted() {
 		$(function() {
 			$('ul > li > a').click(function() {
-				$(this).addClass('active').parent('li').siblings('li').children('a').removeClass('active')
+				$(this).addClass('active').parent('li').siblings('li').children('a').removeClass('active');
 			})
 		})
 	}
