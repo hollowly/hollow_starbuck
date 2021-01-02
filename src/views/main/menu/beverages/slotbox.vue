@@ -2,7 +2,6 @@
 <template>
 <div>
 	<div class="container-fluid">
-
 		<h6>咖啡融合冰淇淋</h6>
 		<div class="row">
 			<div class="col-sm" v-for='item in coffeePlusIceCream'>
@@ -12,6 +11,7 @@
 				</slotone>
 			</div>
 		</div>
+		<hr>
 
 		<h6>星巴克冷萃咖啡系列</h6>
 		<div class="row">
@@ -22,6 +22,7 @@
 				</slotone>
 			</div>
 		</div>
+		<hr>
 
 		<h6>手工调制浓缩咖啡</h6>
 		<div class="row">
@@ -48,75 +49,69 @@
 				</slotone>
 			</div>
 		</div>
+		<hr>
 
-	<h6>星冰乐®</h6>
-	<div class="row">
-		<div class="col-sm" v-for='item in frappuccinoBlendedBeverage1'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<h6>星冰乐®</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in frappuccinoBlendedBeverage1'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm" v-for='item in frappuccinoBlendedBeverage2'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<div class="row">
+			<div class="col-sm" v-for='item in frappuccinoBlendedBeverage2'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
+		<hr>
 
-	<h6>星巴克玩味冰调™</h6>
-	<div class="row">
-		<div class="col-sm" v-for='item in modernMixology'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<h6>星巴克玩味冰调™</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in modernMixology'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
+		<hr>
 
-	<h6>气致™冷萃咖啡</h6>
-	<div class="row">
-		<div class="col-sm" v-for='item in nitroColdBrew'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<h6>气致™冷萃咖啡</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in nitroColdBrew'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
+		<hr>
 
-	<h6>经典巧克力饮品</h6>
-	<div class="row">
-		<div class="col-sm" v-for='item in teavana1'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<h6>经典巧克力饮品</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in teavana1'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm" v-for='item in teavana2'>
-			<slotone>
-				<img :src="item.imgUrl" slot='img'>
-				<strong slot='text'>{{item.text}}</strong>
-			</slotone>
+		<div class="row">
+			<div class="col-sm" v-for='item in teavana2'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
 		</div>
-	</div>
-
-
-
-
-
-
 
 
 	</div>
-
-
-
-
 </div>
 </template>
 
@@ -201,11 +196,14 @@ export default {
 	},
 	components: {
 		slotone
-	}
+	},
 }
 </script>
 
 <style scoped>
+	hr {
+		background: rgba(0, 0, 0, 0.12);
+	}
 	.container-fluid {
 		background:rgb(247,247,247);
 		text-align: center;
