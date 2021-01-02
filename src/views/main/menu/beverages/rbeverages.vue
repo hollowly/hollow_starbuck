@@ -91,8 +91,18 @@
 			</div>
 		</div>
 		<hr>
-
 		<h6>经典巧克力饮品</h6>
+		<div class="row">
+			<div class="col-sm" v-for='item in signatureChocolateBeverage'>
+				<slotone>
+					<img :src="item.imgUrl" slot='img'>
+					<strong slot='text'>{{item.text}}</strong>
+				</slotone>
+			</div>
+		</div>
+		<hr>
+
+		<h6>茶瓦纳™</h6>
 		<div class="row">
 			<div class="col-sm" v-for='item in teavana1'>
 				<slotone>

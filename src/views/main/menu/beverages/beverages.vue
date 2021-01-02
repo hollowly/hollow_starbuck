@@ -6,7 +6,7 @@
 		<ul>
 			<li><router-link to="/menu/beverages/" class="active">全部</router-link></li>
 			<li v-for='item in menu'>
-				<router-link :to="item.url">{{item.text}}</router-link>
+				<router-link to=''>{{item.text}}</router-link>
 			</li>
 		</ul>
 	</div>
@@ -16,17 +16,24 @@ export default {
 	data () {
 		return {
 			menu:[
-				{text:'星巴克玩味冰调™',url:'/menu/beverages/modern-mixology/'},
-				{text:'手工调制浓缩咖啡',url:'/menu/beverages/espresso/'},
-				{text:'星冰乐®',url:'/menu/beverages/frappuccino-blended-beverage/'},
-				{text:'茶瓦纳™',url:'/menu/beverages/teavana/'},
-				{text:'经典巧克力饮品',url:'/menu/beverages/signature-chocolate-beverage/'},
-				{text:'咖啡融合冰淇淋',url:'/menu/beverages/coffee-plus-ice-cream/'},
-				{text:'星巴克冷萃咖啡系列',url:'/menu/beverages/cold-brew/'},
-				{text:'气致™冷萃咖啡',url:'/menu/beverages/nitro-cold-brew/'},
+				{text:'星巴克玩味冰调™'},
+				{text:'手工调制浓缩咖啡'},
+				{text:'星冰乐®'},
+				{text:'茶瓦纳™'},
+				{text:'经典巧克力饮品'},
+				{text:'咖啡融合冰淇淋'},
+				{text:'星巴克冷萃咖啡系列'},
+				{text:'气致™冷萃咖啡'},
 			]
 		}
 	},
+	mounted() {
+		$(function() {
+			$('ul > li > a').click(function() {
+				$(this).addClass('active').parent('li').siblings('li').children('a').removeClass('active')
+			})
+		})
+	}
 }
 </script>
 
@@ -58,12 +65,6 @@ export default {
 	ul > li > a {
 		color: #777;
 	}
-	.active {
-		font-weight: 700;
-		border-bottom: 3px solid #00a862;
-		color: black;
-	}
-
 	@media screen and (max-width: 992px){
 		#profile {
 			top: 75px;
