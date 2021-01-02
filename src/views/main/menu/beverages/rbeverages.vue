@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 <div>
-	<div class="container-fluid qwer">
+	<div class="container-fluid beverages">
 		<!-- 咖啡融合冰淇淋 -->
 		<div>
 			<h6>咖啡融合冰淇淋</h6>
@@ -124,7 +124,6 @@
 			<hr>
 		</div>
 
-
 		<!-- 茶瓦纳™ -->
 		<div>
 			<h6>茶瓦纳™</h6>
@@ -231,8 +230,8 @@ export default {
 				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/7.jpg'),text:'梨光清润路芭茶'},
 				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/8.jpg'),text:'橘香柚柚花草茶'},
 			],
-			text: 'all',
-			istext:['咖啡融合冰淇淋','星巴克冷萃咖啡系列','手工调制浓缩咖啡','星冰乐®','星巴克玩味冰调™','气致™冷萃咖啡','经典巧克力饮品','茶瓦纳™']
+			text: '全部',
+			istext:['全部','咖啡融合冰淇淋','星巴克冷萃咖啡系列','手工调制浓缩咖啡','星冰乐®','星巴克玩味冰调™','气致™冷萃咖啡','经典巧克力饮品','茶瓦纳™']
 		}
 	},
 	components: {
@@ -244,11 +243,16 @@ export default {
 
 			for(let i = 0; i < this.istext.length;i++) {
 				if(this.text == this.istext[i]) {
-					$('.qwer > div').hide()
-					$('.qwer > div').eq(i).show()
+					console.log(i);
+					if(i == 0) {
+						$('.beverages > div').show()
+					} else {
+						$('.beverages > div').hide()
+						$('.beverages > div').eq(i-1).show()
+					}
 				}
 			}
-		});
+		})
 	}
 }
 </script>
