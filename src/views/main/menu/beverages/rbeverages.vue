@@ -284,8 +284,7 @@ export default {
 		margin-left: 4%;
 		margin-right: 4%;
 	}
-	.col-sm 
-
+	
 	@media screen and (max-width: 576px){
 		.container-fluid > .row > div {
 			width: 40%;

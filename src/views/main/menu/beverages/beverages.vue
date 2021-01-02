@@ -4,7 +4,6 @@
 		<a href='/menu'><h6><img src="@/assets/svg/screen-left.svg">菜单</h6></a>
 		<h3 style="font-weight:700">饮料</h3>
 		<ul>
-			<!-- <li><router-link to="/menu/beverages/" class="active">全部</router-link></li> -->
 			<li v-for='item in menu'>
 				<router-link to=''>{{item.text}}</router-link>
 			</li>
