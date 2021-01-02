@@ -66,6 +66,4 @@
 	.container-fuild > .row > div:last-child {
 		margin-right: 0;
 	}
-
-	
 </style>

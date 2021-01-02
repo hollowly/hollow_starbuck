@@ -19,7 +19,7 @@ const rstores = () => import('@/views/main/stores')			//right门店
 const rlogin = () => import('@/views/main/login')				//right登录
 const rregister = () => import('@/views/main/register')	//right注册
 const rclub = () => import('@/views/main/club')				 	//right俱乐部
-const rmenu = () => import('@/views/main/menu')					//right菜单
+const rmenu = () => import('@/views/main/menu/index')		//right菜单
 // 菜单右边渲染
 const rbeverages = () => import('@/views/main/menu/beverages/rbeverages')		//right饮料
 

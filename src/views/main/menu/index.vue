@@ -20,13 +20,15 @@
 			<p>层次分明，有着比想象更多的特殊风味。</p>
 			<p>每一次细品，都是对这个季节的美妙诠释</p>
 		</menutext>
-		<menuimgrow></menuimgrow>
+
+		<menuimg></menuimg>
+
 	</div>
 </template>
 
 <script>
-import menuimgrow from '@/components/main/menuimgrow'
-import menutext from '@/components/main/menutext'
+import menuimg from '@/components/main/menu/menuimg'
+import menutext from '@/components/main/menu/menutext'
 export default {
 	data () {
 		return {
@@ -35,7 +37,7 @@ export default {
 	},
 	components: {
 		menutext,
-		menuimgrow
+		menuimg
 	}
 
 }
