@@ -19,10 +19,12 @@ export default {
 		return {
 			menu: [
 				{text:'全部'},
-				{text:'咖啡豆'},
-				{text:'星巴克VIA® 免煮咖啡'},
-				{text:'星巴克臻选™咖啡'},
-				{text:'Origami™'},
+				{text:'中度烘焙'},
+				{text:'深度烘焙'},
+				{text:'VIA® DAIRY'},
+				{text:'VIA® BLACK'},
+				{text:'中度烘焙®'},
+				{text:'深度烘焙®'},
 			]
 		}
 	},

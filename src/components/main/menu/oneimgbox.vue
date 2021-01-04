@@ -35,7 +35,7 @@ export default {
 		margin-top: 3px;
 		width: 95%;
 		box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
-		border-radius: 999px;
+		border-radius: 100%;
 	}
 	div:hover > img {
 		box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.15);
