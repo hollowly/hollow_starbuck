@@ -13,6 +13,7 @@ const club = () => import('@/views/nav/club')					//俱乐部
 const beverages = () => import('@/views/main/menu/beverages/beverages')		//饮料
 const food = () => import('@/views/main/menu/food/food')		//美食
 const coffee = () => import('@/views/main/menu/coffee/coffee')		//咖啡
+const merchandise = () => import('@/views/main/menu/merchandise/merchandise')		//商店
 
 
 // 右边渲染
@@ -25,7 +26,8 @@ const rmenu = () => import('@/views/main/menu/index')		//right菜单
 // 菜单右边渲染
 const rbeverages = () => import('@/views/main/menu/beverages/rbeverages')		//right饮料
 const rfood = () => import('@/views/main/menu/food/rfood')		//right美食
-const rcoffee = () => import('@/views/main/menu/coffee/rcoffee')		//right美食
+const rcoffee = () => import('@/views/main/menu/coffee/rcoffee')		//right咖啡
+const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')		//right商店
 
 
 
@@ -100,6 +102,13 @@ const routes = [
 				components: {
 					nav:coffee,
 					main:rcoffee
+				}
+			},
+			{
+				path:'/menu/merchandise/',
+				components: {
+					nav:merchandise,
+					main:rmerchandise
 				}
 			},
 		]
