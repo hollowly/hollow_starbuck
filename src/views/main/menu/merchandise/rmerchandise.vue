@@ -2,11 +2,11 @@
 <template>
 <div style="">
 	<div class="container-fluid beverages">
-		<!-- 烘焙 -->
+		<!-- 常规产品 -->
 		<div>
-			<h6>烘焙</h6>
+			<h6>常规产品</h6>
 			<div class="row">
-				<div class="col-sm" v-for='item in bakery1'>
+				<div class="col-sm" v-for='item in conventionalProducts1'>
 					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm" v-for='item in bakery2'>
+				<div class="col-sm" v-for='item in conventionalProducts2'>
 					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm" v-for='item in bakery3'>
+				<div class="col-sm" v-for='item in conventionalProducts3'>
 					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm" v-for='item in bakery4'>
+				<div class="col-sm" v-for='item in conventionalProducts4'>
 					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
@@ -40,19 +40,11 @@
 			<hr>
 		</div>
 
-		<!-- 蛋糕&甜品 -->
+		<!-- 臻选产品 -->
 		<div>
-			<h6>蛋糕&甜品</h6>
+			<h6>臻选产品</h6>
 			<div class="row">
-				<div class="col-sm" v-for='item in cakeDessert1'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm" v-for='item in cakeDessert2'>
+				<div class="col-sm" v-for='item in zhenxuanProducts'>
 					<oneimgbox>
 						<img :src="item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
@@ -62,93 +54,6 @@
 			<hr>
 		</div>
 
-		<!-- 其他美食 -->
-		<div>
-			<h6>其他美食</h6>
-			<div class="row">
-				<div class="col-sm" v-for='item in package1'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm" v-for='item in package2'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<hr>
-		</div>
-		
-		<!-- 三明治、帕尼尼、卷 -->
-		<div>
-			<h6>三明治、帕尼尼、卷</h6>
-			<div class="row">
-				<div class="col-sm" v-for='item in sandwich1'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm" v-for='item in sandwich2'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm" v-for='item in sandwich3'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm" v-for='item in sandwich4'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<hr>
-		</div>
-
-		<!-- 酸奶 -->
-		<div>
-			<h6>酸奶</h6>
-			<div class="row">
-				<div class="col-sm" v-for='item in yoghurt'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<hr>
-		</div>
-
-		<!-- 早安新一天 -->
-		<div>
-			<h6>早安新一天</h6>
-			<div class="row">
-				<div class="col-sm" v-for='item in nitroColdBrew'>
-					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
-						<strong slot='text'>{{item.text}}</strong>
-					</oneimgbox>
-				</div>
-			</div>
-			<hr>
-		</div>
 	</div>
 </div>
 </template>
@@ -161,88 +66,50 @@ import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			bakery1: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/1.jpg'),text:'美式松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/2.jpg'),text:'蓝莓麦芬'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/3.jpg'),text:'香浓巧克力麦芬'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/4.jpg'),text:'旋风玉桂酥'},
+			conventionalProducts1: [
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/1.jpg'),text:'12oz 烫金品牌黑色马克杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/2.jpg'),text:'银色/白色亮面品牌桌面杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/3.jpg'),text:'12oz 彰显本色黑色/深灰不锈钢桌面杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/4.jpg'),text:'12oz 纯白磨砂玻璃杯'},
 			],
-			bakery2: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/5.jpg'),text:'法式香酥可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/6.jpg'),text:'法式焦糖酥'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/7.jpg'),text:'层层榛子果仁酥'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/8.jpg'),text:'蜂蜜提子司康'},
+			conventionalProducts2: [
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/5.jpg'),text:'12oz 烫金品牌白色马克杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/6.jpg'),text:'16oz 烫金品牌黑色马克杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/7.jpg'),text:'16oz 原木黑色拎绳不锈钢保温杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/8.jpg'),text:'16oz 彰显本色黑色/深灰不锈钢随行杯'},
 			],
-			bakery3: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/9.jpg'),text:'燕麦焦糖布丁面包'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/10.jpg'),text:'香浓巧克力可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/11.jpg'),text:'提子干松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/12.jpg'),text:'核桃提子软法面包'},
+			conventionalProducts3: [
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/9.jpg'),text:'16oz 烫金品牌白色马克杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/10.jpg'),text:'3oz 烫金品牌黑色试尝杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/11.jpg'),text:'3oz 烫金品牌白色试尝杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/12.jpg'),text:'500ml 黑色Logo水瓶'},
 			],
-			bakery4: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/13.jpg'),text:'红豆燕麦松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/14.jpg'),text:'全麦核桃麦芬'},
+			conventionalProducts4: [
+				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/13.jpg'),text:'500ml 白色Logo水瓶'},
 				{imgUrl:'',text:''},
 				{imgUrl:'',text:''},
-			],
-			cakeDessert1: [
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/1.jpg'),text:'蓝莓曲奇风轻乳酪蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/2.jpg'),text:'经典瑞士卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/3.jpg'),text:'浓醇三重黑巧克力蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/4.jpg'),text:'法式闪电泡芙'},
-			],
-			cakeDessert2: [
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/5.jpg'),text:'星巴克咖啡提拉米苏蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/6.jpg'),text:'法式马卡龙'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/7.jpg'),text:'纽约风浓郁重芝士蛋糕'},
 				{imgUrl:'',text:''},
 			],
-			package1: [
-				{imgUrl:require('@/assets/img/main/menu/food/package/1.jpg'),text:'腰果'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/2.jpg'),text:'英伦风味黄油饼干'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/3.jpg'),text:'混合果仁果脯'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/4.jpg'),text:'水果沙拉'},
-			],
-			package2: [
-				{imgUrl:require('@/assets/img/main/menu/food/package/5.jpg'),text:'棒棒糖'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/6.jpg'),text:'咖啡味蛋卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/7.jpg'),text:'薄荷味口香糖（无糖）'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/8.jpg'),text:'薄荷味硬糖（无糖）'},
-			],
-			sandwich1: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/1.jpg'),text:'牛油果鸡肉焙果'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/2.jpg'),text:'培根蛋可颂堡'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/3.jpg'),text:'蜜汁培根蛋卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/4.jpg'),text:'层层牛肉法棍'},
-			],
-			sandwich2: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/5.jpg'),text:'牛肉芝士可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/6.jpg'),text:'凯撒鸡肉卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/7.jpg'),text:'鸡肉芝香帕尼尼'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/8.jpg'),text:'炒蛋菌菇虾仁卷'},
-			],
-			sandwich3: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/9.jpg'),text:'火腿芝士可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/10.jpg'),text:'双重芝士火腿吐司'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/11.jpg'),text:'高达芝士火腿星明治'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/12.jpg'),text:'帕斯雀牛肉三明治'},
-			],
-			sandwich4: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/13.jpg'),text:'烤法式火腿鸡蛋三明治'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/14.jpg'),text:'慢烤火腿芝士恰巴特'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/15.jpg'),text:'金枪鱼帕尼尼'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/16.jpg'),text:'火鸡培根英式麦芬'},
-			],
-			yoghurt: [
-				{imgUrl:require('@/assets/img/main/menu/food/yoghurt/1.jpg'),text:'谷物组合希腊式风味酸奶（混合莓果）'},
-				{imgUrl:require('@/assets/img/main/menu/food/yoghurt/2.jpg'),text:'谷物组合希腊式风味酸奶（黄桃）'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
+			zhenxuanProducts: [
+				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/1.jpg'),text:'12oz 纯黑/古铜亮面品牌桌面杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/2.jpg'),text:'16oz 香槟金品牌不锈钢桌面杯'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/3.jpg'),text:'500ml 金色Logo水瓶'},
+				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/4.jpg'),text:'9oz 臻选玻璃杯'},
 			],
 			text: '全部',
-			istext:['全部','烘焙','蛋糕&甜品','其他美食','三明治、帕尼尼、卷','酸奶','早安新一天']
+			istext:['全部','常规产品','臻选产品']
 		}
 	},
+// 	12oz 烫金品牌白色马克杯
+// 16oz 烫金品牌黑色马克杯
+// 16oz 原木黑色拎绳不锈钢保温杯
+// 16oz 彰显本色黑色/深灰不锈钢随行杯
+// 16oz 烫金品牌白色马克杯
+// 3oz 烫金品牌黑色试尝杯
+// 3oz 烫金品牌白色试尝杯
+// 500ml 黑色Logo水瓶
+// 500ml 白色Logo水瓶
+
 	components: {
 		oneimgbox
 	},
