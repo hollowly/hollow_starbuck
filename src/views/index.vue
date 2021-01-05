@@ -60,6 +60,8 @@ export default {
 		}).then(res => {
 			this.container1 = res.data.container1
 			this.container2 = res.data.container2
+			// console.log(this.container1);
+			// console.log(this.container2);
 		}).catch(err => {
 			console.log(err);
 		})
