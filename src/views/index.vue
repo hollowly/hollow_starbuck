@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {request} from '@/network/request'
 export default {
 	data () {
 		return {
@@ -54,15 +54,16 @@ export default {
 			container2:[]
 		}
 	},
-	created() {
-		axios.all([
-			axios({url:'/data.json'}).then(data => {
-				this.container1 = data.data.container1
-				this.container2 = data.data.container2
-			}),
-		])
-	},
 	mounted() {
+		request({
+			url:'/data.json',
+		}).then(res => {
+			this.container1 = res.data.container1
+			this.container2 = res.data.container2
+		}).catch(err => {
+			console.log(err);
+		})
+		
 		$(function() {
 			$('.sidebar-more').click(function() {
 				$(this).hide()

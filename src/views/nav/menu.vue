@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {request} from '@/network/request'
 
 export default {
 	data () {
@@ -22,11 +22,14 @@ export default {
 		}
 	},
 	mounted() {
-		axios.all([
-			axios({url:'/data.json'}).then(data => {
-				this.menu = data.data.menu
-			}),
-		])
+		request({
+			url:'/data.json',
+		}).then(res => {
+			this.menu = res.data.menu
+			// console.log(res.data.menu);
+		}).catch(err => {
+			console.log(err);
+		})
 	},
 }
 </script>
