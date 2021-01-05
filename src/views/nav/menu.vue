@@ -3,7 +3,7 @@
 	<div id='profile'>
 		<h3 style="font-weight:700">菜单</h3>
 		<ul>
-			我叫{{$store.state.name}}
+			<!-- 我叫{{this.$store.state.data}} -->
 			<li><a href="/menu" class="active">季度精选</a></li>
 			<li v-for='item in menu'>
 				<router-link :to="item.url">{{item.text}}</router-link>
@@ -24,9 +24,7 @@ export default {
 	mounted() {
 		axios.all([
 			axios({url:'/data.json'}).then(data => {
-				console.log(data.data);
-
-				
+				this.menu = data.data.menu
 			}),
 		])
 	},
