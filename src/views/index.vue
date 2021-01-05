@@ -57,7 +57,7 @@ export default {
 	created() {
 		axios.all([
 			axios({url:'/data.json'}).then(data => {
-				console.log(data);
+				// console.log(data);
 				this.container1 = data.data.container1
 				this.container2 = data.data.container2
 			}),

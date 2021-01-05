@@ -20,14 +20,15 @@ export default {
 			menu: [],
 		}
 	},
-	created() {
-		axios.all([
-			axios({url:'/data.json'}).then(data => {
-				console.log(data);
-				this.menu = data.data.menu
-			}),
-		])
-	},
+	// created() {
+		// axios.all([
+			// axios({url:'/data.json'}).then(data => {
+				// console.log(data);
+				// console.log(this.$root);
+				// this.menu = data.data.menu
+			// }),
+		// ])
+	// },
 }
 </script>
 

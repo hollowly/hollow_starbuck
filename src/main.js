@@ -12,13 +12,24 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 Vue.prototype.$ = $
 Vue.config.productionTip = false
 
-
-import Axios from 'axios'
-Axios.defaults.baseURL = '/api'
-
-
-
 new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+
+
+
+
+// 1. 配置 axios 请求的为 api 格式
+import axios from 'axios'
+axios.defaults.baseURL = '/api'
+
+// 2. axios请求数据：
+import { request } from './network/request'
+request({
+	url:'/data.json',
+}).then(res => {
+	console.log(res.data);
+}).catch(err => {
+	console.log(err);
+})
