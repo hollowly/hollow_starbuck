@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 // 引入jQuery、bootstrap
 import $ from 'jquery'
@@ -13,23 +14,13 @@ Vue.prototype.$ = $
 Vue.config.productionTip = false
 
 new Vue({
-  router,
+	router,
+	store,
   render: h => h(App)
 }).$mount('#app')
 
 
 
-
-// 1. 配置 axios 请求的为 api 格式
+// 配置 axios 请求的为 api 格式
 import axios from 'axios'
 axios.defaults.baseURL = '/api'
-
-// 2. axios请求数据：
-import { request } from './network/request'
-request({
-	url:'/data.json',
-}).then(res => {
-	console.log(res.data);
-}).catch(err => {
-	console.log(err);
-})
