@@ -10,9 +10,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 // 全局注册 $
 Vue.prototype.$ = $
-
-
 Vue.config.productionTip = false
+
+
+import Axios from 'axios'
+Axios.defaults.baseURL = '/api'
+
+
 
 new Vue({
   router,

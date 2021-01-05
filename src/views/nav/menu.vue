@@ -12,16 +12,30 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
 	data () {
 		return {
-			menu:[
-				{text:'饮料',url:'/menu/beverages/'},
-				{text:'美食',url:'/menu/food/'},
-				{text:'咖啡产品',url:'/menu/coffee/'},
-				{text:'商店',url:'/menu/merchandise/'},
-			]
+			// menu:[
+			// 	{text:'饮料',url:'/menu/beverages/'},
+			// 	{text:'美食',url:'/menu/food/'},
+			// 	{text:'咖啡产品',url:'/menu/coffee/'},
+			// 	{text:'商店',url:'/menu/merchandise/'},
+			// ]
+			menu: [],
 		}
+	},
+	created() {
+		axios.all([
+			axios({url:'/stia.json'}).then(data => {
+				console.log(data);
+				// this.menu = data.menu
+			}),
+			axios({url:'/stia.json'}).then(data => {
+				console.log(data);
+			})
+		])
 	},
 }
 </script>
