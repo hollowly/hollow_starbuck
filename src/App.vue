@@ -7,15 +7,24 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { request } from './network/request'
+
 export default {
 	data() {
 		return {
 		}
 	},
-	components: {
-		
-	},
-	
+	// 封装的 axios 方法
+	// created() {
+	// 	request({
+	// 		url:'/data.json',
+	// 	}).then(res => {
+	// 		console.log(res.data);
+	// 	}).catch(err => {
+	// 		console.log(err);
+	// 	})
+	// }
 }
 </script>
 
