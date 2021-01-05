@@ -46,26 +46,22 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
 	data () {
 		return {
-			container1:[
-				{text:'门店',url:'/stores'},
-				{text:'星享俱乐部',url:'/club'},
-				{text:'菜单',url:'/menu'},
-			],
-			container2:[		
-				{text:'星巴克移动应用',url:'/apps'},
-				{text:'星礼卡',url:'/gift-card'},
-				{text:'星巴克臻选™',url:'/reserve'},
-				{text:'啡快™ - 在线点 到店取',url:'/now'},
-				{text:'专星送™',url:'/delivers'},
-				{text:'咖啡星讲堂',url:'/coffee-blog'},
-				{text:'上海烘焙工坊',url:'/baking'},
-				{text:'关于星巴克',url:'/about'},
-				{text:'帮助中心',url:'/help'}
-			]
+			container1:[],
+			container2:[]
 		}
+	},
+	created() {
+		axios.all([
+			axios({url:'/data.json'}).then(data => {
+				console.log(data);
+				this.container1 = data.data.container1
+				this.container2 = data.data.container2
+			}),
+		])
 	},
 	mounted() {
 		$(function() {
