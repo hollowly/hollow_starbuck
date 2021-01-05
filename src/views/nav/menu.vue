@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
 	data () {
@@ -20,8 +20,15 @@ export default {
 			menu: [],
 		}
 	},
-	mounted() {
-	},
+	// mounted() {
+	// 	axios.all([
+	// 		axios({url:'/data.json'}).then(data => {
+	// 			this.menu = data.data.menu
+
+	// 			console.log(this.menu);
+	// 		}),
+	// 	])
+	// },
 }
 </script>
 

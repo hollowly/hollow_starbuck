@@ -7,12 +7,13 @@
 </template>
 
 <script>
-import axios from 'axios'
-import { request } from './network/request'
+// import axios from 'axios'
+// import { request } from './network/request'
 
 export default {
 	data() {
 		return {
+			
 		}
 	},
 	// 封装的 axios 方法
