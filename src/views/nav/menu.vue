@@ -3,6 +3,7 @@
 	<div id='profile'>
 		<h3 style="font-weight:700">菜单</h3>
 		<ul>
+			我叫{{$store.state.name}}
 			<li><a href="/menu" class="active">季度精选</a></li>
 			<li v-for='item in menu'>
 				<router-link :to="item.url">{{item.text}}</router-link>
@@ -12,7 +13,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
 	data () {
@@ -20,15 +21,15 @@ export default {
 			menu: [],
 		}
 	},
-	// mounted() {
-	// 	axios.all([
-	// 		axios({url:'/data.json'}).then(data => {
-	// 			this.menu = data.data.menu
+	mounted() {
+		axios.all([
+			axios({url:'/data.json'}).then(data => {
+				console.log(data.data);
 
-	// 			console.log(this.menu);
-	// 		}),
-	// 	])
-	// },
+				
+			}),
+		])
+	},
 }
 </script>
 
