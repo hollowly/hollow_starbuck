@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 import axios from 'axios'
 
 export default {
@@ -21,10 +22,12 @@ export default {
 		}
 	},
 	mounted() {
+		console.log(this.$store.state.name);
+		console.log(this.$store.state.data);
+
 		// axios.all([
 			// axios({url:'/data.json'}).then(data => {
 				// console.log(data);
-				console.log(this.$root);
 				// this.menu = data.data.menu
 			// }),
 		// ])
