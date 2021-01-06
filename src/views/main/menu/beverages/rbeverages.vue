@@ -152,7 +152,7 @@
 
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
-import {request} from '@/network/request'
+import { request } from '@/network/request'
 
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
@@ -220,4 +220,35 @@ export default {
 </script>
 
 <style scoped>
+	.hidden {
+		display: none;
+	}
+	hr {
+		background: rgba(0, 0, 0, 0.12);
+	}
+	.container-fluid {
+		background:rgb(247,247,247);
+		text-align: center;
+		margin: 0  auto;
+	}
+	.container-fluid > div > h6 {
+		text-align: left;
+		font-weight: 700;
+		color: rgba(0, 0, 0, 0.56);
+		font-size: 14px;
+		padding: 20px;
+	}
+	.container-fluid > div > .row {
+		margin: 0  auto;
+	}
+	.container-fluid > div > .row > div {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+	
+	@media screen and (max-width: 576px){
+		.container-fluid > .row > div {
+			width: 40%;
+		}
+	}
 </style>

@@ -116,16 +116,14 @@ import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			mediumRoast1: [],
-			mediumRoast2: [],
-			darkRoast1: [],
-			darkRoast2: [],
-			viaDairy: [],
-			viaBlack: [],
-			zhenxuanCoffee1: [],
-			zhenxuanCoffee2: [],
-			mediumRoastOne: [],
-			darkRoastOne: [],
+			mediumRoast1: [],	//中度烘焙1
+			mediumRoast2: [],	//中度烘焙2
+			darkRoast1: [],	//深度烘焙1
+			darkRoast2: [],	//深度烘焙2
+			viaDairy: [],	//VIA® DAIRY
+			viaBlack: [],	//VIA® BLACK
+			mediumRoastOne: [],	//中度烘焙®
+			darkRoastOne: [],	//深度烘焙®
 			text: '全部',
 			istext:['全部','中度烘焙','深度烘焙','VIA® DAIRY','VIA® BLACK','中度烘焙®','深度烘焙®']
 		}
@@ -144,8 +142,6 @@ export default {
 			this.darkRoast2 = res.data.menu_coffee.darkRoast2
 			this.viaDairy = res.data.menu_coffee.viaDairy
 			this.viaBlack = res.data.menu_coffee.viaBlack
-			this.zhenxuanCoffee1 = res.data.menu_coffee.zhenxuanCoffee1
-			this.zhenxuanCoffee2 = res.data.menu_coffee.zhenxuanCoffee2
 			this.mediumRoastOne = res.data.menu_coffee.mediumRoastOne
 			this.darkRoastOne = res.data.menu_coffee.darkRoastOne
 		}).catch(err => {
@@ -185,18 +181,15 @@ export default {
 		margin: 0  auto;
 	}
 	.container-fluid > div > h6 {
-		/* width: 100%; */
 		text-align: left;
 		font-weight: 700;
 		color: rgba(0, 0, 0, 0.56);
-		/* border: 1px solid red; */
 		font-size: 14px;
 		padding: 20px;
 	}
 	.container-fluid > div > .row {
 		margin: 0  auto;
 	}
-	
 	.container-fluid > div > .row > div {
 		margin-left: 4%;
 		margin-right: 4%;

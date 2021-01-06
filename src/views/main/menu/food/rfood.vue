@@ -162,19 +162,19 @@ import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			bakery1: [],
-			bakery2: [],
-			bakery3: [],
-			bakery4: [],
-			cakeDessert1: [],
-			cakeDessert2: [],
-			package1: [],
-			package2: [],
-			sandwich1: [],
-			sandwich2: [],
-			sandwich3: [],
-			sandwich4: [],
-			yoghurt: [],
+			bakery1: [],	//烘焙1
+			bakery2: [],	//烘焙2
+			bakery3: [],	//烘焙3
+			bakery4: [],	//烘焙4
+			cakeDessert1: [],	//蛋糕&甜品1
+			cakeDessert2: [],	//蛋糕&甜品2
+			package1: [],		//其他美食1
+			package2: [],		//其他美食2
+			sandwich1: [],	//三明治、帕尼尼、卷1
+			sandwich2: [],	//三明治、帕尼尼、卷2
+			sandwich3: [],	//三明治、帕尼尼、卷3
+			sandwich4: [],	//三明治、帕尼尼、卷4
+			yoghurt: [],		//酸奶
 			text: '全部',
 			istext:['全部','烘焙','蛋糕&甜品','其他美食','三明治、帕尼尼、卷','酸奶','早安新一天']
 		}
@@ -237,18 +237,15 @@ export default {
 		margin: 0  auto;
 	}
 	.container-fluid > div > h6 {
-		/* width: 100%; */
 		text-align: left;
 		font-weight: 700;
 		color: rgba(0, 0, 0, 0.56);
-		/* border: 1px solid red; */
 		font-size: 14px;
 		padding: 20px;
 	}
 	.container-fluid > div > .row {
 		margin: 0  auto;
 	}
-	
 	.container-fluid > div > .row > div {
 		margin-left: 4%;
 		margin-right: 4%;

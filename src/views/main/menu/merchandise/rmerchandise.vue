@@ -67,11 +67,11 @@ import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			conventionalProducts1: [],
-			conventionalProducts2: [],
-			conventionalProducts3: [],
-			conventionalProducts4: [],
-			zhenxuanProducts: [],
+			conventionalProducts1: [],	//常规产品1
+			conventionalProducts2: [],	//常规产品2
+			conventionalProducts3: [],	//常规产品3
+			conventionalProducts4: [],	//常规产品4
+			zhenxuanProducts: [],		//臻选产品
 			text: '全部',
 			istext:['全部','常规产品','臻选产品']
 		}
@@ -110,7 +110,7 @@ export default {
 			}
 		})
 	}
-	
+
 }
 </script>
 
@@ -127,18 +127,15 @@ export default {
 		margin: 0  auto;
 	}
 	.container-fluid > div > h6 {
-		/* width: 100%; */
 		text-align: left;
 		font-weight: 700;
 		color: rgba(0, 0, 0, 0.56);
-		/* border: 1px solid red; */
 		font-size: 14px;
 		padding: 20px;
 	}
 	.container-fluid > div > .row {
 		margin: 0  auto;
 	}
-	
 	.container-fluid > div > .row > div {
 		margin-left: 4%;
 		margin-right: 4%;
