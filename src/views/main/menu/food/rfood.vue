@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in bakery1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in bakery2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in bakery3'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in bakery4'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in cakeDessert1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -54,7 +54,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in cakeDessert2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -68,7 +68,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in package1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -76,7 +76,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in package2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -90,7 +90,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in sandwich1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -98,7 +98,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in sandwich2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -106,7 +106,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in sandwich3'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -114,7 +114,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in sandwich4'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -128,7 +128,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in yoghurt'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -155,90 +155,26 @@
 
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
+import {request} from '@/network/request'
 
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			bakery1: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/1.jpg'),text:'美式松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/2.jpg'),text:'蓝莓麦芬'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/3.jpg'),text:'香浓巧克力麦芬'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/4.jpg'),text:'旋风玉桂酥'},
-			],
-			bakery2: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/5.jpg'),text:'法式香酥可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/6.jpg'),text:'法式焦糖酥'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/7.jpg'),text:'层层榛子果仁酥'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/8.jpg'),text:'蜂蜜提子司康'},
-			],
-			bakery3: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/9.jpg'),text:'燕麦焦糖布丁面包'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/10.jpg'),text:'香浓巧克力可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/11.jpg'),text:'提子干松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/12.jpg'),text:'核桃提子软法面包'},
-			],
-			bakery4: [
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/13.jpg'),text:'红豆燕麦松饼'},
-				{imgUrl:require('@/assets/img/main/menu/food/bakery/14.jpg'),text:'全麦核桃麦芬'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			cakeDessert1: [
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/1.jpg'),text:'蓝莓曲奇风轻乳酪蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/2.jpg'),text:'经典瑞士卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/3.jpg'),text:'浓醇三重黑巧克力蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/4.jpg'),text:'法式闪电泡芙'},
-			],
-			cakeDessert2: [
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/5.jpg'),text:'星巴克咖啡提拉米苏蛋糕'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/6.jpg'),text:'法式马卡龙'},
-				{imgUrl:require('@/assets/img/main/menu/food/cake-dessert/7.jpg'),text:'纽约风浓郁重芝士蛋糕'},
-				{imgUrl:'',text:''},
-			],
-			package1: [
-				{imgUrl:require('@/assets/img/main/menu/food/package/1.jpg'),text:'腰果'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/2.jpg'),text:'英伦风味黄油饼干'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/3.jpg'),text:'混合果仁果脯'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/4.jpg'),text:'水果沙拉'},
-			],
-			package2: [
-				{imgUrl:require('@/assets/img/main/menu/food/package/5.jpg'),text:'棒棒糖'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/6.jpg'),text:'咖啡味蛋卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/7.jpg'),text:'薄荷味口香糖（无糖）'},
-				{imgUrl:require('@/assets/img/main/menu/food/package/8.jpg'),text:'薄荷味硬糖（无糖）'},
-			],
-			sandwich1: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/1.jpg'),text:'牛油果鸡肉焙果'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/2.jpg'),text:'培根蛋可颂堡'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/3.jpg'),text:'蜜汁培根蛋卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/4.jpg'),text:'层层牛肉法棍'},
-			],
-			sandwich2: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/5.jpg'),text:'牛肉芝士可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/6.jpg'),text:'凯撒鸡肉卷'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/7.jpg'),text:'鸡肉芝香帕尼尼'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/8.jpg'),text:'炒蛋菌菇虾仁卷'},
-			],
-			sandwich3: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/9.jpg'),text:'火腿芝士可颂'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/10.jpg'),text:'双重芝士火腿吐司'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/11.jpg'),text:'高达芝士火腿星明治'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/12.jpg'),text:'帕斯雀牛肉三明治'},
-			],
-			sandwich4: [
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/13.jpg'),text:'烤法式火腿鸡蛋三明治'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/14.jpg'),text:'慢烤火腿芝士恰巴特'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/15.jpg'),text:'金枪鱼帕尼尼'},
-				{imgUrl:require('@/assets/img/main/menu/food/sandwich/16.jpg'),text:'火鸡培根英式麦芬'},
-			],
-			yoghurt: [
-				{imgUrl:require('@/assets/img/main/menu/food/yoghurt/1.jpg'),text:'谷物组合希腊式风味酸奶（混合莓果）'},
-				{imgUrl:require('@/assets/img/main/menu/food/yoghurt/2.jpg'),text:'谷物组合希腊式风味酸奶（黄桃）'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
+			bakery1: [],
+			bakery2: [],
+			bakery3: [],
+			bakery4: [],
+			cakeDessert1: [],
+			cakeDessert2: [],
+			package1: [],
+			package2: [],
+			sandwich1: [],
+			sandwich2: [],
+			sandwich3: [],
+			sandwich4: [],
+			yoghurt: [],
 			text: '全部',
 			istext:['全部','烘焙','蛋糕&甜品','其他美食','三明治、帕尼尼、卷','酸奶','早安新一天']
 		}
@@ -247,6 +183,27 @@ export default {
 		oneimgbox
 	},
 	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			this.bakery1 = res.data.menu_food.bakery1
+			this.bakery2 = res.data.menu_food.bakery2
+			this.bakery3 = res.data.menu_food.bakery3
+			this.bakery4 = res.data.menu_food.bakery4
+			this.cakeDessert1 = res.data.menu_food.cakeDessert1
+			this.cakeDessert2 = res.data.menu_food.cakeDessert2
+			this.package1 = res.data.menu_food.package1
+			this.package2 = res.data.menu_food.package2
+			this.sandwich1 = res.data.menu_food.sandwich1
+			this.sandwich2 = res.data.menu_food.sandwich2
+			this.sandwich3 = res.data.menu_food.sandwich3
+			this.sandwich4 = res.data.menu_food.sandwich4
+			this.yoghurt = res.data.menu_food.yoghurt
+		}).catch(err => {
+			console.log(err);
+		})
+
 		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
 		Bus.$on('texttitle', texttitle => {
 			this.text = texttitle
@@ -268,6 +225,9 @@ export default {
 </script>
 
 <style scoped>
+	.hidden {
+		display: none;
+	}
 	hr {
 		background: rgba(0, 0, 0, 0.12);
 	}

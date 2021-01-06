@@ -152,7 +152,6 @@
 
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
-
 import {request} from '@/network/request'
 
 //引用 Bus 来进行兄弟组件中之间通信
