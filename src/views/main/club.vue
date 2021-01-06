@@ -274,7 +274,6 @@ export default {
 		request({
 			url:'/data3.json',
 		}).then(res => {
-			console.log(res.data);
 			this.rewards = res.data.rewards
 			this.upgrade = res.data.upgrade
 			this.stars = res.data.stars

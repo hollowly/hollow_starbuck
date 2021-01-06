@@ -108,12 +108,11 @@ export default {
 		}
 	},
 
-	// 数据请求
 	mounted() {
+		// 数据请求
 		request({
 			url:'/data3.json',
 		}).then(res => {
-			console.log(res.data);
 			this.promotionUrl = res.data.promotionUrl
 			this.tmallD = res.data.tmallD
 			this.tmallCulture = res.data.tmallCulture
