@@ -13,25 +13,27 @@
 </template>
 
 <script>
+import {request} from '@/network/request'
+
 import leftmenu from '@/components/main/menu/leftmenu'
 export default {
 	data () {
 		return {
-			menu:[
-				{text:'全部'},
-				{text:'星巴克玩味冰调™'},
-				{text:'手工调制浓缩咖啡'},
-				{text:'星冰乐®'},
-				{text:'茶瓦纳™'},
-				{text:'经典巧克力饮品'},
-				{text:'咖啡融合冰淇淋'},
-				{text:'星巴克冷萃咖啡系列'},
-				{text:'气致™冷萃咖啡'},
-			]
+			menu:[],
 		}
 	},
 	components: {
 		leftmenu
+	},
+	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			this.menu = res.data.menu_beverages.menu
+		}).catch(err => {
+			console.log(err);
+		})
 	}
 }
 </script>

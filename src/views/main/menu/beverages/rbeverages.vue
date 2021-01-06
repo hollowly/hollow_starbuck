@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in coffeePlusIceCream'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in coldBrew'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -36,7 +36,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -44,7 +44,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in espresso3'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -66,7 +66,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in frappuccinoBlendedBeverage1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -74,7 +74,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in frappuccinoBlendedBeverage2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -88,7 +88,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in modernMixology'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -102,7 +102,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in nitroColdBrew'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -116,7 +116,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in signatureChocolateBeverage'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -130,7 +130,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in teavana1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -138,7 +138,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in teavana2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -153,83 +153,25 @@
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
 
+import {request} from '@/network/request'
+
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			coffeePlusIceCream: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/coffee-plus-ice-cream/1.jpg'),text:'阿馥奇朵™'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/coffee-plus-ice-cream/2.jpg'),text:'麦芽雪冷萃™'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/coffee-plus-ice-cream/3.jpg'),text:'冷萃浮乐朵™'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/coffee-plus-ice-cream/4.jpg'),text:'气致™冷萃浮乐朵™'},
-			],
-			coldBrew: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/cold-brew/1.jpg'),text:'冷萃冰咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/cold-brew/2.jpg'),text:'轻甜奶油冷萃'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/cold-brew/3.jpg'),text:'绵云冷萃'},
-				{imgUrl:'',text:''},
-			],
-			espresso1: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/1.jpg'),text:'美式咖啡（热/冷）'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/2.jpg'),text:'拿铁（热/冷）'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/3.jpg'),text:'摩卡（热/冷)'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/4.jpg'),text:'卡布奇诺（热/冷）'},
-			],
-			espresso2: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/5.jpg'),text:'焦糖玛奇朵（热/冷）'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/6.jpg'),text:'浓缩咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/7.jpg'),text:'馥芮白™'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/8.jpg'),text:'榛果风味拿铁（热/冷）'},
-			],
-			espresso3: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/espresso/9.jpg'),text:'香草风味拿铁（热/冷）'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			frappuccinoBlendedBeverage1: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/1.jpg'),text:'焦糖浓缩咖啡星冰乐'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/2.jpg'),text:'抹茶星冰乐'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/3.jpg'),text:'芒果西番莲果茶星冰乐'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/4.jpg'),text:'摩卡星冰乐'},
-			],
-			frappuccinoBlendedBeverage2: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/5.jpg'),text:'摩卡可可碎片星冰乐'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/frappuccino-blended-beverage/6.jpg'),text:'香草风味星冰乐'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			modernMixology: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/1.jpg'),text:'气炫冰山美式'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/2.jpg'),text:'橙柚派对'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/3.jpg'),text:'醋意桃桃'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/modern-mixology/4.jpg'),text:'酸柠浮冷萃'},
-			],
-			nitroColdBrew: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/nitro-cold-brew/1.jpg'),text:'气致™冷萃咖啡'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			signatureChocolateBeverage: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/signature-chocolate-beverage/1.jpg'),text:'经典巧克力饮品（热/冷）'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			teavana1: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/1.jpg'),text:'红茶拿铁（热/冷）'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/2.jpg'),text:'抹茶拿铁（热/冷）'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/3.jpg'),text:'茶瓦纳™ 冰摇柚柚蜂蜜红茶'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/4.jpg'),text:'冰摇红莓黑加仑茶'},
-			],
-			teavana2: [
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/5.jpg'),text:'冰摇芒果花草茶'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/6.jpg'),text:'茶瓦纳™冰摇桃桃乌龙茶'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/7.jpg'),text:'梨光清润路芭茶'},
-				{imgUrl:require('@/assets/img/main/menu/beverages/teavana/8.jpg'),text:'橘香柚柚花草茶'},
-			],
+			coffeePlusIceCream: [], //咖啡融合冰淇淋
+			coldBrew: [],	//星巴克冷萃咖啡系列
+			espresso1: [],	//手工调制浓缩咖啡1
+			espresso2: [],	//手工调制浓缩咖啡2
+			espresso3: [],	//手工调制浓缩咖啡3
+			frappuccinoBlendedBeverage1: [],	//星冰乐®1
+			frappuccinoBlendedBeverage2: [],	//星冰乐®2
+			modernMixology: [],	//星巴克玩味冰调™
+			nitroColdBrew: [],	//气致™冷萃咖啡
+			signatureChocolateBeverage: [],	//经典巧克力饮品
+			teavana1: [],	//茶瓦纳™1
+			teavana2: [],	//茶瓦纳™2
 			text: '全部',
 			istext:['全部','咖啡融合冰淇淋','星巴克冷萃咖啡系列','手工调制浓缩咖啡','星冰乐®','星巴克玩味冰调™','气致™冷萃咖啡','经典巧克力饮品','茶瓦纳™']
 		}
@@ -238,6 +180,26 @@ export default {
 		oneimgbox
 	},
 	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			this.coffeePlusIceCream = res.data.menu_beverages.coffeePlusIceCream
+			this.coldBrew = res.data.menu_beverages.coldBrew
+			this.espresso1 = res.data.menu_beverages.espresso1
+			this.espresso2 = res.data.menu_beverages.espresso2
+			this.espresso3 = res.data.menu_beverages.espresso3
+			this.frappuccinoBlendedBeverage1 = res.data.menu_beverages.frappuccinoBlendedBeverage1
+			this.frappuccinoBlendedBeverage2 = res.data.menu_beverages.frappuccinoBlendedBeverage2
+			this.modernMixology = res.data.menu_beverages.modernMixology
+			this.nitroColdBrew = res.data.menu_beverages.nitroColdBrew
+			this.signatureChocolateBeverage = res.data.menu_beverages.signatureChocolateBeverage
+			this.teavana1 = res.data.menu_beverages.teavana1
+			this.teavana2 = res.data.menu_beverages.teavana2
+		}).catch(err => {
+			console.log(err);
+		})
+		
 		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
 		Bus.$on('texttitle', texttitle => {
 			this.text = texttitle
@@ -259,6 +221,9 @@ export default {
 </script>
 
 <style scoped>
+.hidden {
+	display: none;
+}
 	hr {
 		background: rgba(0, 0, 0, 0.12);
 	}
