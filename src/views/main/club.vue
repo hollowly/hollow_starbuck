@@ -260,7 +260,6 @@ export default {
 			rewards: [],
 			upgrade: [],
 			stars: [],
-			giftbag: [],
 			channel: [],
 			join: [],
 			footer:[],
@@ -277,7 +276,6 @@ export default {
 			this.rewards = res.data.rewards
 			this.upgrade = res.data.upgrade
 			this.stars = res.data.stars
-			this.giftbag = res.data.giftbag
 			this.channel = res.data.channel
 			this.join = res.data.join
 			this.footer = res.data.footer
