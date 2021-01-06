@@ -239,7 +239,7 @@
 			</div>
 		</club>
 
-		<div class="container footer" :style="{backgroundImage: 'url(' + footer + ')'}">
+		<div class="container footer" :style="{backgroundImage: 'url(' + $host + footer + ')'}">
 			<div class="row">
 				<div class="col-sm">
 					<p>详情以《星享俱乐部活动的条款和条件》的规定为准</p>
@@ -262,11 +262,8 @@ export default {
 			stars: [],
 			giftbag: [],
 			channel: [],
-			join: [
-				{title:'现在就来加入星享俱乐部',p1:'轻松注册，立即开启',p2:"您的全新星享之旅，好礼享不停",text:'立即注册',aUrl:'/register'},
-				{title:'已是星享俱乐部的会员',p1:'您可快速绑定会员星礼包，',p2:"专享加速积星，丰富好礼等你",text:'立即登录',aUrl:'/login'},
-			],
-			footer: require('@/assets/img/main/club/bg-footer.jpeg')
+			join: [],
+			footer:[],
 		}
 	},
 	components: {
@@ -283,6 +280,8 @@ export default {
 			this.stars = res.data.stars
 			this.giftbag = res.data.giftbag
 			this.channel = res.data.channel
+			this.join = res.data.join
+			this.footer = res.data.footer
 		}).catch(err => {
 			console.log(err);
 		})

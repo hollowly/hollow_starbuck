@@ -16,6 +16,7 @@
 import {request} from '@/network/request'
 
 export default {
+	
 	data () {
 		return {
 			menu: [],
@@ -23,7 +24,7 @@ export default {
 	},
 	mounted() {
 		request({
-			url:'/data.json',
+			url:'/data3.json',
 		}).then(res => {
 			this.menu = res.data.menu
 		}).catch(err => {

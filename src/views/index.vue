@@ -57,7 +57,7 @@ export default {
 	mounted() {
 		// 数据请求
 		request({
-			url:'/data.json',
+			url:'/data3.json',
 		}).then(res => {
 			this.container1 = res.data.container1
 			this.container2 = res.data.container2
