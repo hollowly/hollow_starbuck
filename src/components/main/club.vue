@@ -16,9 +16,9 @@
 </template>
 
 <style scoped>
- p {
-	 margin: 0;
- }
+p {
+	margin: 0;
+}
 .container-fuild {
 	margin: 0 auto;
 	padding-top: 30px;

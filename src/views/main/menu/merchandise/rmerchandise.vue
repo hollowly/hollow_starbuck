@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in conventionalProducts1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in conventionalProducts2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in conventionalProducts3'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in conventionalProducts4'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in zhenxuanProducts'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -60,42 +60,18 @@
 
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
+import {request} from '@/network/request'
 
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			conventionalProducts1: [
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/1.jpg'),text:'12oz 烫金品牌黑色马克杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/2.jpg'),text:'银色/白色亮面品牌桌面杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/3.jpg'),text:'12oz 彰显本色黑色/深灰不锈钢桌面杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/4.jpg'),text:'12oz 纯白磨砂玻璃杯'},
-			],
-			conventionalProducts2: [
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/5.jpg'),text:'12oz 烫金品牌白色马克杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/6.jpg'),text:'16oz 烫金品牌黑色马克杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/7.jpg'),text:'16oz 原木黑色拎绳不锈钢保温杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/8.jpg'),text:'16oz 彰显本色黑色/深灰不锈钢随行杯'},
-			],
-			conventionalProducts3: [
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/9.jpg'),text:'16oz 烫金品牌白色马克杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/10.jpg'),text:'3oz 烫金品牌黑色试尝杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/11.jpg'),text:'3oz 烫金品牌白色试尝杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/12.jpg'),text:'500ml 黑色Logo水瓶'},
-			],
-			conventionalProducts4: [
-				{imgUrl:require('@/assets/img/main/menu/merchandise/conventional-products/13.jpg'),text:'500ml 白色Logo水瓶'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			zhenxuanProducts: [
-				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/1.jpg'),text:'12oz 纯黑/古铜亮面品牌桌面杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/2.jpg'),text:'16oz 香槟金品牌不锈钢桌面杯'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/3.jpg'),text:'500ml 金色Logo水瓶'},
-				{imgUrl:require('@/assets/img/main/menu/merchandise/zhenxuan-products/4.jpg'),text:'9oz 臻选玻璃杯'},
-			],
+			conventionalProducts1: [],
+			conventionalProducts2: [],
+			conventionalProducts3: [],
+			conventionalProducts4: [],
+			zhenxuanProducts: [],
 			text: '全部',
 			istext:['全部','常规产品','臻选产品']
 		}
@@ -105,6 +81,19 @@ export default {
 		oneimgbox
 	},
 	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			this.conventionalProducts1 = res.data.menu_merchandise.conventionalProducts1
+			this.conventionalProducts2 = res.data.menu_merchandise.conventionalProducts2
+			this.conventionalProducts3 = res.data.menu_merchandise.conventionalProducts3
+			this.conventionalProducts4 = res.data.menu_merchandise.conventionalProducts4
+			this.zhenxuanProducts = res.data.menu_merchandise.zhenxuanProducts
+		}).catch(err => {
+			console.log(err);
+		})
+
 		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
 		Bus.$on('texttitle', texttitle => {
 			this.text = texttitle
@@ -126,6 +115,9 @@ export default {
 </script>
 
 <style scoped>
+	.hidden {
+		display: none;
+	}
 	hr {
 		background: rgba(0, 0, 0, 0.12);
 	}

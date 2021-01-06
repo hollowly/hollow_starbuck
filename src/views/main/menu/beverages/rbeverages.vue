@@ -220,38 +220,4 @@ export default {
 </script>
 
 <style scoped>
-.hidden {
-	display: none;
-}
-	hr {
-		background: rgba(0, 0, 0, 0.12);
-	}
-	.container-fluid {
-		background:rgb(247,247,247);
-		text-align: center;
-		margin: 0  auto;
-	}
-	.container-fluid > div > h6 {
-		/* width: 100%; */
-		text-align: left;
-		font-weight: 700;
-		color: rgba(0, 0, 0, 0.56);
-		/* border: 1px solid red; */
-		font-size: 14px;
-		padding: 20px;
-	}
-	.container-fluid > div > .row {
-		margin: 0  auto;
-	}
-	
-	.container-fluid > div > .row > div {
-		margin-left: 4%;
-		margin-right: 4%;
-	}
-	
-	@media screen and (max-width: 576px){
-		.container-fluid > .row > div {
-			width: 40%;
-		}
-	}
 </style>

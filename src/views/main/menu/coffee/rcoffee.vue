@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in mediumRoast1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in mediumRoast2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in darkRoast1'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -39,7 +39,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in darkRoast2'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class='item.class'>
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in viaDairy'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -67,7 +67,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in viaBlack'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -81,7 +81,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in mediumRoastOne'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -95,7 +95,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in darkRoastOne'>
 					<oneimgbox>
-						<img :src="item.imgUrl" slot='img'>
+						<img :src="$host + item.imgUrl" slot='img' :class="item.class">
 						<strong slot='text'>{{item.text}}</strong>
 					</oneimgbox>
 				</div>
@@ -109,72 +109,23 @@
 
 <script>
 import oneimgbox from '@/components/main/menu/oneimgbox'
+import {request} from '@/network/request'
 
 //引用 Bus 来进行兄弟组件中之间通信
 import Bus from '@/utils/bus'
 export default {
 	data () {
 		return {
-			mediumRoast1: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/1.jpg'),text:'星巴克®凤舞祥云综合咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/2.jpg'),text:'星巴克®派克市场烘焙咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/3.jpg'),text:'星巴克®肯亚咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/4.jpg'),text:'星巴克®首选咖啡豆'},
-			],
-			mediumRoast2: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/5.jpg'),text:'星巴克®危地马拉安提瓜咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/6.jpg'),text:'星巴克®埃塞俄比亚咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/7.jpg'),text:'星巴克®哥伦比亚咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast/8.jpg'),text:'星巴克®早餐综合咖啡豆'},
-			],
-			darkRoast1: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast/1.jpg'),text:'星巴克®苏门答腊咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast/2.jpg'),text:'星巴克®低因祥龙综合咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast/3.jpg'),text:'星巴克®意式烘焙咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast/4.jpg'),text:'星巴克®浓缩烘焙咖啡豆'},
-			],
-			darkRoast2: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast/5.jpg'),text:'星巴克®佛罗娜咖啡豆'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			viaDairy: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/via-dairy/1.jpg'),text:'星巴克VIA®香草拿铁风味免煮咖啡固体饮料'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/via-dairy/2.jpg'),text:'星巴克VIA®焦糖拿铁风味免煮咖啡固体饮料'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/via-dairy/3.jpg'),text:'星巴克VIA®摩卡风味免煮咖啡固体饮料'},
-				{imgUrl:'',text:''},
-			],
-			viaBlack: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/via-black/1.jpg'),text:'星巴克VIA®意式烘焙免煮咖啡'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/via-black/2.jpg'),text:'星巴克VIA®哥伦比亚免煮咖啡'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			zhenxuanCoffee1: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/zhenxuan-coffee/1.jpg'),text:'星巴克臻选™ 苏门答腊瓦哈纳庄园咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/zhenxuan-coffee/2.jpg'),text:'星巴克臻选™ 埃塞俄比亚比塔庄园咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/zhenxuan-coffee/3.jpg'),text:'星巴克臻选™ 中国云南普洱保山综合咖啡豆'},
-				{imgUrl:require('@/assets/img/main/menu/coffee/zhenxuan-coffee/4.jpg'),text:'星巴克臻选™ 中国云南晴开农场咖啡豆'},
-			],
-			zhenxuanCoffee2: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/zhenxuan-coffee/1.jpg'),text:'星巴克臻选™ 哥伦比亚圣洛克蒙克斯咖啡豆'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			mediumRoastOne: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/medium-roast-one/1.jpg'),text:'星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®派克市场烘焙咖啡系列'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
-			darkRoastOne: [
-				{imgUrl:require('@/assets/img/main/menu/coffee/dark-roast-one/1.jpg'),text:'星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®佛罗娜烘焙咖啡系列'},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-				{imgUrl:'',text:''},
-			],
+			mediumRoast1: [],
+			mediumRoast2: [],
+			darkRoast1: [],
+			darkRoast2: [],
+			viaDairy: [],
+			viaBlack: [],
+			zhenxuanCoffee1: [],
+			zhenxuanCoffee2: [],
+			mediumRoastOne: [],
+			darkRoastOne: [],
 			text: '全部',
 			istext:['全部','中度烘焙','深度烘焙','VIA® DAIRY','VIA® BLACK','中度烘焙®','深度烘焙®']
 		}
@@ -183,6 +134,24 @@ export default {
 		oneimgbox
 	},
 	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			this.mediumRoast1 = res.data.menu_coffee.mediumRoast1
+			this.mediumRoast2 = res.data.menu_coffee.mediumRoast2
+			this.darkRoast1 = res.data.menu_coffee.darkRoast1
+			this.darkRoast2 = res.data.menu_coffee.darkRoast2
+			this.viaDairy = res.data.menu_coffee.viaDairy
+			this.viaBlack = res.data.menu_coffee.viaBlack
+			this.zhenxuanCoffee1 = res.data.menu_coffee.zhenxuanCoffee1
+			this.zhenxuanCoffee2 = res.data.menu_coffee.zhenxuanCoffee2
+			this.mediumRoastOne = res.data.menu_coffee.mediumRoastOne
+			this.darkRoastOne = res.data.menu_coffee.darkRoastOne
+		}).catch(err => {
+			console.log(err);
+		})
+
 		// 使用 Bus 来接收 beverages 组件传过来的文本，在经过逻辑判断来进行渲染
 		Bus.$on('texttitle', texttitle => {
 			this.text = texttitle
@@ -204,6 +173,9 @@ export default {
 </script>
 
 <style scoped>
+	.hidden {
+		display: none;
+	}
 	hr {
 		background: rgba(0, 0, 0, 0.12);
 	}
