@@ -11,7 +11,7 @@ module.exports = {
         Popper: ["popper.js", "default"],
       }),
 		],
-		//	高德地图配置
+		// 高德地图配置
 		externals: {
       AMap: "window.AMap"
     }
