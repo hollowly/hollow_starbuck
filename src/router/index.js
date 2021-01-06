@@ -15,7 +15,6 @@ const food = () => import('@/views/main/menu/food/food')		//美食
 const coffee = () => import('@/views/main/menu/coffee/coffee')		//咖啡
 const merchandise = () => import('@/views/main/menu/merchandise/merchandise')		//商店
 
-
 // 右边渲染
 const mainindex = () => import('@/views/main/index')		//right默认渲染
 const rstores = () => import('@/views/main/stores')			//right门店
@@ -28,10 +27,6 @@ const rbeverages = () => import('@/views/main/menu/beverages/rbeverages')		//rig
 const rfood = () => import('@/views/main/menu/food/rfood')		//right美食
 const rcoffee = () => import('@/views/main/menu/coffee/rcoffee')		//right咖啡
 const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')		//right商店
-
-
-
-
 
 
 Vue.use(VueRouter)

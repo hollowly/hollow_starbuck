@@ -16,6 +16,7 @@ module.exports = {
       AMap: "window.AMap"
     }
 	},
+	// 服务器请求配置
 	devServer: {
     proxy: {
       '/api': { //匹配api开头的走代理
