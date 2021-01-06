@@ -44,15 +44,9 @@
 import btn from '@/components/btn'
 
 export default {
-	data () {
-		return {
-
-		}
-	},
 	components: {
 		btn
 	}
-
 }
 
 </script>

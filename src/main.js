@@ -24,3 +24,4 @@ new Vue({
 // 配置 axios 请求的为 api 格式
 import axios from 'axios'
 axios.defaults.baseURL = '/api'
+Vue.prototype.$host = 'http://localhost:8011' // 服务器路径常量

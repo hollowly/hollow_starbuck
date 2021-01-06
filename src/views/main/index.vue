@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-sm" v-for='item in promotionUrl'>
 					<a href="">
-						<img :src="item.imgUrl">
+						<img :src="$host + item.imgUrl">
 					</a>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 
 			<div class="row">
 				<div class="col-sm" v-for='item in tmallD'>
-					<img :src="item.imgUrl">
+					<img :src="$host + item.imgUrl">
 					<p><strong>{{item.title}}</strong></p>
 					<p>{{item.p1}}</p>
 					<p>{{item.p2}}</p>
@@ -79,7 +79,7 @@
 			<div class="tmall-screen">
 				<span class="screen-left"><img src="@/assets/svg/screen-left.svg"></span>
 				<a href="" v-for='item in tmallCulture'>
-					<div :style="{backgroundImage: 'url(' + item.imgUrl + ')'}">
+					<div :style="{backgroundImage: 'url(' + $host + item.imgUrl + ')'}">
 						<span>{{item.title}}</span>
 					</div>
 					<p>{{item.p}}</p>
@@ -98,30 +98,30 @@
 </template>
 
 <script>
+import {request} from '@/network/request'
 export default {
 	data() {
-		return {	
-			promotionUrl:[
-				{imgUrl:require('@/assets/img/main/index/program1.jpg'),text:'1'},
-				{imgUrl:require('@/assets/img/main/index/program2.jpg'),text:'1'},
-				{imgUrl:require('@/assets/img/main/index/program3.jpg'),text:'1'}
-			],
-			tmallD:[
-				{title:'会员星礼包',p1:'星享卡新升级',p2:'更多心意好礼',imgUrl:require('@/assets/img/main/index/tmall1.png')},
-				{title:'星礼卡',p1:'用一份心礼',p2:'让心意相随',imgUrl:require('@/assets/img/main/index/tmall2.png')},
-				{title:'电子产品券',p1:'心意',p2:'从这一杯开始',imgUrl:require('@/assets/img/main/index/tmall3.png')},
-				{title:'咖啡生活',p1:'星巴克',p2:'用心制作',imgUrl:require('@/assets/img/main/index/tmall4.png')},
-			],
-			tmallCulture: [
-				{title:'咖啡知识',p:'咖啡的起源于栽培',imgUrl:require('@/assets/img/main/index/coffeehouse1.jpg')},
-				{title:'咖啡品鉴',p:'咖啡调制',imgUrl:require('@/assets/img/main/index/coffeehouse2.jpg')},
-				{title:'咖啡知识',p:'咖啡烘焙',imgUrl:require('@/assets/img/main/index/coffeehouse3.jpg')},
-				{title:'咖啡品鉴',p:'手冲咖啡',imgUrl:require('@/assets/img/main/index/coffeehouse4.jpg')},
-			]
+		return {
+			promotionUrl:[],
+			tmallD:[],
+			tmallCulture: []
 		}
 	},
 
+	// 数据请求
 	mounted() {
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			console.log(res.data);
+			this.promotionUrl = res.data.promotionUrl
+			this.tmallD = res.data.tmallD
+			this.tmallCulture = res.data.tmallCulture
+		}).catch(err => {
+			console.log(err);
+		})
+
+
 		$(function() {
 			$('#promotion  a > img, #tmall > div > div, #tmall > .tmall-screen > a').mouseenter(function() {
 				$(this).css({

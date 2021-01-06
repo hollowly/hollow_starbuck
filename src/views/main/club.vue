@@ -7,7 +7,7 @@
 		<club class="rewards">
 			<img src="@/assets/img/main/club/rewards-title.png" width="260" slot='titleImg'>
 			<div class="col-sm" v-for='item in rewards' slot='container'>
-				<img :src="item.imgUrl" width="120">
+				<img :src="$host + item.imgUrl" width="120">
 				<h5>{{item.title}}</h5>
 				<p>{{item.p}}</p>
 			</div>
@@ -18,7 +18,7 @@
 		<club class="upgrade">
 			<img src="@/assets/img/main/club/upgrade-title.png" width="380" slot='titleImg'>
 			<div class="col-sm" v-for='item in upgrade' slot='container'>
-				<img :src="item.imgUrl" width="150">
+				<img :src="$host + item.imgUrl" width="150">
 				<p>{{item.p1_1}}<span>{{item.p1_span}}</span>{{item.p1_2}}</p>
 				<p>{{item.p2_1}}<span style="color:#00A862">{{item.p2_span}}</span>{{item.p2_2}}</p>
 				<p>{{item.p3_1}}<span style="color:#C2A661">{{item.p3_span}}</span>{{item.p3_2}}</p>
@@ -30,7 +30,7 @@
 		<club class="stars">
 			<img src="@/assets/img/main/club/stars-title.png" width="240" slot='titleImg'>
 			<div class="col-sm" v-for='item in stars' slot='container'>
-				<img :src="item.imgUrl" width="150">
+				<img :src="$host + item.imgUrl" width="150">
 				<div></div>
 					<ul>
 						<li>{{item.text[0]}}</li>
@@ -71,7 +71,7 @@
 		<club class="channel">
 			<img src="@/assets/img/main/club/channel-title.png" width="280" slot='titleImg'>
 			<div class="col-sm" v-for='item in channel' slot='container'>
-				<img :src="item.imgUrl" height="70">
+				<img :src="$host + item.imgUrl" height="70">
 				<p>{{item.p1}}</p>
 				<p>{{item.p2}}</p>
 			</div>
@@ -159,7 +159,7 @@
 	<li>2020年年3月10日，星巴克会检查小赵帐户在前一个帐户年度中所累积的等级星星数量。如果所累积的等级星星数量大于或等于16颗，那么小赵可以在2020年3月10日至2021年3月9日期间继续保留在金星级会员等级；但如果所累积的等级星星数量小于16颗，那么小赵会在2020年3月10日当日被降至玉星级。2020年3月10日当天，小赵帐户内所累积的所有等级星星也被同时清零。</li>
 </ul>
 <p>2.9   什么是金星级会员专属电子星礼卡？我该如何使用？</p>
-<p class="p-container">在星享俱乐部会员首次成为金星级会员时，一张金星级专属电子星礼卡会在您晋升为金星级会员后的24小时内自动绑定至您的星享俱乐部帐户，并作为您帐户内的默认星礼卡。金星级专属电子星礼卡是一种可充值的预付费卡。该卡完成充值后，您在中国大陆地区的指定星巴克门店消费时，可以使用星礼卡付款（您可以查阅 <qwe>《星礼卡常见问题 》</qwe>以了解使用星礼卡的更多详情）。</p>
+<p class="p-container">在星享俱乐部会员首次成为金星级会员时，一张金星级专属电子星礼卡会在您晋升为金星级会员后的24小时内自动绑定至您的星享俱乐部帐户，并作为您帐户内的默认星礼卡。金星级专属电子星礼卡是一种可充值的预付费卡。该卡完成充值后，您在中国大陆地区的指定星巴克门店消费时，可以使用星礼卡付款（您可以查阅 <font>《星礼卡常见问题 》</font>以了解使用星礼卡的更多详情）。</p>
 <p>2.10   哪里可以兑换我星享俱乐部帐户中的好礼？</p>
 <p class="p-container">光顾中国大陆地区任何一家参加星享俱乐部活动的星巴克门店时，您可以在星巴克App登录您的星享俱乐部帐户，点击帐户首页“我的二维码”后，向店内咖啡师出示页面上所呈现的动态二维码、或者出示您星享俱乐部帐户中的星享卡活跃卡，当POS机具成功读取动态二维码或星享卡活跃卡时，您即可兑换使用帐户中的会员好礼电子券。此外，您也可以通过合作伙伴的渠道登录星享俱乐部帐户，当店内咖啡师通过该渠道指定的方式得以识别您的会员身份后，您即可兑换使用帐户中的会员好礼电子券。</p>
 <p class="p-container">请您注意，不同好礼的适用渠道和门店范围可能有所不同，详见好礼使用规则。</p>
@@ -176,7 +176,7 @@
 <p>2.15   金星级会员如何获得周年庆邀请券？</p>
 <p class="p-container">为庆祝您的帐户周年日，如果您在某一帐户周年复审日之前的帐户年度内累积满了16颗等级星星，我们会在该帐户周年复审日将一张免费的周年庆饮品券（采用电子券的形式）添加到您的星享俱乐部帐户中。此电子券将在添加到您的星享俱乐部帐户中后的下一个帐户周年复审日生效，有效期为7天。</p>
 <p>2.16   与饮品相关的会员好礼是否可用于兑换星巴克门店内的所有饮品？</p>
-<p class="p-container">星享俱乐部会员好礼及其他活动受 <qwe>www.starbucks.com.cn</qwe>网站所示的完整版本的<qwe>《星享俱乐部活动的条款和条件》</qwe>的约束。星享俱乐部帐户中赠送的所有会员好礼不能在不可使用会员好礼的门店中使用（点击查看<qwe>《不可使用星享俱乐部会员好礼的门店列表》</qwe>），也不能用于兑换特定的星巴克饮品（点击查看<qwe>《不适用星享俱乐部好礼的特定饮品列表》</qwe>）。</p>
+<p class="p-container">星享俱乐部会员好礼及其他活动受 <font>www.starbucks.com.cn</font>网站所示的完整版本的<font>《星享俱乐部活动的条款和条件》</font>的约束。星享俱乐部帐户中赠送的所有会员好礼不能在不可使用会员好礼的门店中使用（点击查看<font>《不可使用星享俱乐部会员好礼的门店列表》</font>），也不能用于兑换特定的星巴克饮品（点击查看<font>《不适用星享俱乐部好礼的特定饮品列表》</font>）。</p>
 <p>2.17   金星级会员如何使用好礼星星？</p>
 <p class="p-container">您可通过参加星享俱乐部活动的星巴克门店、星巴克App内啡快服务，使用您会员帐户内的基础好礼星星和奖励好礼星星兑换星巴克指定饮品或食品；您也可以在星巴克App内使用您会员帐户内的基础好礼星星和奖励好礼星星兑换金星会员专享优惠券。星巴克将不时更新可用基础好礼星星和奖励好礼星星兑换的指定产品和指定权益，具体请详见《好礼星星兑换规则》。</p>
 <p class="p-container">除<span>《好礼星星兑换规则》</span>规定产品外，星巴克还会不时推出星星兑换的短期促销活动，请随时关注星巴克App和合作伙伴App内相关活动详情。</p>
@@ -252,37 +252,16 @@
 	</div>
 </template>
 <script>
+import {request} from '@/network/request'
 import club from '@/components/main/club'
 export default {
 	data () {
 		return {
-			rewards: [
-				{imgUrl:require('@/assets/img/main/club/rewards1.png'),title:'消费累积星星',p:'每累计消费￥50元累积一颗星星使用星巴克指定的方式，可享加速积星'},
-				{imgUrl:require('@/assets/img/main/club/rewards2.png'),title:'积星升级 好礼享不停',p:''},
-				{imgUrl:require('@/assets/img/main/club/rewards3.png'),title:'会员专享星星奖励活动',p:''},
-				{imgUrl:require('@/assets/img/main/club/rewards4.png'),title:'星星兑换丰富好礼',p:''},
-			],
-			upgrade: [
-				{imgUrl:require('@/assets/img/main/club/upgrade1.png'),p1_1:'注册星享俱乐部帐户',p1_span:'',p1_2:'',p2_1:'即成为',p2_span:'银星级',p2_2:'会员',p3_1:'可开始消费积星星',p3_span:'',p3_2:''},
-				{imgUrl:require('@/assets/img/main/club/upgrade4.png'),p1_1:'累积',p1_span:'4',p1_2:'颗星星',p2_1:'升级至',p2_span:'玉星级',p2_2:'会员'},
-				{imgUrl:require('@/assets/img/main/club/upgrade20.png'),p1_1:'玉星级',p2_1:'再累积',p2_span:'16',p2_2:'颗星星',p3_1:'升级至',p3_span:'金星级',p3_2:'会员'},
-			],
-			stars: [
-				{imgUrl:require('@/assets/img/main/club/stars1.png'),text:['购买绑定会员星礼包可直通玉星级','各类奖励星星活动']},
-				{imgUrl:require('@/assets/img/main/club/stars2.png'),text:['玉星晋级饮品券','金星在望饮品券','生日饮品券','永享玉星级保级','各类奖励星星活动']},
-				{imgUrl:require('@/assets/img/main/club/stars3.png'),text:['金星晋级饮品券','周年庆饮品券','生日饮品券','永享玉星级保级','好礼星星兑换','各类奖励星星活动']},	
-			],
-			giftbag: [
-				{imgUrl:require('@/assets/img/main/club/giftbag1.png')},
-				{imgUrl:require('@/assets/img/main/club/giftbag2.png')},
-			],
-			channel: [
-				{imgUrl:require('@/assets/img/main/club/channel1.png'),p1:'星巴克门店',p2:''},
-				{imgUrl:require('@/assets/img/main/club/channel2.png'),p1:'专星送™',p2:'（仅限已开通门店）'},
-				{imgUrl:require('@/assets/img/main/club/channel3.png'),p1:'啡快™',p2:'（仅限已开通门店）'},
-				{imgUrl:require('@/assets/img/main/club/channel4.png'),p1:'星巴克天猫',p2:'会员旗舰店'},
-				{imgUrl:require('@/assets/img/main/club/channel5.png'),p1:'星星奖励',p2:'活动'},
-			],
+			rewards: [],
+			upgrade: [],
+			stars: [],
+			giftbag: [],
+			channel: [],
 			join: [
 				{title:'现在就来加入星享俱乐部',p1:'轻松注册，立即开启',p2:"您的全新星享之旅，好礼享不停",text:'立即注册',aUrl:'/register'},
 				{title:'已是星享俱乐部的会员',p1:'您可快速绑定会员星礼包，',p2:"专享加速积星，丰富好礼等你",text:'立即登录',aUrl:'/login'},
@@ -292,6 +271,21 @@ export default {
 	},
 	components: {
 		club,
+	},
+	mounted() {
+		// 数据请求
+		request({
+			url:'/data3.json',
+		}).then(res => {
+			console.log(res.data);
+			this.rewards = res.data.rewards
+			this.upgrade = res.data.upgrade
+			this.stars = res.data.stars
+			this.giftbag = res.data.giftbag
+			this.channel = res.data.channel
+		}).catch(err => {
+			console.log(err);
+		})
 	}
 }
 
@@ -453,7 +447,7 @@ export default {
 	.card-body > p > span {
 		font-weight: 700;
 	}
-	.card-body > p > qwe {
+	.card-body > p > font {
 		color: #00A862;
 	}
 

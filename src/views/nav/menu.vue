@@ -26,7 +26,6 @@ export default {
 			url:'/data.json',
 		}).then(res => {
 			this.menu = res.data.menu
-			// console.log(res.data.menu);
 		}).catch(err => {
 			console.log(err);
 		})
