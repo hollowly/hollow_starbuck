@@ -32,9 +32,18 @@ const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')	
 // 用户登录
 const account = () => import('@/views/nav/user/account')
 const raccount = () => import('@/views/main/user/account')
-// 
+// 消费记录
 const activity = () => import('@/views/nav/user/activity.vue')
 const ractivity = () => import('@/views/main/user/activity.vue')
+// 星享好礼
+const rewards = () => import('@/views/nav/user/rewards.vue')
+const rrewards = () => import('@/views/main/user/rewards.vue')
+// 管理我的账户
+const profile = () => import('@/views/nav/user/profile.vue')
+const rprofile = () => import('@/views/main/user/profile.vue')
+// 关于星享俱乐部
+const userclub = () => import('@/views/nav/user/club.vue')
+const userrclub = () => import('@/views/main/user/club.vue')
 
 
 Vue.use(VueRouter)
@@ -132,22 +141,22 @@ const routes = [
 			{
 				path:'/account/rewards',
 				components: {
-					nav: activity,
-					main: ractivity
+					nav: rewards,
+					main: rrewards
 				}
 			},
 			{
 				path:'/account/profile',
 				components: {
-					nav: activity,
-					main: ractivity
+					nav: profile,
+					main: rprofile
 				}
 			},
 			{
 				path:'/account/club',
 				components: {
-					nav: activity,
-					main: ractivity
+					nav: userclub,
+					main: userrclub
 				}
 			},
 		]

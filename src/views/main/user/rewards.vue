@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div>
-		account
+		rewards
 	</div>
 </template>
 

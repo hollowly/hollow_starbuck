@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<user>
-			<li slot='account'><router-link to='/account' class="active">账户一览</router-link></li>
+			<li slot='profile'><router-link to='/account/profile' class="active">管理我的账户</router-link></li>
 		</user>
 	</div>
 </template>
