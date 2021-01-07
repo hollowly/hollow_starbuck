@@ -28,6 +28,9 @@ const rfood = () => import('@/views/main/menu/food/rfood')		//right美食
 const rcoffee = () => import('@/views/main/menu/coffee/rcoffee')		//right咖啡
 const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')		//right商店
 
+// 用户登录
+const user = () => import('@/views/nav/user')
+const ruser = () => import('@/views/main/user')
 
 Vue.use(VueRouter)
 
@@ -106,6 +109,14 @@ const routes = [
 					main:rmerchandise
 				}
 			},
+			{
+				path:'/accout/',
+				components: {
+					nav: user,
+					main: ruser
+				}
+
+			}
 		]
 	},
 ]
