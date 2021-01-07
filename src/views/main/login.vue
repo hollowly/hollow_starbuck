@@ -2,32 +2,68 @@
 <template>
 	<div>
 		<a href="/register"><img src="@/assets/img/main/login/top.jpg" class="img-fluid"></a>
-		<div class="container-fuild top">
-			<div class="row">
-				<div class="col-sm">
-					<div><input type="text" placeholder="用户名或电子邮箱" autocomplete="new-password"></div>
-					<div><input type="password" placeholder="密码" autocomplete="new-password"></div>
-					<div>
-						<span>
-							<label for="autologin">
-								<input type="checkbox" id='autologin'>
-								下次自动登录
-							</label>
-						</span>
-						<span><a href="">忘记密码？</a></span>
-					</div>
-					<div class="item captchaWrapper">
-						<div style="width: 300px; height: 230px; margin: 0px auto; position: relative; z-index: 0;">
-							<iframe frameborder="0" border="0" marginheight="0" marginwidth="0" scrolling="no" id="tcaptcha_iframe" style="width: 300px; height: 230px; border: 0px; position: relative; left: 0px; top: 0px; z-index: 2000000002; background: rgb(255, 255, 255);" src="https://t.captcha.qq.com/cap_union_new_show?aid=2045345034&amp;protocol=https&amp;accver=1&amp;showtype=embed&amp;ua=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzg3LjAuNDI4MC42NiBTYWZhcmkvNTM3LjM2&amp;noheader=1&amp;fb=1&amp;enableDarkMode=0&amp;grayscale=1&amp;clientype=2&amp;sess=s0C52V7xpLXGN6OCWqXDL5ch4QSADk0MlapPS_oXhv6gCn-msUFqe2GlF7E8r0AVJYs3qRl6fl6z4oT-q-IJTbEo0URhkbRCmV0EXpLgvNF73tNX3mxEwr2fTdLaB1cTvhhbNXReFiwhd1COy3y7B3trI5RczegfiIOGpXYJshjF3xmHQH6YBSl7E_rYFLzLtlc7TcRvo4Y5b6J9RaQmN1mhhH_tvU-HIPTljvzBXfqBTILqshMihVES-7NsXOhhkfKBbF5cSahj8-U3FSg_US2A**&amp;fwidth=0&amp;sid=6749306880106127360&amp;forcestyle=undefined&amp;wxLang=&amp;tcScale=1&amp;uid=&amp;cap_cd=&amp;rnd=639923&amp;TCapIframeLoadTime=undefined&amp;prehandleLoadTime=106&amp;createIframeStart=1609160157318&amp;subsid=2">
-							</iframe>
+
+		<form>
+			<div class="container-fuild top">
+				<div class="row">
+					<div class="col-sm">
+						<div><input type="text" placeholder="用户名或电子邮箱" v-model="name" required /></div>
+						<div><input type="text" placeholder="密码" v-model="pwd" required /></div>
+						<div>
+							<span>
+								<label for="autologin">
+									<input type="checkbox" id='autologin'>
+									下次自动登录
+								</label>
+							</span>
+							<span><a href="">忘记密码？</a></span>
 						</div>
-					</div>
-					<div>
-						<btn>登录</btn>
+						<div>
+							<!-- <btn @click.prevent='login()'>登录</btn> -->
+	<div id='btnSvg'>
+		<button class="btn" @click.prevent='login()'>
+				<span>
+					登录
+				</span>
+			<svg width="0" height="0">
+				<defs>
+					<filter id="goo" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
+						<feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
+					</filter>
+					<filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
+						<feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" />
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
+					</filter>
+					<filter id="goo-big" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
+						<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
+					</filter>
+				</defs>
+			</svg>
+			<svg preserveAspectRatio="none" viewBox="0 0 132 45">
+				<g clip-path="url(#clip)" filter="url(#goo-big)">
+					<circle class="top-left" cx="49.5" cy="-0.5" r="26.5" />
+					<circle class="middle-bottom" cx="70.5" cy="40.5" r="26.5" />
+					<circle class="top-right" cx="104" cy="6.5" r="27" />
+					<circle class="right-bottom" cx="123.5" cy="36.5" r="26.5" />
+					<circle class="left-bottom" cx="16.5" cy="28" r="30" />
+				</g>
+				<defs>
+					<clipPath id="clip">
+						<rect width="132" height="45" rx="7" />
+					</clipPath>
+				</defs>
+			</svg>
+		</button>
+	</div>
+							<div> {{ msg }}</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</form>
+
 		<div class="container-fuild bottom">
 			<div class="row">
 				<div class="col-sm">
@@ -44,6 +80,30 @@
 import btn from '@/components/btn'
 
 export default {
+	data() {
+		return {
+			name:null,
+			pwd:null,
+			msg:null,	//接收数据
+		}
+	},
+	methods: {
+		login() {
+			this.$axios
+				.post(this.HOST + "/api/login", {
+					name: this.name,
+					password: this.pwd,
+				})
+				.then((result) => {
+					console.log(result.data);
+					this.msg = result.data.msg;
+				})
+				.catch((err) => {
+					alert(result.data)
+					console.log(err);
+				});
+		},
+  },
 	components: {
 		btn
 	}
