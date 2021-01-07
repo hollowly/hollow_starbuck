@@ -36,10 +36,10 @@
 						开启您的星享之旅，星星越多、会员等级越高、
 					</p>
 					<p>
-						好礼越丰富。<a href="" style="color: #C2A661;">了解更多 › </a>
+						好礼越丰富。<router-link to="/club" style="color: #C2A661;">了解更多 › </router-link>
 					</p>
-					<a href='/register' class="aInput">注册</a>
-					<a href='/login' class="aInput login-in">登录</a>
+					<router-link to='/register' class="aInput">注册</router-link>
+					<router-link to='/login' class="aInput login-in">登录</router-link>
 				</div>
 
 				<div class="col-sm">

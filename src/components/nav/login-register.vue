@@ -3,9 +3,9 @@
 	<div id='profile'>
 		<p>登录或创建一个新帐户 🌟</p>
 		<ul>
-			<slot name='login'><li><a href="/login">登录</a></li></slot>
-			<slot name='register'><li><a href="/register">注册</a></li></slot>
-			<slot name='club'><li><a href="/club">关于星享俱乐部</a></li></slot>
+			<slot name='login'><li><router-link to="/login">登录</router-link></li></slot>
+			<slot name='register'><li><router-link to="/register">注册</router-link></li></slot>
+			<slot name='club'><li><router-link to="/club">关于星享俱乐部</router-link></li></slot>
 		</ul>
 	</div>
 </template>

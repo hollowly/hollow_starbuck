@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<login>
-		<li slot='login'><a href="" class="active">登录</a></li>
+		<li slot='login'><router-link to="/login" class="active">登录</router-link></li>
 	</login>
 </template>
 

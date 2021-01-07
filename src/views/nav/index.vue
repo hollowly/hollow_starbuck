@@ -3,7 +3,7 @@
 	<div id='profile'>
 		<p style="margin-bottom:22px">心情惬意，来杯咖啡吧 ☕</p>
 		<router-link to='/login' class="login-in">
-		<img src="@/assets/svg/sign-in.svg">登陆</router-link>
+		<img src="@/assets/svg/sign-in.svg">登录</router-link>
 		<router-link to='/register'>注册</router-link>
 	</div>
 </template>
