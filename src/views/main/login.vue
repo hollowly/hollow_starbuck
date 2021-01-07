@@ -3,12 +3,28 @@
 	<div>
 		<a href="/register"><img src="@/assets/img/main/login/top.jpg" class="img-fluid"></a>
 
+
 		<form>
+		<div class="rightlogin_phone">
+			<p>扫码登录</p>
+			<img src="@/assets/img/main/login/login-phone.png" width="110">
+		</div>
+
 			<div class="container-fuild top">
 				<div class="row">
 					<div class="col-sm">
-						<div><input type="text" placeholder="用户名或电子邮箱" v-model="name" required /></div>
-						<div><input type="text" placeholder="密码" v-model="pwd" required /></div>
+						<div class="form-row">
+							<input type="text" placeholder="用户名或电子邮箱" v-model="name" required />
+							<!-- <div class="valid-feedback">验证通过</div> -->
+							<!-- <div class="invalid-feedback">验证不通过</div> -->
+						</div>
+
+						<div class="form-row">
+							<input type="text" placeholder="密码" v-model="pwd" required />
+							<!-- <div class="valid-feedback">验证通过</div> -->
+							<!-- <div class="invalid-feedback">验证不通过</div> -->
+						</div>
+
 						<div>
 							<span>
 								<label for="autologin">
@@ -19,50 +35,31 @@
 							<span><a href="">忘记密码？</a></span>
 						</div>
 						<div>
-							<!-- <btn @click.prevent='login()'>登录</btn> -->
-	<div id='btnSvg'>
-		<button class="btn" @click.prevent='login()'>
-				<span>
-					登录
-				</span>
-			<svg width="0" height="0">
-				<defs>
-					<filter id="goo" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
-						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-					</filter>
-					<filter id="goo-light" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur" />
-						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-					</filter>
-					<filter id="goo-big" x="-50%" width="200%" y="-50%" height="200%" color-interpolation-filters="sRGB">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" result="cm" />
-					</filter>
-				</defs>
-			</svg>
-			<svg preserveAspectRatio="none" viewBox="0 0 132 45">
-				<g clip-path="url(#clip)" filter="url(#goo-big)">
-					<circle class="top-left" cx="49.5" cy="-0.5" r="26.5" />
-					<circle class="middle-bottom" cx="70.5" cy="40.5" r="26.5" />
-					<circle class="top-right" cx="104" cy="6.5" r="27" />
-					<circle class="right-bottom" cx="123.5" cy="36.5" r="26.5" />
-					<circle class="left-bottom" cx="16.5" cy="28" r="30" />
-				</g>
-				<defs>
-					<clipPath id="clip">
-						<rect width="132" height="45" rx="7" />
-					</clipPath>
-				</defs>
-			</svg>
-		</button>
-	</div>
-							<div> {{ msg }}</div>
+							<div><span style="color:red">{{ msg }}</span></div>
+							<div>
+								<button class="btn btn-outline-success loginbtn " @click.prevent='login()' type="submit">
+									登录
+								</button>
+								<router-link to='/register' class="btn btn-outline-secondary registerbtn">注册</router-link>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
+
+		<div class="qrjoin">
+			<div class="rightlogin_computer">
+				<p>账号登录</p>
+				<img src="@/assets/img/main/login/login-computer.png" width="110">
+			</div>
+
+			<p>打开<a href="/apps">星巴克App</a>，在“我”页面右上角点开扫描二维码图标。</p>
+			<img src="@/assets/img/main/login/qrcode.png" class="qrcodeimg">
+			<img src="@/assets/img/main/login/phone.png">
+		</div>
+
+
 
 		<div class="container-fuild bottom">
 			<div class="row">
@@ -77,48 +74,122 @@
 </template>
 
 <script>
-import btn from '@/components/btn'
-
 export default {
 	data() {
 		return {
 			name:null,
 			pwd:null,
-			msg:null,	//接收数据
+			msg:null,		//接收数据
+			time:null,	//用来倒计时渲染
 		}
+	},
+	mounted() {
+		// 验证代码
+		(function() {
+			'use strict';
+			window.addEventListener('load', function() {
+				var forms = document.getElementsByClassName('needs-validation');
+				var validation = Array.prototype.filter.call(forms, function(form) {
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+		})();
+
+		$('.rightlogin_phone').click(function() {
+			$('.qrjoin').show()
+			$('form').hide()
+		})
+		$('.rightlogin_computer').click(function() {
+			$('form').show()
+			$('.qrjoin').hide()
+		})
 	},
 	methods: {
 		login() {
+			if(this.name == null) {
+				this.msg = '请输入账号'
+				return
+			} else if(this.pwd == null) {
+				this.msg = '请输入密码'
+				return
+			}
 			this.$axios
 				.post(this.HOST + "/api/login", {
 					name: this.name,
 					password: this.pwd,
 				})
 				.then((result) => {
-					console.log(result.data);
-					this.msg = result.data.msg;
+					this.msg = result.data.msg
+					this.time = result.data.time
+
+					console.log(this.time);
 				})
 				.catch((err) => {
-					alert(result.data)
 					console.log(err);
 				});
 		},
   },
-	components: {
-		btn
-	}
 }
 
 </script>
 
 <style scoped>
+form {
+	position: relative;
+}
+.loginbtn {
+	margin-top: 10px;
+	float: right;
+	margin-right: 10px;
+}
+.registerbtn {
+	margin-top: 10px;
+	float: left;
+}
+.rightlogin_phone, .rightlogin_computer {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 10px;
+	text-align: center;	
+}
+.rightlogin_phone > p, .rightlogin_computer > p {
+	position: absolute;
+	left: 35%;
+	top: 0;
+}
+.qrjoin {
+	display: none;
+	position: relative;
+	padding: 50px 0px;
+	text-align: center;
+}
+.qrjoin > p > a {
+	color: #00A862;
+}
+.qrjoin > img {
+	margin-top: 50px;
+	width: 150px;
+}
+.qrjoin > .qrcodeimg{
+	width: 220px;
+	margin-right: 5%;
+}
+
+
 .top {
-	margin: 50px 0px;
+	padding: 50px 0px;
 }
 .top > .row > div > div {
 	width: 40%;
 	margin: 0 auto;
-	/* border: 1px solid red; */
 }
 .top > .row > div > div > input {
 	width: 100%;
