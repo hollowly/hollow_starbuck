@@ -28,9 +28,14 @@ const rfood = () => import('@/views/main/menu/food/rfood')		//right美食
 const rcoffee = () => import('@/views/main/menu/coffee/rcoffee')		//right咖啡
 const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')		//right商店
 
+
 // 用户登录
-const user = () => import('@/views/nav/user')
-const ruser = () => import('@/views/main/user')
+const user = () => import('@/views/nav/user/index')
+const ruser = () => import('@/views/main/user/index')
+
+const activity = () => import('@/views/nav/user/activity.vue')
+const ractivity = () => import('@/views/main/user/activity.vue')
+
 
 Vue.use(VueRouter)
 
@@ -109,13 +114,20 @@ const routes = [
 					main:rmerchandise
 				}
 			},
+			// 以下是用户登录的跳转
 			{
-				path:'/accout/',
+				path:'/account',
 				components: {
 					nav: user,
 					main: ruser
+				},
+			},
+			{
+				path:'/account/activity',
+				components: {
+					nav: activity,
+					main: ractivity
 				}
-
 			}
 		]
 	},

@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div>
-		
+		activity
 	</div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
 
 		}
 	},
+
 }
 
 </script>
