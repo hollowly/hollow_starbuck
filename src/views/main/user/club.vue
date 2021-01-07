@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<user>
-			<li slot='activity'><router-link to='/account/activity' class="active">消费记录</router-link></li>
+			<li slot='club'><router-link to='/account/club' class="active">关于星享俱乐部</router-link></li>
 		</user>
 	</div>
 </template>

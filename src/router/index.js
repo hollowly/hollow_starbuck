@@ -30,9 +30,9 @@ const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')	
 
 
 // 用户登录
-const user = () => import('@/views/nav/user/index')
-const ruser = () => import('@/views/main/user/index')
-
+const account = () => import('@/views/nav/user/account')
+const raccount = () => import('@/views/main/user/account')
+// 
 const activity = () => import('@/views/nav/user/activity.vue')
 const ractivity = () => import('@/views/main/user/activity.vue')
 
@@ -118,8 +118,8 @@ const routes = [
 			{
 				path:'/account',
 				components: {
-					nav: user,
-					main: ruser
+					nav: account,
+					main: raccount
 				},
 			},
 			{
@@ -128,7 +128,28 @@ const routes = [
 					nav: activity,
 					main: ractivity
 				}
-			}
+			},
+			{
+				path:'/account/rewards',
+				components: {
+					nav: activity,
+					main: ractivity
+				}
+			},
+			{
+				path:'/account/profile',
+				components: {
+					nav: activity,
+					main: ractivity
+				}
+			},
+			{
+				path:'/account/club',
+				components: {
+					nav: activity,
+					main: ractivity
+				}
+			},
 		]
 	},
 ]

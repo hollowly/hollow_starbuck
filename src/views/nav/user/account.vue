@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<user>
-			<li slot='activity'><router-link to='/account/activity' class="active">消费记录</router-link></li>
+			<li slot='account'><router-link to='/account/' class="active">账户一览</router-link></li>
 		</user>
 	</div>
 </template>

@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div>
-		rightactivity
+		right
 	</div>
 </template>
 
