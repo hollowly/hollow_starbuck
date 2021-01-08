@@ -106,12 +106,11 @@ export default {
 	#box {
 		width: 100%;
 		padding-top: 30px;
-		background: rgb(248,248,248);
-		height: 100vh;
 	}
 	#box > div {
 		width: 70%;
 		margin: 0 auto;
+		box-shadow: 0 1px 1px 1px rgba(0,0,0,.12);
 	}
 	.title {
 		padding: 18px 40px;
