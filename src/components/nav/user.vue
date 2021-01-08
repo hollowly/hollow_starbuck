@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 	<div id='profile'>
-		<h3 style="font-weight:700">晚上好！name☕</h3>
+		<h3 style="font-weight:700">晚上好！{{cookiename}}☕</h3>
 		<ul>
 			<slot name='account'><li><router-link to='/account'>账户一览</router-link></li></slot>
 			<slot name='activity'><li><router-link to='/account/activity'>消费记录</router-link></li></slot>
@@ -16,9 +16,9 @@
 // import {request} from '@/network/request'
 
 export default {
-	
 	data () {
 		return {
+			cookiename:null,
 			menu: [
 				{url:'/account',text:''},
 				{url:'/account/',text:''},
@@ -28,15 +28,18 @@ export default {
 			],
 		}
 	},
-	// mounted() {
-	// 	request({
-	// 		url:'/data3.json',
-	// 	}).then(res => {
-	// 		this.menu = res.data.menu
-	// 	}).catch(err => {
-	// 		console.log(err);
-	// 	})
-	// },
+	mounted() {
+		// 判断是否登录，登录就渲染不同的组件
+		this.cookiename = this.cookie.getCookie('loginname')
+		if(this.cookiename) {
+			this.isshow = true;
+			return
+		}
+		// 判断没有登录就跳转到登录页面
+		if(this.cookiename == null) {
+			this.$router.replace('/login')
+		}
+	}
 }
 </script>
 
