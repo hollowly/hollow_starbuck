@@ -3,16 +3,20 @@ import App from './App.vue'
 import router from './router'
 // import store from './store'
 
-// 引入jQuery、bootstrap
+// 引入jQuery、bootstrap、并且全局注册$
 import $ from 'jquery'
 import 'bootstrap'
-// 引入bootstrap样式
+// 引入bootstrap样式和js
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
-// 全局注册 $
 Vue.prototype.$ = $
-Vue.config.productionTip = false
 
+// 引入cookie.js 来进行登录判断,并且全局注册cookie
+import cookie from './utils/cookie'
+Vue.prototype.cookie = cookie;
+
+
+// Vue.config.productionTip = true
 new Vue({
 	router,
 	// store,

@@ -16,12 +16,13 @@ exports.login = (req,res) => {
 	
 	db.base(sql,name,(result) => {
 		if(!result.length) {
-			return res.json({ status: 1, msg: '账户不存在，请先注册' })
+			return res.json({ status: 0, msg: '账户不存在，请先注册' })
 		}else{
 			if(result[0].password == pwd) {
-				return res.json({ status: 1, msg: '登录成功...即将跳转' })
+				return res.json({ status: 1, msg: '验证成功...请再次点击登录进行跳转' })
+				
 			}
-			return res.json({ status: 1, msg: '密码错误' })
+			return res.json({ status: 0, msg: '密码错误' })
 		}
 	})
 }

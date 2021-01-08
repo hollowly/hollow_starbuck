@@ -34,8 +34,9 @@
 							</span>
 							<span><a href="">忘记密码？</a></span>
 						</div>
+						
 						<div>
-							<div><span style="color:red">{{ msg }}</span></div>
+							<div v-if='ismsg'><span style="color:red">{{ msg }}</span></div>
 							<div>
 								<button class="btn btn-outline-success loginbtn " @click.prevent='login()' type="submit">
 									登录
@@ -77,10 +78,11 @@
 export default {
 	data() {
 		return {
-			name:null,
-			pwd:null,
+			name:null,	//用户名
+			pwd:null,		//密码
 			msg:null,		//接收数据
-			time:null,	//用来倒计时渲染
+			ismsg:true,//显示和隐藏提示信息
+			status:0,//判断用户的登录状态
 		}
 	},
 	mounted() {
@@ -111,7 +113,15 @@ export default {
 		})
 	},
 	methods: {
+		ismsgtime() {
+		},
 		login() {
+			// 3秒后隐藏提示信息
+			setTimeout(() => {
+				this.ismsg = false
+			}, 2000);
+			this.ismsg = true
+
 			if(this.name == null) {
 				this.msg = '请输入账号'
 				return
@@ -119,20 +129,41 @@ export default {
 				this.msg = '请输入密码'
 				return
 			}
+			// 发送请求，给 node.js 来判断和进行数据库的操作
 			this.$axios
 				.post(this.HOST + "/api/login", {
 					name: this.name,
 					password: this.pwd,
+					status: this.status
 				})
 				.then((result) => {
 					this.msg = result.data.msg
-					this.time = result.data.time
-
-					console.log(this.time);
+					this.status = result.data.status
+					console.log(result.data);
+						// 保存cookie
+						if(this.status) {
+							// 以json格式传给setCookie方法存入信息,方法里面会循环遍历该json以单个数据存储的方式，多次存入cookie中　　　　　　// 注：cookie不支持直接以json的方式存入
+							let loginInfo = {
+								loginname:this.name,
+								// openid:用户为中心的数字身份识别框架,唯一
+								openId:"openId" + this.name
+							}
+							// console.log(loginInfo);
+							// 调用setCookie方法，同时传递需要存储的数据，保存天数
+							this.cookie.setCookie(loginInfo,3)
+							console.log('cookie保存成功');
+							// 跳转到首页
+							this.$router.replace('/')
+						}
 				})
 				.catch((err) => {
 					console.log(err);
 				});
+			
+				
+			
+			
+			
 		},
   },
 }
