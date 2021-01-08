@@ -235,7 +235,9 @@ export default {
 	}
 	.main > .badge1 > div, .main > .badge2 > div {
 		text-align: center;
-
+	}
+	.main > .badge2 > div {
+		margin-top: 10px;
 	}
 	.main > .badge1 > div > span, .main > .badge2 > div > span {
 		display: inline-block;
@@ -303,5 +305,10 @@ export default {
 		.main > .badge2 > div > div {
 			left: 50px;
 		}
+	}
+	@media screen and (max-width:576px) {
+		 .main > .badge1 > div, .main > .badge2 > div {
+			 width: 25%;
+		 }
 	}
 </style>	
