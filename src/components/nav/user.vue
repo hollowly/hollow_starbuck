@@ -37,6 +37,7 @@ export default {
 		}
 		// 判断没有登录就跳转到登录页面
 		if(this.cookiename == null) {
+			console.log(this.cookiename);
 			this.$router.replace('/login')
 		}
 	}
