@@ -51,12 +51,6 @@ export default {
 		width: 70%;
 		margin: 0 auto;
 	}
-	@media screen and (max-width: 1213px){
-		#box > div {
-			width: 80%;
-			border: 1px solid red;
-		}
-	}
 	.title {
 		padding: 18px 40px;
 		background-color: #00a862;
@@ -103,7 +97,7 @@ export default {
 		background: rgb(1,143,84);
 	}
 	.main > .line > .aa {
-		width: 130px;
+		width: 20%;
 		height: 10px;
 		position: relative;
 		left: -10px;
@@ -113,7 +107,7 @@ export default {
 		background: rgb(236,234,232);
 	}
 	.main > .line > .bb {
-		width: 175px;
+		width: 30%;
 		height: 10px;
 		position: relative;
 		left: -40px;
@@ -154,4 +148,14 @@ export default {
 		background: rgb(195,167,92);
 	}
 	
+
+	
+	@media screen and (max-width: 1213px){
+		#box > div {
+			width: 80%;
+		}
+		.main > .line > div:last-child {
+		left: 82% !important;
+		}
+	}
 </style>
