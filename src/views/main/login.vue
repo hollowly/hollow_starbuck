@@ -153,16 +153,12 @@ export default {
 							this.cookie.setCookie(loginInfo,3)
 							console.log('cookie保存成功');
 							// 跳转到首页
-							this.$router.replace('/')
+							this.$router.push('/')
 						}
 				})
 				.catch((err) => {
 					console.log(err);
 				});
-			
-				
-			
-			
 			
 		},
   },

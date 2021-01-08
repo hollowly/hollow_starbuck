@@ -38,8 +38,8 @@
 					<p>
 						好礼越丰富。<router-link to="/club" style="color: #C2A661;">了解更多 › </router-link>
 					</p>
-					<router-link to='/register' class="aInput">注册</router-link>
-					<router-link to='/login' class="aInput login-in">登录</router-link>
+					<router-link to='/register' class="aInput" v-if='!isshow'>注册</router-link>
+					<router-link to='/login' class="aInput login-in" v-if='!isshow'>登录</router-link>
 				</div>
 
 				<div class="col-sm">
@@ -104,11 +104,17 @@ export default {
 		return {
 			promotionUrl:[],
 			tmallD:[],
-			tmallCulture: []
+			tmallCulture: [],
+			isshow:false,
 		}
 	},
 
 	mounted() {
+		// 判断是否登录，登录就渲染不同的组件
+		this.cookiename = this.cookie.getCookie('loginname')
+		if(this.cookiename) {
+			this.isshow = true;
+		}
 		// 数据请求
 		request({
 			url:'/data3.json',
@@ -119,7 +125,6 @@ export default {
 		}).catch(err => {
 			console.log(err);
 		})
-
 
 		$(function() {
 			$('#promotion  a > img, #tmall > div > div, #tmall > .tmall-screen > a').mouseenter(function() {

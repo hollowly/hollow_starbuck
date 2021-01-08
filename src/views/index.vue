@@ -6,7 +6,8 @@
 					<nav class="nav">
 						<a href="/"><img src="@/assets/img/logo.png" width="40"></a>
 						<router-link to='/stores' class="nav-link">门店</router-link>
-						<router-link to='/login' class="nav-link">我的账户</router-link>
+						<router-link to='/account' class="nav-link" v-if='this.isshow'>我的账户</router-link>
+						<router-link to='/login' class="nav-link" v-else='this.isshow'>我的账户</router-link>
 						<router-link to='/menu' class="nav-link">菜单</router-link>
 					</nav>
 					<div style="float:right"><a class='sidebar-more'>☰</a></div>
@@ -22,10 +23,11 @@
 									<a :href="item.url">{{item.text}}</a>
 								</li>
 								<li><hr></li>
-								<a href='/login' class="aInput login-in">
+								<a href="" @click='exit()' class="aInput" v-if='isshow'>登出</a>
+								<a href='/login' class="aInput login-in" v-else='isshow'>
 									<img src="@/assets/svg/sign-in.svg">登录
 								</a>
-								<a href='/register' class="aInput">注册</a> <br>
+								<a href='/register' class="aInput" v-else="isshow">注册</a> <br>
 								<footer>
 									<p>English | 隐私政策 | 使用条款</p>
 								</footer>
@@ -51,10 +53,29 @@ export default {
 	data () {
 		return {
 			container1:[],
-			container2:[]
+			container2:[],
+
+			cookiename:null,
+			isshow:false,
+			// isshow1:false,
+		}
+	},
+	methods: {
+		exit() {
+			// 调用this.cookie.clearCookie方法删除cookie
+			this.cookie.clearCookie('loginname')
+			this.cookie.clearCookie('openId')
+			// 跳转到主页面
+			this.$router.replace('/')
 		}
 	},
 	mounted() {
+		// 判断是否登录，登录就渲染不同的组件
+		this.cookiename = this.cookie.getCookie('loginname')
+		if(this.cookiename) {
+			this.isshow = true;
+			// this.isshow1 = true;
+		}
 		// 数据请求
 		request({
 			url:'/data3.json',

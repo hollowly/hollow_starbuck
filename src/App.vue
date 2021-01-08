@@ -1,8 +1,6 @@
 <template>
 	<div id='app' class="container-fluid">
-	<keep-alive>
-		<router-view />
-	</keep-alive>
+		<router-view :key="this.$route.path"/>
 	</div>
 </template>
 
