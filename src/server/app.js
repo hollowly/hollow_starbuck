@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 // 将请求响应设置content-type设置为application/json
 const router = require('./router.js')
 app.use('/api/*', function (req, res, next) {
-	// 设置请求头为允许跨域
+		// 设置请求头为允许跨域
     res.header("Access-Control-Allow-Origin", "*");
     // 设置服务器支持的所有头信息字段
     res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
