@@ -57,7 +57,6 @@ export default {
 
 			cookiename:null,
 			isshow:false,
-			// isshow1:false,
 		}
 	},
 	methods: {
