@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-	<div style="width:100%; height:2000px; background:rgb(248,248,248)">
+	<div style="width:100%; background:rgb(248,248,248);padding-bottom:50px">
 		<wrapper></wrapper>
 		<indexframe>
 			<h4 slot='titletext'>管理星礼卡</h4>
@@ -32,7 +32,7 @@
 			<div slot="main">
 				<ul class="mainul">
 					<li v-for='item in star_gift'>
-						<img :src="item.imgUrl">
+						<img src="@/assets/svg/user/index/glass-brown.svg">
 						<span>{{item.titletext}}</span><br><span>{{item.date}}</span>
 					</li>
 				</ul>
@@ -46,13 +46,13 @@
 			<div slot="main">
 				<ul class="mainul">
 					<li v-for='item in records_consumption'>
-						<img :src="item.imgUrl">
+						<img src="@/assets/svg/user/index/glass-black.svg">
 						<span style="float:right">{{item.money}}</span>
 						<span>{{item.titletext}}</span><br><span>{{item.date}}</span>
 					</li>
 				</ul>
 			</div>
-			<router-link to="/account/rewards" slot='footterUrl'>查看更多</router-link>
+			<router-link to="/account/activity" slot='footterUrl'>查看更多</router-link>
 		</indexframe>
 
 
@@ -67,16 +67,16 @@ export default {
 	data () {
 		return {
 			star_gift: [
-				{imgUrl:require("@/assets/svg/user/index/glass-brown.svg"),titletext:'玉星晋级饮品券',date:'2021/01/10'},
-				{imgUrl:require("@/assets/svg/user/index/glass-brown.svg"),titletext:'星巴克玩味冰调™立减5元',date:'2021/01/10'},
-				{imgUrl:require("@/assets/svg/user/index/glass-brown.svg"),titletext:'星冰粽单包减28元',date:'2021/01/11'},
-				{imgUrl:require("@/assets/svg/user/index/glass-brown.svg"),titletext:'同笔交易两包或以上星冰粽减66元',date:'2021/01/11'},
+				{titletext:'玉星晋级饮品券',date:'2021/01/10'},
+				{titletext:'星巴克玩味冰调™立减5元',date:'2021/01/10'},
+				{titletext:'星冰粽单包减28元',date:'2021/01/11'},
+				{titletext:'同笔交易两包或以上星冰粽减66元',date:'2021/01/11'},
 			],
 			records_consumption: [
-				{imgUrl:require("@/assets/svg/user/index/glass-black.svg"),titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/3',money:'￥61.00'},
-				{imgUrl:require("@/assets/svg/user/index/glass-black.svg"),titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/5',money:'￥35.00'},
-				{imgUrl:require("@/assets/svg/user/index/glass-black.svg"),titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/6',money:'￥100.00'},
-				{imgUrl:require("@/assets/svg/user/index/glass-black.svg"),titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/8',money:'￥38.00'},
+				{titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/3',money:'￥61.00'},
+				{titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/5',money:'￥35.00'},
+				{titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/6',money:'￥100.00'},
+				{titletext:'金桥佳邻坊店(Joy Link Hub Store)',date:'2021/01/8',money:'￥38.00'},
 			]
 		}
 	},
