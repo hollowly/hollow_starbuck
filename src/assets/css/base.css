@@ -23,4 +23,5 @@ a,a:link,a:hover,a:active {
 
 body {
 	font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	overflow-x: hidden;
 }

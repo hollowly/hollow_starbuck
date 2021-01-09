@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 hr {
-	width: 300%;
+	/* width: 300%; */
 }
 	#profile {
 		position: absolute;
@@ -80,13 +80,16 @@ hr {
 		vertical-align: middle;
 		margin-right: 5px;
 	}
-	@media screen and (max-width: 991px) {
+	@media screen and (max-width: 992px) {
 		#profile {
 			top: 75px;
 			left: 20px;
 		}
 		.usermessage {
 			transform: translateY(-20px);
+		}
+		hr {
+			width: 300%;
 		}
 	}
 
