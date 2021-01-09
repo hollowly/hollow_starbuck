@@ -71,6 +71,7 @@ export default {
     font-family: Gothma-book;
 	}
 	.container > div > ul > li > span > p:last-of-type {
+		float: left;
 		font-size: 13px;
 		margin: 0;
     color: rgba(0,0,0,.56);

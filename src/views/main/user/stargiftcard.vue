@@ -70,33 +70,39 @@
 			</div>
 			<div class="row">
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 800</h6>
 					<img src="@/assets/img/main/user/star_gift_card/13.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 7532</p>
 				</stargiftcardone>
 
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 1000</h6>
 					<img src="@/assets/img/main/user/star_gift_card/14.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 5160</p>
 				</stargiftcardone>
 			</div>
 			<div class="row">
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 1000</h6>
 					<img src="@/assets/img/main/user/star_gift_card/15.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 1470</p>
 				</stargiftcardone>
 
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 600</h6>
 					<img src="@/assets/img/main/user/star_gift_card/16.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 4317</p>
 				</stargiftcardone>
 			</div>
 			<div class="row">
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 800</h6>
 					<img src="@/assets/img/main/user/star_gift_card/17.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 0436</p>
 				</stargiftcardone>
 
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 100</h6>
 					<img src="@/assets/img/main/user/star_gift_card/18.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 2366</p>
 				</stargiftcardone>
@@ -108,6 +114,7 @@
 				</stargiftcardone>
 
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 600</h6>
 					<img src="@/assets/img/main/user/star_gift_card/20.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 7532</p>
 				</stargiftcardone>
@@ -130,6 +137,7 @@
 				</stargiftcardone>
 
 				<stargiftcardone>
+					<h6 slot='titlemoney'>¥ 800</h6>
 					<img src="@/assets/img/main/user/star_gift_card/24.jpg" slot='img1'>
 					<p slot="p1">7310 2332 6124 2337</p>
 				</stargiftcardone>
