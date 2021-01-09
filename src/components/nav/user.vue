@@ -6,6 +6,7 @@
 			<slot name='account'><li><router-link to='/account'>账户一览</router-link></li></slot>
 			<slot name='activity'><li><router-link to='/account/activity'>消费记录</router-link></li></slot>
 			<slot name='rewards'><li><router-link to='/account/rewards'>星享好礼</router-link></li></slot>
+			<slot name='Stargiftcard'><li><router-link to='/account/Star-gift-card'>星礼卡</router-link></li></slot>
 			<slot name='profile'><li><router-link to='/account/profile'>管理我的账户</router-link></li></slot>
 			<slot name='club'><li><router-link to='/account/club'>关于星享俱乐部</router-link></li></slot>
 		</ul>

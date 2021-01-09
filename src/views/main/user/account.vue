@@ -12,16 +12,27 @@
 					<strong>24</strong>	<img src="@/assets/svg/user/index/card-title.svg" width="30"> 
 				</div>
 			</div>
+
 			<div class="row main">
 				<div class="col-sm scroll">
-					<div class="card-item"></div>
+					<div class="card-item">
+						<p>￥200</p>
+						<img src="@/assets/img/main/user/star_gift_card/1.jpg">
+						<span>7310 2332 6124 1994</span>
+					</div>
+					<div class="card-item">
+						<p>￥200</p>
+						<img src="@/assets/img/main/user/star_gift_card/2.jpg">
+						<span>7310 2332 6124 1994</span>
+					</div>
 				</div>
 			</div>
+
 			<div class="row footter">
 				<div class="col-sm">
 				</div>
 				<div class="col-sm">
-					<a href="">查看所有卡片</a>
+					<router-link to="/account/Star-gift-card">查看所有卡片</router-link>
 				</div>
 			</div>
 		</div>
@@ -40,6 +51,13 @@ export default {
 	},
 	components: {
 		wrapper
+	},
+	mounted() {
+		$('.main > .scroll > .card-item').mouseenter(function() {
+			$(this).css('transform','translateY(-20px)')
+		}).mouseleave(function() {
+			$(this).css('transform','translateY(0px)')
+		})
 	}
 
 }
@@ -58,7 +76,6 @@ export default {
 	padding: 18px 40px;
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
-
 .title > div > .titleright {
 	text-align: right;
 }
@@ -66,11 +83,42 @@ export default {
 	margin-bottom: 5px;
 }
 
-
 .main > .scroll {
-	width: 100%;
-	border: 1px solid yellow;
+	height: 280px;
+	overflow-y: hidden;
+	padding-top: 15px;
 }
+
+.main > .scroll > .card-item {
+	transition: all .4s;
+	float: left;
+	margin-right: 30px;
+}
+.main > .scroll > .card-item > p {
+	padding: 0;
+	margin: 0;
+}
+.main > .scroll > .card-item > img {
+	width: 280px;
+}
+.main > .scroll > .card-item > span {
+		display: block;
+    margin-top: 12px;
+    margin-bottom: 17px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0,0,0,.38);
+    line-height: 160%;
+}
+@media screen and (max-width: 1213px) {
+		.title {
+			width: 80%;
+		}
+		.main > .line > div:last-child {
+		left: 82% !important;
+		}
+	}
 
 
 

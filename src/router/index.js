@@ -30,8 +30,8 @@ const rmerchandise = () => import('@/views/main/menu/merchandise/rmerchandise')	
 
 
 // 用户登录
-const account = () => import('@/views/nav/user/account')
-const raccount = () => import('@/views/main/user/account')
+const account = () => import('@/views/nav/user/account.vue')
+const raccount = () => import('@/views/main/user/account.vue')
 // 消费记录
 const activity = () => import('@/views/nav/user/activity.vue')
 const ractivity = () => import('@/views/main/user/activity.vue')
@@ -44,8 +44,9 @@ const rprofile = () => import('@/views/main/user/profile.vue')
 // 关于星享俱乐部
 const userclub = () => import('@/views/nav/user/club.vue')
 const userrclub = () => import('@/views/main/user/club.vue')
-
-
+// 星礼卡
+const stargiftcard = () => import('@/views/nav/user/stargiftcard.vue')
+const rstargiftcard = () => import('@/views/main/user/stargiftcard.vue')
 Vue.use(VueRouter)
 
 const routes = [
@@ -159,6 +160,13 @@ const routes = [
 					main: userrclub
 				}
 			},
+			{
+				path:'/account/Star-gift-card',
+				components: {
+					nav:stargiftcard,
+					main:rstargiftcard
+				}
+			}
 		]
 	},
 ]
