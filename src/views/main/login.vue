@@ -15,14 +15,10 @@
 					<div class="col-sm">
 						<div class="form-row">
 							<input type="text" placeholder="用户名或电子邮箱" v-model="name" required />
-							<!-- <div class="valid-feedback">验证通过</div> -->
-							<!-- <div class="invalid-feedback">验证不通过</div> -->
 						</div>
 
 						<div class="form-row">
 							<input type="text" placeholder="密码" v-model="pwd" required />
-							<!-- <div class="valid-feedback">验证通过</div> -->
-							<!-- <div class="invalid-feedback">验证不通过</div> -->
 						</div>
 
 						<div>
@@ -38,7 +34,7 @@
 						<div>
 							<div v-if='ismsg'><span style="color:red">{{ msg }}</span></div>
 							<div>
-								<button class="btn btn-outline-success loginbtn " @click.prevent='login()' type="submit">
+								<button class="btn btn-outline-success loginbtn" @click.prevent='login()' type="submit">
 									登录
 								</button>
 								<router-link to='/register' class="btn btn-outline-secondary registerbtn">注册</router-link>
@@ -83,9 +79,21 @@ export default {
 			msg:null,		//接收数据
 			ismsg:true,//显示和隐藏提示信息
 			status:0,//判断用户的登录状态
+
+			cookiename:null, // 验证访问此页面时，是否带有cookie
 		}
 	},
 	mounted() {
+		// 判断是否登录，登录就渲染不同的组件
+		this.cookiename = this.cookie.getCookie('loginname')
+		// 判断没有登录就跳转到登录页面
+		if(this.cookiename == null) {
+			console.log(this.cookiename);
+			this.$router.replace('/login')
+		} else {
+			this.$router.replace('/account')
+		}
+
 		// 验证代码
 		(function() {
 			'use strict';
@@ -113,8 +121,6 @@ export default {
 		})
 	},
 	methods: {
-		ismsgtime() {
-		},
 		login() {
 			// 3秒后隐藏提示信息
 			setTimeout(() => {
@@ -153,13 +159,13 @@ export default {
 							this.cookie.setCookie(loginInfo,3)
 							console.log('cookie保存成功');
 							// 跳转到首页
-							this.$router.push('/')
+							alert('登录成功')
+							this.$router.push('/account')
 						}
 				})
 				.catch((err) => {
 					console.log(err);
 				});
-			
 		},
   },
 }
