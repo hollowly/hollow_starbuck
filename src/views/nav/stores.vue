@@ -20,6 +20,7 @@
     font-size: 15px;
     cursor: pointer;
 		color: #333;
+		z-index: 999;
 	}
 	#profile > img {
 		vertical-align: middle;

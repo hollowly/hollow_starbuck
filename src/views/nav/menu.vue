@@ -39,6 +39,7 @@ export default {
 		position: absolute;
 		top: 260px;
 		left: 120px;
+		z-index: 999;
 	}
 	ul > li {
 		list-style: none;

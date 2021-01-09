@@ -44,8 +44,9 @@ export default {
 <style scoped>
 	#profile {
 		position: absolute;
-		top: 170px;
+		top: 180px;
 		left: 120px;
+		z-index: 999;
 	}
 	#profile > a {
 		display: inline-block;
@@ -71,7 +72,7 @@ export default {
 	}
 	@media screen and (max-width: 992px){
 		#profile {
-			top: 75px;
+			top: 90px;
 			left: 20px;
 		}
 		ul > li {

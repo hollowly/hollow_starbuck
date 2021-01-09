@@ -15,6 +15,7 @@
 		position: absolute;
 		top: 280px;
 		left: 80px;
+		z-index: 999;
 	}
 	#profile > p {
 		font-size: 28px;

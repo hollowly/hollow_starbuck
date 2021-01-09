@@ -141,9 +141,17 @@ export default {
 		margin-right: 4%;
 	}
 	
-	@media screen and (max-width: 576px){
+	@media screen and (max-width: 992px){
 		.container-fluid > .row > div {
 			width: 40%;
+		}
+		.container-fluid {
+			margin: 40px auto;
+		}
+	}
+	@media screen and (max-width: 576px){
+		.container-fluid .row > div {
+			width: 15% !important;
 		}
 	}
 </style>

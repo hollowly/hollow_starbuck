@@ -178,7 +178,7 @@ export default {
 	.container-fluid {
 		background:rgb(247,247,247);
 		text-align: center;
-		margin: 0  auto;
+		margin: 0 auto;
 	}
 	.container-fluid > div > h6 {
 		text-align: left;
@@ -195,9 +195,22 @@ export default {
 		margin-right: 4%;
 	}
 	
-	@media screen and (max-width: 576px){
+	@media screen and (max-width: 992px){
 		.container-fluid > .row > div {
 			width: 40%;
+		}
+		.container-fluid {
+			margin: 30px auto;
+		}
+	}
+	@media screen and (max-width: 670px){
+		.container-fluid {
+			margin: 90px auto;
+		}
+	}
+	@media screen and (max-width: 576px){
+		.container-fluid .row > div {
+			width: 15% !important;
 		}
 	}
 </style>

@@ -53,6 +53,7 @@ hr {
 		left: 80px;
 		font-size: 25px;
 		font-weight: 700;
+		z-index: 999;
 	}
 	.active {
 		color: red;
@@ -79,7 +80,7 @@ hr {
 		vertical-align: middle;
 		margin-right: 5px;
 	}
-	@media screen and (max-width: 992px) {
+	@media screen and (max-width: 991px) {
 		#profile {
 			top: 75px;
 			left: 20px;
