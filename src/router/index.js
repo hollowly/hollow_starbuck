@@ -47,6 +47,9 @@ const userrclub = () => import('@/views/main/user/club.vue')
 // 星礼卡
 const stargiftcard = () => import('@/views/nav/user/stargiftcard.vue')
 const rstargiftcard = () => import('@/views/main/user/stargiftcard.vue')
+// 404
+const l404 = () => import('@/views/nav/l404.vue')
+const r404 = () => import('@/views/main/r404.vue')
 Vue.use(VueRouter)
 
 const routes = [
@@ -165,6 +168,14 @@ const routes = [
 				components: {
 					nav:stargiftcard,
 					main:rstargiftcard
+				}
+			},
+			// 404页面
+			{
+				path:'*',
+				components: {
+					nav: l404,
+					main: r404
 				}
 			}
 		]
