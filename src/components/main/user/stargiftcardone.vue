@@ -7,9 +7,9 @@
 				<span><img src="@/assets/svg/user/stargiftcard/clock.svg">消费记录</span>
 			</header>
 			<main>
-				<slot name='img1'><img src="@/assets/img/main/user/star_gift_card/1.jpg"></slot>
-				<slot name='p1'><p>7310 2332 6124 1994</p></slot>
-				<slot name='p2'><p>(以上余额截止至今天)</p></slot>
+				<slot name='img1'></slot>
+				<slot name='p1'></slot>
+				<p>(以上余额截止至今天)</p>
 			</main>
 	</div>
 </template>
