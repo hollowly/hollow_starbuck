@@ -257,12 +257,12 @@ import club from '@/components/main/club'
 export default {
 	data () {
 		return {
-			rewards: [],
-			upgrade: [],
-			stars: [],
-			channel: [],
-			join: [],
-			footer:[],
+			// rewards: [],
+			// upgrade: [],
+			// stars: [],
+			// channel: [],
+			// join: [],
+			// footer:[],
 		}
 	},
 	components: {
@@ -270,18 +270,18 @@ export default {
 	},
 	mounted() {
 		// 数据请求
-		request({
-			url:'/data.json',
-		}).then(res => {
-			this.rewards = res.data.rewards
-			this.upgrade = res.data.upgrade
-			this.stars = res.data.stars
-			this.channel = res.data.channel
-			this.join = res.data.join
-			this.footer = res.data.footer
-		}).catch(err => {
-			console.log(err);
-		})
+		// request({
+		// 	url:'/data.json',
+		// }).then(res => {
+		// 	this.rewards = res.data.rewards
+		// 	this.upgrade = res.data.upgrade
+		// 	this.stars = res.data.stars
+		// 	this.channel = res.data.channel
+		// 	this.join = res.data.join
+		// 	this.footer = res.data.footer
+		// }).catch(err => {
+		// 	console.log(err);
+		// })
 	}
 }
 
