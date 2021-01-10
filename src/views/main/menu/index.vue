@@ -62,7 +62,7 @@ export default {
 	mounted() {
 		// 数据请求
 		request({
-			url:'/data3.json',
+			url:'/data.json',
 		}).then(res => {
 			this.mainnewproductstext1 = res.data.menu_index.mainnewproductstext1
 			this.mainnewproductstext2 = res.data.menu_index.mainnewproductstext2

@@ -44,9 +44,6 @@ export default {
 </script>
 
 <style scoped>
-hr {
-	/* width: 300%; */
-}
 	#profile {
 		position: absolute;
 		top: 350px;
