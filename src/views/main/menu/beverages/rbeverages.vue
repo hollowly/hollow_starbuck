@@ -181,7 +181,7 @@ export default {
 	mounted() {
 		// 数据请求
 		request({
-			url:'/data3.json',
+			url:'/data.json',
 		}).then(res => {
 			this.coffeePlusIceCream = res.data.menu_beverages.coffeePlusIceCream
 			this.coldBrew = res.data.menu_beverages.coldBrew

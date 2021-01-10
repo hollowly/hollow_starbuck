@@ -24,7 +24,7 @@ export default {
 	},
 	mounted() {
 		request({
-			url:'/data3.json',
+			url:'data.json',
 		}).then(res => {
 			this.menu = res.data.menu
 		}).catch(err => {

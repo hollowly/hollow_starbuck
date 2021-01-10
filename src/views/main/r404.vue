@@ -49,8 +49,6 @@ export default {
 	.container {
 		width: 70%;
 	}
-	.container > .row {
-	}
 	.container > .row > div > h1{
 		font-size: 32px;
 		padding: 30px 0px 10px 10px;

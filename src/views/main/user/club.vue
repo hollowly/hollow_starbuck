@@ -271,7 +271,7 @@ export default {
 	mounted() {
 		// 数据请求
 		request({
-			url:'/data3.json',
+			url:'/data.json',
 		}).then(res => {
 			this.rewards = res.data.rewards
 			this.upgrade = res.data.upgrade
