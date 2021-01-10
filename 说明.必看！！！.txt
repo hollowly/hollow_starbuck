@@ -5,6 +5,6 @@
 完美运行此项目需要vue，mysql，webpack，apache
 
 步骤：
-1. 请把项目文件下的 http 文件夹移动到你 apache 的根目录
-2. 在本地创建 mysql 数据库，强烈建议使用 Navicat premunm12 可视化工具创建，创建数据库 tsia 再创建表users，并创建id、name、password字段
-2. 进入 server/db.js 修改为你自己用户名(user) 和密码(password)
+1. 把项目文件下的 http 文件夹移动到你 apache 的根目录
+2. 在本地创建 mysql 数据库，强烈建议使用 Navicat premunm12 可视化工具创建，创建数据库 tsia 再创建表users，再创建id、name、password字段
+2. 进入 server/db.js 修改为你自己user(用户名)和password(密码)
