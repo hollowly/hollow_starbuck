@@ -1,0 +1,344 @@
+{
+	"menu": [
+		{"text":"饮料","url":"/menu/beverages/"},
+		{"text":"美食","url":"/menu/food/"},
+		{"text":"咖啡产品","url":"/menu/coffee/"},
+		{"text":"商店","url":"/menu/merchandise/"}
+	],
+	"container1":[
+		{"text":"门店","url":"/stores"},
+		{"text":"星享俱乐部","url":"/club"},
+		{"text":"菜单","url":"/menu"}
+	],
+	"container2":[		
+		{"text":"星巴克移动应用","url":"/apps"},
+		{"text":"星礼卡","url":"/gift-card"},
+		{"text":"星巴克臻选™","url":"/reserve"},
+		{"text":"啡快™ - 在线点 到店取","url":"/now"},
+		{"text":"专星送™","url":"/delivers"},
+		{"text":"咖啡星讲堂","url":"/coffee-blog"},
+		{"text":"上海烘焙工坊","url":"/baking"},
+		{"text":"关于星巴克","url":"/about"},
+		{"text":"帮助中心","url":"/help"}
+	],
+	"rewards": [
+		{"imgUrl":"/assets/img/main/club/rewards1.png","title":"消费累积星星","p":"每累计消费￥50元累积一颗星星使用星巴克指定的方式，可享加速积星"},
+		{"imgUrl":"/assets/img/main/club/rewards2.png","title":"积星升级 好礼享不停","p":""},
+		{"imgUrl":"/assets/img/main/club/rewards3.png","title":"会员专享星星奖励活动","p":""},
+		{"imgUrl":"/assets/img/main/club/rewards4.png","title":"星星兑换丰富好礼","p":""}
+	],
+	"upgrade": [
+		{"imgUrl":"/assets/img/main/club/upgrade1.png","p1_1":"注册星享俱乐部帐户","p1_span":"","p1_2":"","p2_1":"即成为","p2_span":"银星级","p2_2":"会员","p3_1":"可开始消费积星星","p3_span":"","p3_2":""},
+		{"imgUrl":"/assets/img/main/club/upgrade4.png","p1_1":"累积","p1_span":"4","p1_2":"颗星星","p2_1":"升级至","p2_span":"玉星级","p2_2":"会员"},
+		{"imgUrl":"/assets/img/main/club/upgrade20.png","p1_1":"玉星级","p2_1":"再累积","p2_span":"16","p2_2":"颗星星","p3_1":"升级至","p3_span":"金星级","p3_2":"会员"}
+	],
+	"stars": [
+		{"imgUrl":"/assets/img/main/club/stars1.png","text":["购买绑定会员星礼包可直通玉星级","各类奖励星星活动"]},
+		{"imgUrl":"/assets/img/main/club/stars2.png","text":["玉星晋级饮品券","金星在望饮品券","生日饮品券","永享玉星级保级","各类奖励星星活动"]},
+		{"imgUrl":"/assets/img/main/club/stars3.png","text":["金星晋级饮品券","周年庆饮品券","生日饮品券","永享玉星级保级","好礼星星兑换","各类奖励星星活动"]}
+	],
+	"channel": [
+		{"imgUrl":"/assets/img/main/club/channel1.png","p1":"星巴克门店","p2":""},
+		{"imgUrl":"/assets/img/main/club/channel2.png","p1":"专星送™","p2":"（仅限已开通门店）"},
+		{"imgUrl":"/assets/img/main/club/channel3.png","p1":"啡快™","p2":"（仅限已开通门店）"},
+		{"imgUrl":"/assets/img/main/club/channel4.png","p1":"星巴克天猫","p2":"会员旗舰店"},
+		{"imgUrl":"/assets/img/main/club/channel5.png","p1":"星星奖励","p2":"活动"}
+	],
+	"join": [
+		{"title":"现在就来加入星享俱乐部","p1":"轻松注册，立即开启","p2":"您的全新星享之旅，好礼享不停","text":"立即注册","aUrl":"/register"},
+		{"title":"已是星享俱乐部的会员","p1":"您可快速绑定会员星礼包，","p2":"专享加速积星，丰富好礼等你","text":"立即登录","aUrl":"/login"}
+	],
+	"footer": "/assets/img/main/club/bg-footer.jpeg",
+
+	"menu_index": {
+		"mainnewproductstext1": [
+			"叮叮当~喜欢的节日在慢慢到来",
+			"喜欢的太妃榛果拿铁也如约而至",
+			"这一次融入了燕麦奶，平衡了甜度和醇香",
+			"是今年不可错过的全新经典。",
+			"熔岩黑巧摩卡和暖意圣诞茶拿铁",
+			"一杯丝滑绵软一杯茶香温润",
+			"都能让快乐在唇齿间流转"
+			],
+			"mainnewproductstext2": [
+			"雪松般的香气，伴随着柑橘果酱和奶油糖果香甜",
+			"星巴克臻选™2020圣诞综合咖啡豆总是诠释这个美妙的季节",
+			"自哥斯达黎加的贝拉维斯塔庄园咖啡豆",
+			"平衡而顺滑的口感，烤苹果和黑胡桃般的风味",
+			"伴随着蜂巢蜜般的甜感让人不禁忆起过往的节日片段",
+			"越南大叻咖啡豆拥有着月桂叶般的香气，和太妃糖和可可般的风味",
+			"草本植物般的气息仿佛节日的庆典般热闹",
+			"层次分明，有着比想象更多的特殊风味。",
+			"每一次细品，都是对这个季节的美妙诠释"
+			],
+			"newmain1": [
+				{"imgUrl":"/assets/img/main/menu/newmain1.jpg","text":"太妃榛果拿铁"},
+				{"imgUrl":"/assets/img/main/menu/newmain2.jpg","text":"熔岩黑巧摩卡"},
+				{"imgUrl":"/assets/img/main/menu/newmain3.jpg","text":"流金圣诞茶拿铁"}
+			],
+			"newmain2": [
+				{"imgUrl":"/assets/img/main/menu/newmain4.jpg","text":"草莓杯子蛋糕"},
+				{"imgUrl":"/assets/img/main/menu/newmain5.jpg","text":"焦糖杯子蛋糕"},
+				{"imgUrl":"/assets/img/main/menu/newmain6.jpg","text":"巧克力蛋糕"}
+			],
+			"newmain3": [
+				{"imgUrl":"/assets/img/main/menu/newmain7.jpg","text":"柠檬杯子蛋糕"},
+				{"imgUrl":"/assets/img/main/menu/newmain8.jpg","text":"星巴克®圣诞综合咖啡豆"},
+				{"imgUrl":"/assets/img/main/menu/newmain9.jpg","text":"星巴克®浅雅烘焙圣诞综合咖啡豆"}
+			],
+			"newmain4": [
+				{"imgUrl":"/assets/img/main/menu/newmain10.jpg","text":"星巴克®浓缩烘焙圣诞综合咖啡豆"},
+				{"imgUrl":"/assets/img/main/menu/newmain11.jpg","text":"400ml Contigo抱抱动物款保温吸管杯"},
+				{"imgUrl":"/assets/img/main/menu/newmain12.jpg","text":"姜饼人造型玻璃杯"}
+			],
+			"newmain5": [
+				{"imgUrl":"/assets/img/main/menu/newmain13.jpg","text":"星巴克臻选™2020圣诞综合咖啡豆"},
+				{"imgUrl":"/assets/img/main/menu/newmain14.jpg","text":"哥斯达黎加 三水河 贝拉维斯塔庄园咖啡豆"},
+				{"imgUrl":"/assets/img/main/menu/newmain15.jpg","text":"卢旺达穆洪多"}
+			],
+			"newmain6": [
+				{"imgUrl":"/assets/img/main/menu/newmain16.jpg","text":"越南大叻"},
+				{"imgUrl":"/assets/img/main/menu/newmain17.jpg","text":"咖啡快乐圣诞会员星礼包"},
+				{"imgUrl":"/assets/img/main/menu/newmain18.jpg","text":"咖啡快乐圣诞会员星礼包"}
+			]
+	},
+	"menu_beverages": {
+		"coffeePlusIceCream": [
+			{"imgUrl":"/assets/img/main/menu/beverages/coffee-plus-ice-cream/1.jpg","text":"阿馥奇朵™"},
+			{"imgUrl":"/assets/img/main/menu/beverages/coffee-plus-ice-cream/2.jpg","text":"麦芽雪冷萃™"},
+			{"imgUrl":"/assets/img/main/menu/beverages/coffee-plus-ice-cream/3.jpg","text":"冷萃浮乐朵™"},
+			{"imgUrl":"/assets/img/main/menu/beverages/coffee-plus-ice-cream/4.jpg","text":"气致™冷萃浮乐朵™"}
+		],
+		"coldBrew": [
+			{"imgUrl":"/assets/img/main/menu/beverages/cold-brew/1.jpg","text":"冷萃冰咖啡"},
+			{"imgUrl":"/assets/img/main/menu/beverages/cold-brew/2.jpg","text":"轻甜奶油冷萃"},
+			{"imgUrl":"/assets/img/main/menu/beverages/cold-brew/3.jpg","text":"绵云冷萃"},
+			{"class":"hidden"}
+		],
+		"espresso1": [
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/1.jpg","text":"美式咖啡（热/冷）"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/2.jpg","text":"拿铁（热/冷）"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/3.jpg","text":"摩卡（热/冷)"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/4.jpg","text":"卡布奇诺（热/冷）"}
+		],
+		"espresso2": [
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/5.jpg","text":"焦糖玛奇朵（热/冷）"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/6.jpg","text":"浓缩咖啡"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/7.jpg","text":"馥芮白™"},
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/8.jpg","text":"榛果风味拿铁（热/冷）"}
+		],
+		"espresso3": [
+			{"imgUrl":"/assets/img/main/menu/beverages/espresso/9.jpg","text":"香草风味拿铁（热/冷）"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"frappuccinoBlendedBeverage1": [
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/1.jpg","text":"焦糖浓缩咖啡星冰乐"},
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/2.jpg","text":"抹茶星冰乐"},
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/3.jpg","text":"芒果西番莲果茶星冰乐"},
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/4.jpg","text":"摩卡星冰乐"}
+		],
+		"frappuccinoBlendedBeverage2": [
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/5.jpg","text":"摩卡可可碎片星冰乐"},
+			{"imgUrl":"/assets/img/main/menu/beverages/frappuccino-blended-beverage/6.jpg","text":"香草风味星冰乐"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"modernMixology": [
+			{"imgUrl":"/assets/img/main/menu/beverages/modern-mixology/1.jpg","text":"气炫冰山美式"},
+			{"imgUrl":"/assets/img/main/menu/beverages/modern-mixology/2.jpg","text":"橙柚派对"},
+			{"imgUrl":"/assets/img/main/menu/beverages/modern-mixology/3.jpg","text":"醋意桃桃"},
+			{"imgUrl":"/assets/img/main/menu/beverages/modern-mixology/4.jpg","text":"酸柠浮冷萃"}
+		],
+		"nitroColdBrew": [
+			{"imgUrl":"/assets/img/main/menu/beverages/nitro-cold-brew/1.jpg","text":"气致™冷萃咖啡"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"signatureChocolateBeverage": [
+			{"imgUrl":"/assets/img/main/menu/beverages/signature-chocolate-beverage/1.jpg","text":"经典巧克力饮品（热/冷）"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"teavana1": [
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/1.jpg","text":"红茶拿铁（热/冷）"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/2.jpg","text":"抹茶拿铁（热/冷）"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/3.jpg","text":"茶瓦纳™ 冰摇柚柚蜂蜜红茶"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/4.jpg","text":"冰摇红莓黑加仑茶"}
+		],
+		"teavana2": [
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/5.jpg","text":"冰摇芒果花草茶"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/6.jpg","text":"茶瓦纳™冰摇桃桃乌龙茶"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/7.jpg","text":"梨光清润路芭茶"},
+			{"imgUrl":"/assets/img/main/menu/beverages/teavana/8.jpg","text":"橘香柚柚花草茶"}
+		]
+	},
+
+	"menu_food":{
+		"bakery1": [
+			{"imgUrl":"/assets/img/main/menu/food/bakery/1.jpg","text":"美式松饼"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/2.jpg","text":"蓝莓麦芬"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/3.jpg","text":"香浓巧克力麦芬"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/4.jpg","text":"旋风玉桂酥"}
+		],
+		"bakery2": [
+			{"imgUrl":"/assets/img/main/menu/food/bakery/5.jpg","text":"法式香酥可颂"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/6.jpg","text":"法式焦糖酥"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/7.jpg","text":"层层榛子果仁酥"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/8.jpg","text":"蜂蜜提子司康"}
+		],
+		"bakery3": [
+			{"imgUrl":"/assets/img/main/menu/food/bakery/9.jpg","text":"燕麦焦糖布丁面包"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/10.jpg","text":"香浓巧克力可颂"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/11.jpg","text":"提子干松饼"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/12.jpg","text":"核桃提子软法面包"}
+		],
+		"bakery4": [
+			{"imgUrl":"/assets/img/main/menu/food/bakery/13.jpg","text":"红豆燕麦松饼"},
+			{"imgUrl":"/assets/img/main/menu/food/bakery/14.jpg","text":"全麦核桃麦芬"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"cakeDessert1": [
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/1.jpg","text":"蓝莓曲奇风轻乳酪蛋糕"},
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/2.jpg","text":"经典瑞士卷"},
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/3.jpg","text":"浓醇三重黑巧克力蛋糕"},
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/4.jpg","text":"法式闪电泡芙"}
+		],
+		"cakeDessert2": [
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/5.jpg","text":"星巴克咖啡提拉米苏蛋糕"},
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/6.jpg","text":"法式马卡龙"},
+			{"imgUrl":"/assets/img/main/menu/food/cake-dessert/7.jpg","text":"纽约风浓郁重芝士蛋糕"},
+			{"class":"hidden"}
+		],
+		"package1": [
+			{"imgUrl":"/assets/img/main/menu/food/package/1.jpg","text":"腰果"},
+			{"imgUrl":"/assets/img/main/menu/food/package/2.jpg","text":"英伦风味黄油饼干"},
+			{"imgUrl":"/assets/img/main/menu/food/package/3.jpg","text":"混合果仁果脯"},
+			{"imgUrl":"/assets/img/main/menu/food/package/4.jpg","text":"水果沙拉"}
+		],
+		"package2": [
+			{"imgUrl":"/assets/img/main/menu/food/package/5.jpg","text":"棒棒糖"},
+			{"imgUrl":"/assets/img/main/menu/food/package/6.jpg","text":"咖啡味蛋卷"},
+			{"imgUrl":"/assets/img/main/menu/food/package/7.jpg","text":"薄荷味口香糖（无糖）"},
+			{"imgUrl":"/assets/img/main/menu/food/package/8.jpg","text":"薄荷味硬糖（无糖）"}
+		],
+		"sandwich1": [
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/1.jpg","text":"牛油果鸡肉焙果"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/2.jpg","text":"培根蛋可颂堡"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/3.jpg","text":"蜜汁培根蛋卷"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/4.jpg","text":"层层牛肉法棍"}
+		],
+		"sandwich2": [
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/5.jpg","text":"牛肉芝士可颂"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/6.jpg","text":"凯撒鸡肉卷"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/7.jpg","text":"鸡肉芝香帕尼尼"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/8.jpg","text":"炒蛋菌菇虾仁卷"}
+		],
+		"sandwich3": [
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/9.jpg","text":"火腿芝士可颂"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/10.jpg","text":"双重芝士火腿吐司"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/11.jpg","text":"高达芝士火腿星明治"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/12.jpg","text":"帕斯雀牛肉三明治"}
+		],
+		"sandwich4": [
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/13.jpg","text":"烤法式火腿鸡蛋三明治"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/14.jpg","text":"慢烤火腿芝士恰巴特"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/15.jpg","text":"金枪鱼帕尼尼"},
+			{"imgUrl":"/assets/img/main/menu/food/sandwich/16.jpg","text":"火鸡培根英式麦芬"}
+		],
+		"yoghurt": [
+			{"imgUrl":"/assets/img/main/menu/food/yoghurt/1.jpg","text":"谷物组合希腊式风味酸奶（混合莓果）"},
+			{"imgUrl":"/assets/img/main/menu/food/yoghurt/2.jpg","text":"谷物组合希腊式风味酸奶（黄桃）"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		]
+	},
+
+	"menu_coffee": {
+		"mediumRoast1": [
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/1.jpg","text":"星巴克®凤舞祥云综合咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/2.jpg","text":"星巴克®派克市场烘焙咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/3.jpg","text":"星巴克®肯亚咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/4.jpg","text":"星巴克®首选咖啡豆"}
+		],
+		"mediumRoast2": [
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/5.jpg","text":"星巴克®危地马拉安提瓜咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/6.jpg","text":"星巴克®埃塞俄比亚咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/7.jpg","text":"星巴克®哥伦比亚咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast/8.jpg","text":"星巴克®早餐综合咖啡豆"}
+		],
+		"darkRoast1": [
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast/1.jpg","text":"星巴克®苏门答腊咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast/2.jpg","text":"星巴克®低因祥龙综合咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast/3.jpg","text":"星巴克®意式烘焙咖啡豆"},
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast/4.jpg","text":"星巴克®浓缩烘焙咖啡豆"}
+		],
+		"darkRoast2": [
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast/5.jpg","text":"星巴克®佛罗娜咖啡豆"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"viaDairy": [
+			{"imgUrl":"/assets/img/main/menu/coffee/via-dairy/1.jpg","text":"星巴克VIA®香草拿铁风味免煮咖啡固体饮料"},
+			{"imgUrl":"/assets/img/main/menu/coffee/via-dairy/2.jpg","text":"星巴克VIA®焦糖拿铁风味免煮咖啡固体饮料"},
+			{"imgUrl":"/assets/img/main/menu/coffee/via-dairy/3.jpg","text":"星巴克VIA®摩卡风味免煮咖啡固体饮料"},
+			{"class":"hidden"}
+		],
+		"viaBlack": [
+			{"imgUrl":"/assets/img/main/menu/coffee/via-black/1.jpg","text":"星巴克VIA®意式烘焙免煮咖啡"},
+			{"imgUrl":"/assets/img/main/menu/coffee/via-black/2.jpg","text":"星巴克VIA®哥伦比亚免煮咖啡"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"mediumRoastOne": [
+			{"imgUrl":"/assets/img/main/menu/coffee/medium-roast-one/1.jpg","text":"星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®派克市场烘焙咖啡系列"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		],
+		"darkRoastOne": [
+			{"imgUrl":"/assets/img/main/menu/coffee/dark-roast-one/1.jpg","text":"星巴克ORIGAMI™便携式滴滤咖啡（研磨咖啡粉）星巴克®佛罗娜烘焙咖啡系列"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}
+		]
+	},
+
+	"menu_merchandise": {
+		"conventionalProducts1": [
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/1.jpg","text":"12oz 烫金品牌黑色马克杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/2.jpg","text":"银色/白色亮面品牌桌面杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/3.jpg","text":"12oz 彰显本色黑色/深灰不锈钢桌面杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/4.jpg","text":"12oz 纯白磨砂玻璃杯"}
+		],
+		"conventionalProducts2": [
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/5.jpg","text":"12oz 烫金品牌白色马克杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/6.jpg","text":"16oz 烫金品牌黑色马克杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/7.jpg","text":"16oz 原木黑色拎绳不锈钢保温杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/8.jpg","text":"16oz 彰显本色黑色/深灰不锈钢随行杯"}
+		],
+		"conventionalProducts3": [
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/9.jpg","text":"16oz 烫金品牌白色马克杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/10.jpg","text":"3oz 烫金品牌黑色试尝杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/11.jpg","text":"3oz 烫金品牌白色试尝杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/12.jpg","text":"500ml 黑色Logo水瓶"}
+		],
+		"conventionalProducts4": [
+			{"imgUrl":"/assets/img/main/menu/merchandise/conventional-products/13.jpg","text":"500ml 白色Logo水瓶"},
+			{"class":"hidden"},
+			{"class":"hidden"},
+			{"class":"hidden"}	
+		],
+		"zhenxuanProducts": [
+			{"imgUrl":"/assets/img/main/menu/merchandise/zhenxuan-products/1.jpg","text":"12oz 纯黑/古铜亮面品牌桌面杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/zhenxuan-products/2.jpg","text":"16oz 香槟金品牌不锈钢桌面杯"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/zhenxuan-products/3.jpg","text":"500ml 金色Logo水瓶"},
+			{"imgUrl":"/assets/img/main/menu/merchandise/zhenxuan-products/4.jpg","text":"9oz 臻选玻璃杯"}
+		]
+	}
+}

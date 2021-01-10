@@ -1,0 +1,10 @@
+这个项目是基于 Vue.js + Node.js + mysql + webpack + axios + ES6 + vue-Router + apache 构建的前后端分离的单页面应用。网站采用响应式布局方案，适配 PC 端和移动端，包含商品展示、定位附近门店、登录注册、获取当前用户会员信息与消费记录等功能，较为完整的展现了星巴克官方网站的全貌。
+
+
+
+完美运行此项目需要vue，mysql，webpack，apache
+
+步骤：
+1. 请把项目文件下的 http 文件夹移动到你 apache 的根目录
+2. 在本地创建 mysql 数据库，强烈建议使用 Navicat premunm12 可视化工具创建，创建数据库 tsia 再创建表users，并创建id、name、password字段
+2. 进入 server/db.js 修改为你自己用户名(user) 和密码(password)
