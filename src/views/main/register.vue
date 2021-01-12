@@ -119,6 +119,15 @@ export default {
 			$('.top').show()
 			$('form').hide()
 		})
+
+		$('.switch').eq(0).click(function() {
+			$('.switch').css({'color':'#00a862','background':'white'})
+			$(this).css({'color': 'white','background': '#00a862'})
+		})
+		$('.switch').eq(1).click(function() {
+			$('.switch').css({'color':'#00a862','background':'white'})
+			$(this).css({'color': 'white','background': '#00a862'})
+		})
 	}
 }
 </script>
@@ -172,11 +181,6 @@ export default {
 	input::placeholder {
 		font-weight: 100;
 	}
-	/* form  .row > div > div:last-child {
-		margin-top: 60px;
-	} */
-
-
 	.top {
 		display: none;
 	}
